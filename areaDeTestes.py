@@ -1,6 +1,5 @@
 print("Hello, World!")
-print("Welcome to Python programming.")
-print("This is a simple script to demonstrate basic print statements.")
-print("You can print multiple lines of text using multiple print statements.")
-print("Python is a versatile programming language that is widely used in various fields.") 
-print("Thank you for running this script!")
+
+proximo teste vai ser sobre calculo de soma de variaveis
+
+a=int(input'Digite aqui: ')
