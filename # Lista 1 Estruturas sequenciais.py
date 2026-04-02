@@ -124,5 +124,95 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # else:
 #     print('Valor de número inválido. Por favor, insira um número no formato DU (0 a 99).')
 
-# Exercício 11
-# algoritmo que receba um número no formato CDU (centena, dezena e unidade) e imprima esse número invertido
+# # Exercício 11
+# # algoritmo que receba um número no formato CDU (centena, dezena e unidade) e imprima esse número invertido
+# print('Algoritmo para inverter um número de 3 digitos no formato CDU (centena, dezena e unidade) para UDC')
+# numero=int(input('Digite um número no formato CDU (centena, dezena e unidade): '))
+# if 0<=numero<=999:
+#     centena=numero//100
+#     dezena=(numero//10)%10
+#     unidade=numero%10
+#     numeroInvertido=unidade*100+dezena*10+centena
+
+#     print(f'Número original: {numero}')
+#     print(f'Número invertido: {numeroInvertido}')
+# else:
+#     print('Valor de número inválido. Por favor, insira um número no formato CDU (0 a 999).')
+
+# # # Exercício 12
+# # Conversões e cálculo de tempo
+
+# from datetime import *
+
+# print('Teste das variaveis de data e hora')
+
+# dataHoraAtual=datetime.now()
+# print(f'Data e hora atual: {dataHoraAtual}')
+
+# dataAtual=dataHoraAtual.date()
+# print(f'Data atual: {dataAtual}')
+
+# horaAtual=dataHoraAtual.time()
+# print(f'Hora atual: {horaAtual}')
+
+# dataHoraEspecifica=datetime(2024, 6, 30, 15, 30, 0)
+# print(f'Data e hora específica: {dataHoraEspecifica}')
+
+# dataEspecifica=dataHoraEspecifica.date()
+# print(f'Data específica: {dataEspecifica}')
+
+# horaEspecifica=dataHoraEspecifica.time()
+# print(f'Hora específica: {horaEspecifica}')
+
+# dataHoraFormatada=dataHoraAtual.strftime('%d/%m/%Y %H:%M:%S')
+# print(f'Data e hora atual formatada: {dataHoraFormatada}')
+
+# dataFormatada=dataAtual.strftime('%d/%m/%Y')
+# print(f'Data atual formatada: {dataFormatada}')
+
+# horaFormatada=horaAtual.strftime('%H:%M:%S')
+# print(f'Hora atual formatada: {horaFormatada}')
+
+# dataHoraConvertida=datetime.strptime('30/06/2024 15:30:00', '%d/%m/%Y %H:%M:%S')
+# print(f'Data e hora convertida: {dataHoraConvertida}')
+
+# dataConvertida=datetime.strptime('30/06/2024', '%d/%m/%Y')
+# print(f'Data convertida: {dataConvertida}')
+
+# horaConvertida=datetime.strptime('15:30:00', '%H:%M:%S')
+# print(f'Hora convertida: {horaConvertida}')
+
+# print('Fim dos testes de data e hora')
+
+# Exercício 13
+# algoritmo que leia a idade de uma pessoa em anos e mostre esse valor convertido em dias, horas, minutos e segundos, considerando o tempo decorrido até o momento em que o algoritmo foi executado
+from datetime import datetime
+
+print('Algoritmo para converter a idade completa.')
+
+dataString=input('Digite a data de nascimento da pessoa no formato DD/MM/AAAA: ')
+dataNascimento=datetime.strptime(dataString,'%d/%m/%Y')
+dataAtual=datetime.now()
+
+idadeAnos=dataAtual.year-dataNascimento.year
+idadeMeses=dataAtual.month-dataNascimento.month
+idadeDias=dataAtual.day-dataNascimento.day
+
+if idadeMeses<0 or (idadeMeses==0 and idadeDias<0):
+    idadeAnos-=1
+    idadeMeses+=12
+    idadeDias+=30
+
+diferencaDias=(dataAtual-dataNascimento).days
+idadeHoras=diferencaDias*24
+idadeMinutos=idadeHoras*60
+idadeSegundos=idadeMinutos*60
+
+def formatar(n):
+    return f'{n:,}'.replace(',', '.')
+
+print('\nIdade detalhada:')
+print(f'Anos: {formatar(idadeAnos)}\nMeses: {formatar(idadeMeses)}\nDias: {formatar(idadeDias)}')
+
+print(f'Horas: {formatar(idadeHoras)}\nMinutos: {formatar(idadeMinutos)}\nSegundos: {formatar(idadeSegundos)}')
+
