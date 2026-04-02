@@ -190,13 +190,17 @@ from datetime import datetime
 
 print('Algoritmo para converter a idade completa.')
 
-dataString=input('Digite a data de nascimento da pessoa no formato DD/MM/AAAA: ')
-dataNascimento=datetime.strptime(dataString,'%d/%m/%Y')
+dataString=input('Digite a data de nascimento da pessoa no formato DDMMAAAA: ')
+dataNascimento=datetime.strptime(dataString,'%d%m%Y')
 dataAtual=datetime.now()
 
-idadeAnos=dataAtual.year-dataNascimento.year
-idadeMeses=dataAtual.month-dataNascimento.month
-idadeDias=dataAtual.day-dataNascimento.day
+idadeAnos=dataAtual.year-dataNascimento.year 
+# print(f'Idade em anos: {idadeAnos}')
+idadeMeses=dataAtual.month-dataNascimento.month 
+# print(f'Idade em meses: {idadeMeses}')
+idadeDias=dataAtual.day-dataNascimento.day 
+# print(f'Idade em dias: {idadeDias}')
+
 
 if idadeMeses<0 or (idadeMeses==0 and idadeDias<0):
     idadeAnos-=1
@@ -204,9 +208,13 @@ if idadeMeses<0 or (idadeMeses==0 and idadeDias<0):
     idadeDias+=30
 
 diferencaDias=(dataAtual-dataNascimento).days
+# print(f'Diferença em dias: {diferencaDias}')
 idadeHoras=diferencaDias*24
+# print(f'Idade em horas: {idadeHoras}')
 idadeMinutos=idadeHoras*60
+# print(f'Idade em minutos: {idadeMinutos}')
 idadeSegundos=idadeMinutos*60
+# print(f'Idade em segundos: {idadeSegundos}')
 
 def formatar(n):
     return f'{n:,}'.replace(',', '.')
