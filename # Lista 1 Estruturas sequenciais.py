@@ -66,3 +66,63 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # litrosGastos=distPerc/eficiencia
 # print(f'A quantidade de litros de combustível gastos na viagem de {distPerc:.2f} km, foi de: {litrosGastos:.2f} litros')
 
+# # Exercício 7
+# # programa que, dados dois números inteiros como entrada, realiza a operação de divisão e exibe o dividendo, divisor, quociente e resto
+# print('Programa para realizar a operação de divisão entre dois números inteiros e exibir o dividendo, divisor, quociente e resto')
+# dividendo=int(input('Digite o dividendo (número inteiro): '))
+# divisor=int(input('Digite o divisor (número inteiro): '))
+# quociente=dividendo//divisor
+# resto=dividendo%divisor
+# print(f'Dividendo: {dividendo}')
+# print(f'Divisor: {divisor}')
+# print(f'Quociente: {quociente}')
+# print(f'Resto: {resto}')
+
+# # Exercício 8
+# # algoritmo que receba um número de quatro dígitos e mostre as unidades, dezenas, centenas e milhares que compõem esse número.
+# print('Algoritmo para decompor um número de quatro dígitos em unidades, dezenas, centenas e milhares')
+# numero=int(input('Digite um número de quatro dígitos: '))
+# unidades=numero%10
+# dezenas=(numero//10)%10
+# centenas=(numero//100)%10
+# milhares=numero//1000
+# print(f'Número: {numero}')
+# print(f'Milhares: {milhares}')
+# print(f'Centenas: {centenas}')
+# print(f'Dezenas: {dezenas}')
+# print(f'Unidades: {unidades}')
+
+# # Exercício 9
+# # algoritmo que leia uma informação de latitude no formato GGMMSS (Graus, Minutos e Segundos) e decomponha esta informação em graus, minutos e segundos
+# print('Algoritmo para decompor uma informação de latitude no formato GGMMSS em graus, minutos e segundos')
+# latitude=int(input('Digite a latitude no formato GGMMSS: '))
+# if 0<=latitude<=999999:
+
+#     graus=latitude//10000
+#     minutos=(latitude//100)%100
+#     segundos=latitude%100
+
+#     print(f'Latitude: {latitude}')
+#     print(f'Graus: {graus}')
+#     print(f'Minutos: {minutos}')
+#     print(f'Segundos: {segundos}')  
+
+# else:
+#     print('Valor de latitude inválido. Por favor, insira um número no formato GGMMSS (0 a 999999).')
+
+# # Exercício 10
+# # algoritmo que receba um número no formato DU (dezena e unidade) e imprima esse número invertido, ou seja, no formato UD.
+# print('Algoritmo para inverter um número no formato DU (dezena e unidade) para UD')
+# numero=int(input('Digite um número no formato DU (dezena e unidade): '))
+# if 0<=numero<=99:
+#     dezena=numero//10
+#     unidade=numero%10
+#     numeroInvertido=unidade*10+dezena
+
+#     print(f'Número original: {numero}')
+#     print(f'Número invertido: {numeroInvertido}')
+# else:
+#     print('Valor de número inválido. Por favor, insira um número no formato DU (0 a 99).')
+
+# Exercício 11
+# algoritmo que receba um número no formato CDU (centena, dezena e unidade) e imprima esse número invertido
