@@ -503,4 +503,44 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 
 
 # exercício 28
-# 
+# algoritmo que imprima a média aritmética entre três números reais 
+
+# num1=float(input('Digite o primeiro número real para calcular a média aritmética: '))
+# num2=float(input('Digite o segundo número real para calcular a média aritmética: '))
+# num3=float(input('Digite o terceiro número real para calcular a média aritmética: '))
+
+# mediaAritmetica=(num1+num2+num3)/3
+
+# print(f'A média aritmética entre os números {num1:.2f}, {num2:.2f} e {num3:.2f} é: {mediaAritmetica:.2f}') 
+
+# exercício 29
+# algoritmo que calcule e imprima a média ponderada de quatro números reais.
+
+# num1=float(input('Digite o primeiro número real para calcular a média ponderada: '))
+# num2=float(input('Digite o segundo número real para calcular a média ponderada: '))
+# num3=float(input('Digite o terceiro número real para calcular a média ponderada: '))
+# num4=float(input('Digite o quarto número real para calcular a média ponderada: '))
+
+# pesos=[1,2,3,4]
+# somaPesos=sum(pesos)
+# mediaPonderada=(num1*pesos[0]+num2*pesos[1]+num3*pesos[2]+num4*pesos[3])/somaPesos
+
+# print(f'A média ponderada entre os números {num1:.2f}, {num2:.2f}, {num3:.2f} e {num4:.2f} é: {mediaPonderada:.2f}') 
+
+# exercício 30
+# algoritmo que leia três notas de um aluno (N1, N2 e N3) e três pesos (P1, P2, P3). Calcule e mostre a média ponderada dessas notas.
+
+# N1=float(input('Digite a primeira nota do aluno para calcular a média ponderada: '))
+# N2=float(input('Digite a segunda nota do aluno para calcular a média ponderada: '))
+# N3=float(input('Digite a terceira nota do aluno para calcular a média ponderada: '))
+
+# P1=float(input('Digite o peso da primeira nota para calcular a média ponderada: '))
+# P2=float(input('Digite o peso da segunda nota para calcular a média ponderada: '))
+# P3=float(input('Digite o peso da terceira nota para calcular a média ponderada: '))
+
+# somaPesos=P1+P2+P3
+# mediaPonderada=(N1*P1+N2*P2+N3*P3)/somaPesos
+
+# print(f'A média ponderada das notas {N1:.2f}, {N2:.2f} e {N3:.2f} com os pesos {P1:.2f}, {P2:.2f} e {P3:.2f} é: {mediaPonderada:.2f}') 
+
+
