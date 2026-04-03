@@ -366,14 +366,62 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # print(f'Na soma dos dois valores, existem {horas} horas!')
 
 # # exercício 19
-# # algoritmo que leia uma temperatura em graus Celsius e a converta para graus Fahrenheit. A fórmula de conversão é TF = (TC * 1.8) + 32.
+# # algoritmo que leia uma temperatura que pode serem graus Celsius, Fahrenheit ou kelvin e converta para os outros dois formatos.
 
-# print('Algoritmo para converter uma temperatura de graus Celsius para graus Fahrenheit')
-# tempDigitado=float(input('Digite a temperatura em graus Celsius ou Fahrenheit: '))
+# def converterTemperatura(tempDigitado):
+#     tempFahrenheit=(tempDigitado*1.8)+32
+#     tempCelsius=(tempDigitado-32)/1.8
+#     tempKelvin=tempDigitado+273.15
+#     return tempFahrenheit, tempCelsius, tempKelvin
 
-# tempFahrenheit=(tempDigitado*1.8)+32
-# tempCelsius=(tempDigitado-32)/1.8
+# print('Algoritmo para converter uma temperatura que pode ser graus Celsius, Fahrenheit ou Kelvin para os outros dois formatos')
+# tempDigitado=float(input('Digite a temperatura para converter: '))
 
-# print(f'A temperatura digitada foi: {tempDigitado:.2f}°C ou {tempDigitado:.2f}°F')
-# print(f'A temperatura convertida é: {tempFahrenheit:.2f}°F ou {tempCelsius:.2f}°C')
+# tempFahrenheit, tempCelsius, tempKelvin = converterTemperatura(tempDigitado)
 
+# print(f'A temperatura digitada foi: {tempDigitado:.2f}°C ou {tempDigitado:.2f}°F ou {tempDigitado:.2f} K')
+# print(f'A temperatura convertida é: {tempFahrenheit:.2f}°F ou {tempCelsius:.2f}°C ou {tempKelvin:.2f} K')
+
+#  exercício 20
+# algoritmo que leia um valor em reais e a cotação do dólar do dia
+#  v1 - manual
+# valorDigitado=float(input('Digite um valor em reais para converter para dólares: '))
+# cotacaoDolar=float(input('Digite a cotação do dólar do dia: '))
+# valorDolar=valorDigitado/cotacaoDolar
+# print(f'O valor digitado em reais foi: R${valorDigitado:.2f}')
+# print(f'Com a cotação do dólar do dia, o valor convertido para dólares é: ${valorDolar:.2f}')
+
+#  v2 - request api
+import requests
+
+try:
+    print('Algoritmo para converter um valor em reais para outras moedas usando a cotação do dia obtida por meio de uma API')
+    valorDigitado=float(input('Digite um valor em reais para converter em outra moedas: '))
+
+    # Fazendo uma requisição para a API de câmbio para obter a cotação do dólar do dia
+    url='https://api.exchangerate-api.com/v4/latest/BRL'
+    resposta=requests.get(url)
+    # print(f'Status da resposta da API: {resposta.status_code}') # Verificando o status da resposta da API
+    dados=resposta.json()
+    # print(f'Dados obtidos da API: {dados}') # Verificando os dados obtidos da API
+
+    cotacaoDolar=dados['rates']['USD']
+    # print(f'Cotação do dólar do dia: {cotacaoDolar}') # Verificando a cotação do dólar obtida da API
+
+    valorDolar=valorDigitado*cotacaoDolar
+    valorEuro=valorDigitado*dados['rates']['EUR'] # Exemplo de conversão para euros usando a cotação obtida da API
+    valorYen=valorDigitado*dados['rates']['JPY'] # Exemplo de conversão para ienes usando a cotação obtida da API
+    valorRuble=valorDigitado*dados['rates']['RUB'] # Exemplo de conversão para rublos usando a cotação obtida da API
+    valorLibraEsterlina=valorDigitado*dados['rates']['GBP'] # Exemplo de conversão para libras esterlinas usando a cotação obtida da API
+
+    print(f'O valor digitado em reais foi: R${valorDigitado:.2f}')
+    print(f'Com a cotação do dólar do dia em {cotacaoDolar:.3f}, o valor convertido para dólares é: ${valorDolar:,.2f}')
+    print(f'Com a cotação do euro do dia em {dados["rates"]["EUR"]:.3f}, o valor convertido para euros é: €{valorEuro:,.2f}')
+    print(f'Com a cotação do iene do dia em {dados["rates"]["JPY"]:.3f}, o valor convertido para ienes é: ¥{valorYen:,.2f}')
+    print(f'Com a cotação do rublo do dia em {dados["rates"]["RUB"]:.3f}, o valor convertido para rublos é: ₽{valorRuble:,.2f}')
+    print(f'Com a cotação da libra esterlina do dia em {dados["rates"]["GBP"]:.3f}, o valor convertido para libras esterlinas é: £{valorLibraEsterlina:,.2f}')
+
+except requests.exceptions.RequestException as e:
+
+    print('Erro ao obter a cotação do dólar do dia. Por favor, tente novamente mais tarde.')
+    print(f'Detalhes do erro: {e}') 
