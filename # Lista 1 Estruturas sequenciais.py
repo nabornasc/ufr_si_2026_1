@@ -391,37 +391,105 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # print(f'O valor digitado em reais foi: R${valorDigitado:.2f}')
 # print(f'Com a cotação do dólar do dia, o valor convertido para dólares é: ${valorDolar:.2f}')
 
-#  v2 - request api
-import requests
+# #  v2 - request api
+# import requests
 
-try:
-    print('Algoritmo para converter um valor em reais para outras moedas usando a cotação do dia obtida por meio de uma API')
-    valorDigitado=float(input('Digite um valor em reais para converter em outra moedas: '))
+# try:
+#     print('Algoritmo para converter um valor em reais para outras moedas usando a cotação do dia obtida por meio de uma API')
+#     valorDigitado=float(input('Digite um valor em reais para converter em outra moedas: '))
 
-    # Fazendo uma requisição para a API de câmbio para obter a cotação do dólar do dia
-    url='https://api.exchangerate-api.com/v4/latest/BRL'
-    resposta=requests.get(url)
-    # print(f'Status da resposta da API: {resposta.status_code}') # Verificando o status da resposta da API
-    dados=resposta.json()
-    # print(f'Dados obtidos da API: {dados}') # Verificando os dados obtidos da API
+#     # Fazendo uma requisição para a API de câmbio para obter a cotação do dólar do dia
+#     url='https://api.exchangerate-api.com/v4/latest/BRL'
+#     resposta=requests.get(url)
+#     # print(f'Status da resposta da API: {resposta.status_code}') # Verificando o status da resposta da API
+#     dados=resposta.json()
+#     # print(f'Dados obtidos da API: {dados}') # Verificando os dados obtidos da API
 
-    cotacaoDolar=dados['rates']['USD']
-    # print(f'Cotação do dólar do dia: {cotacaoDolar}') # Verificando a cotação do dólar obtida da API
+#     cotacaoDolar=dados['rates']['USD']
+#     # print(f'Cotação do dólar do dia: {cotacaoDolar}') # Verificando a cotação do dólar obtida da API
 
-    valorDolar=valorDigitado*cotacaoDolar
-    valorEuro=valorDigitado*dados['rates']['EUR'] # Exemplo de conversão para euros usando a cotação obtida da API
-    valorYen=valorDigitado*dados['rates']['JPY'] # Exemplo de conversão para ienes usando a cotação obtida da API
-    valorRuble=valorDigitado*dados['rates']['RUB'] # Exemplo de conversão para rublos usando a cotação obtida da API
-    valorLibraEsterlina=valorDigitado*dados['rates']['GBP'] # Exemplo de conversão para libras esterlinas usando a cotação obtida da API
+#     valorDolar=valorDigitado*cotacaoDolar
+#     valorEuro=valorDigitado*dados['rates']['EUR'] # Exemplo de conversão para euros usando a cotação obtida da API
+#     valorYen=valorDigitado*dados['rates']['JPY'] # Exemplo de conversão para ienes usando a cotação obtida da API
+#     valorRuble=valorDigitado*dados['rates']['RUB'] # Exemplo de conversão para rublos usando a cotação obtida da API
+#     valorLibraEsterlina=valorDigitado*dados['rates']['GBP'] # Exemplo de conversão para libras esterlinas usando a cotação obtida da API
 
-    print(f'O valor digitado em reais foi: R${valorDigitado:.2f}')
-    print(f'Com a cotação do dólar do dia em {cotacaoDolar:.3f}, o valor convertido para dólares é: ${valorDolar:,.2f}')
-    print(f'Com a cotação do euro do dia em {dados["rates"]["EUR"]:.3f}, o valor convertido para euros é: €{valorEuro:,.2f}')
-    print(f'Com a cotação do iene do dia em {dados["rates"]["JPY"]:.3f}, o valor convertido para ienes é: ¥{valorYen:,.2f}')
-    print(f'Com a cotação do rublo do dia em {dados["rates"]["RUB"]:.3f}, o valor convertido para rublos é: ₽{valorRuble:,.2f}')
-    print(f'Com a cotação da libra esterlina do dia em {dados["rates"]["GBP"]:.3f}, o valor convertido para libras esterlinas é: £{valorLibraEsterlina:,.2f}')
+#     print(f'O valor digitado em reais foi: R${valorDigitado:.2f}')
+#     print(f'Com a cotação do dólar do dia em {cotacaoDolar:.3f}, o valor convertido para dólares é: ${valorDolar:,.2f}')
+#     print(f'Com a cotação do euro do dia em {dados["rates"]["EUR"]:.3f}, o valor convertido para euros é: €{valorEuro:,.2f}')
+#     print(f'Com a cotação do iene do dia em {dados["rates"]["JPY"]:.3f}, o valor convertido para ienes é: ¥{valorYen:,.2f}')
+#     print(f'Com a cotação do rublo do dia em {dados["rates"]["RUB"]:.3f}, o valor convertido para rublos é: ₽{valorRuble:,.2f}')
+#     print(f'Com a cotação da libra esterlina do dia em {dados["rates"]["GBP"]:.3f}, o valor convertido para libras esterlinas é: £{valorLibraEsterlina:,.2f}')
 
-except requests.exceptions.RequestException as e:
+# except requests.exceptions.RequestException as e:
 
-    print('Erro ao obter a cotação do dólar do dia. Por favor, tente novamente mais tarde.')
-    print(f'Detalhes do erro: {e}') 
+#     print('Erro ao obter a cotação do dólar do dia. Por favor, tente novamente mais tarde.')
+#     print(f'Detalhes do erro: {e}') 
+
+# # exercício 21
+# # algoritmo que, dado o peso de uma pessoa em quilogramas, calcule e imprima o peso da pessoa em gramas
+
+# pesoKg=float(input('Digite um peso em kg para converter para gramas: '))
+# pesoGm=pesoKg*1000
+# print(f'O peso digitado em kg foi: {pesoKg:,.2f} kg')
+# print(f'O peso convertido para gramas é: {pesoGm:,.2f} g')
+
+# # exercício 22
+# # algoritmo que, dado uma medida em polegadas, converta essa medida para metros e jardas
+
+# medidaPolegadas=float(input('Digite uma medida em polegadas para converter para metros e jardas: '))
+# medidaMetros=medidaPolegadas*0.0254
+# medidaJardas=medidaPolegadas*0.0277778
+# print(f'A medida digitada em polegadas foi: {medidaPolegadas:,.2f} polegadas')
+# print(f'A medida convertida para metros é: {medidaMetros:,.4f} metros')
+# print(f'A medida convertida para jardas é: {medidaJardas:,.4f} jardas')
+
+# # exercício 23
+# # algoritmo que, dado uma velocidade em metros por segundo (m/s) para nós por segundo (n/s)
+
+# velocidadeMS=float(input('Digite uma velocidade em metros por segundo para converter para nós por segundo: '))
+# velocidadeNS=velocidadeMS*1.94384
+# print(f'A velocidade digitada em metros por segundo foi: {velocidadeMS:,.2f} m/s')
+# print(f'A velocidade convertida para nós por segundo é: {velocidadeNS:,.2f} n/s')
+
+# # exercício 24
+# # algoritmo que calcule o valor de delta para uma equação de segundo grau,
+# # utilizando a fórmula delta = b² - 4ac.
+
+# valorA=float(input('Digite o valor de a para calcular o delta de uma equação de segundo grau: '))
+# valorB=float(input('Digite o valor de b para calcular o delta de uma equação de segundo grau: '))
+# valorC=float(input('Digite o valor de c para calcular o delta de uma equação de segundo grau: '))
+
+# delta=valorB**2-4*valorA*valorC
+
+# print(f'O valor de delta para a equação de segundo grau é: {delta:,.2f}')
+
+
+# exercício 25
+# algoritmo que calcule e apresente o valor do volume e a superfície de um cilindro,
+# dados o raio R e a altura h, ambos em centímetros
+# import math
+
+# raio=float(input('Digite o valor do raio R do cilindro em cm: '))
+# altura=float(input('Digite o valor da altura h do cilindro em cm: '))
+# volume=math.pi*raio**2*altura
+# superficie=2*math.pi*raio*(raio+altura)
+
+# print(f'O volume do cilindro é: {volume:,.2f} cm³')
+# print(f'A superfície do cilindro é: {superficie:,.2f} cm²')
+
+# # exercício 26
+# # algoritmo que, dado o raio de um círculo,
+# #  calcule e imprima o perímetro e a área desse círculo
+# import math
+
+# raio=float(input('Digite o valor do raio do círculo para calcular o perímetro e a área: '))
+
+# perimetro=2*math.pi*raio
+# area=math.pi*raio**2
+
+# print(f'O perímetro do círculo é: {perimetro:,.2f} unidades de comprimento')
+# print(f'A área do círculo é: {area:,.2f} unidades de área')
+
+
+

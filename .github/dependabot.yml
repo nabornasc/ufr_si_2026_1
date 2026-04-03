@@ -8,6 +8,10 @@ updates:
   - package-ecosystem: "" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly"
-
-      
+      interval: 'daily' # Check for updates daily
+      time: '10:00' # Check for updates at 10:00 AM
+      timezone: 'America/cuiaba' # Use the specified time zone for the update checks  
+    Optionally, you can specify additional configuration options here, such as:
+    - open-pull-requests-limit: 5 # Limit the number of open pull requests created by Dependabot
+    - automerged_updates: true # Automatically merge updates that pass tests and meet the specified criteria
+    - versioning-strategy: increase-if-necessary # Specify how version updates should be handled (e.g., increase-if-necessary, widen, lockfile-only)
