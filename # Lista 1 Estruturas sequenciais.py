@@ -266,14 +266,114 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 
 # print(f'Total de dias cumpridos no ano até a data {dataStr}: {diasCumpridos}')
 
-# v2 - usando lista
-from datetime import datetime
+# # v2 - usando lista
+# from datetime import datetime
 
-print('Algoritmo para calcular o total de dias cumpridos no ano a partir de uma data no formato DDMM')
-dataStr=input('Digite a data no formato DDMM: ')
-data=datetime.strptime(dataStr, '%d%m')
-dia=data.day
-mes=data.month
-diasPorMes=[31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-diasCumpridos=sum(diasPorMes[:mes-1])+dia
-print(f'Total de dias cumpridos no ano até a data {dataStr}: {diasCumpridos}')
+# print('Algoritmo para calcular o total de dias cumpridos no ano a partir de uma data no formato DDMM')
+# dataStr=input('Digite a data no formato DDMM: ')
+# data=datetime.strptime(dataStr, '%d%m')
+# dia=data.day
+# mes=data.month
+# diasPorMes=[31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+# diasCumpridos=sum(diasPorMes[:mes-1])+dia
+# print(f'Total de dias cumpridos no ano até a data {dataStr}: {diasCumpridos}')
+
+# # v3 - usando datetime
+# from datetime import datetime
+
+# print('Algoritmo para calcular o total de dias cumpridos no ano a partir de uma data no formato DDMM')
+
+# try:
+
+#     dataStr=input('Digite a data no formato DDMM: ')
+
+#     ano=datetime.now().year
+
+#     data=datetime.strptime(dataStr+str(ano), '%d%m%Y')
+
+#     diasCumpridos=(data.timetuple().tm_yday)
+
+#     print(f'Total de dias cumpridos no ano até a data {dataStr}: {diasCumpridos}')
+
+# except ValueError:
+
+#     print('Data inválida. Por favor, insira uma data no formato DDMM (ex: 15 de junho no formato 1506).')
+
+# # exercício 15
+# # algoritmo que leia um valor em horas e minutos, representado por um número inteiro de 4 dígitos, e informe quantos minutos se passaram desde o início do dia
+
+# print('Algoritmo para calcular quantos minutos se passaram desde o início do dia a partir de um valor em horas e minutos no formato HHMM')
+
+# tempo=int(input('Digite um valor em H e M no formato HHMM:'))
+# minutos=tempo//100*60+tempo%100 # calculo usando o quociente para obter as horas e multiplicando por 60, e usando o resto para obter os minutos
+# print(f'Minutos passados desde o início do dia: {minutos} minutos!')
+
+# #  exercício 16
+# # algoritmo que receba a informação de hora e minutos no formato HHMM e calcular e mostrar o total de horas e total de minutos que faltam para o final do dia
+
+# print('Algoritmo para calcular quantas horas e minutos faltam para o final do dia a partir de um valor em horas e minutos no formato HHMM')
+# tempo=int(input('Digite um valor em H e M no formato HHMM:'))
+# horas=tempo//100
+# minutos=tempo%100
+# horasFaltam=23-horas
+# minutosFaltam=60-minutos
+# if minutosFaltam==60:
+#     minutosFaltam=0
+#     horasFaltam+=1
+
+# print(f'Faltam {horasFaltam} horas e {minutosFaltam} minutos para o final do dia!')
+
+# # exercício 17
+# # algoritmo que receba a informação de data e hora (formato DDMMHHMM - dia mês hora minutos) e calcular e mostrar o total de tempo para finalizar o ano comercial, também no formato DDMMHHMM
+
+# print('Algoritmo para calcular o tempo restante para finalizar o ano comercial a partir de uma data e hora no formato DDMMHHMM')
+# from datetime import datetime
+
+# try: # usando try para tratar possíveis erros de formato na entrada do usuário
+
+#     dataHoraStr=input('Digite a data e hora no formato DDMMHHMM: ')
+
+#     ano=datetime.now().year
+
+#     dataHora=datetime.strptime(dataHoraStr+str(ano), '%d%m%H%M%Y')
+
+#     dataHoraFim=datetime(ano, 12, 31, 23, 59)
+
+#     tempoRestante=dataHoraFim-dataHora
+
+#     dias=tempoRestante.days
+#     horas=tempoRestante.seconds//3600
+#     minutos=(tempoRestante.seconds%3600)//60
+
+#     print(f'Tempo restante para finalizar o ano comercial: {dias} dias, {horas} horas e {minutos} minutos!')
+# except ValueError: # caso o usuário insira um valor que não esteja no formato esperado, o programa exibirá uma mensagem de erro 
+
+#     print('Data e hora inválida. Por favor, insira uma data e hora no formato DDMMHHMM (ex: 15 de junho às 14:30 no formato 15061430).')
+
+# # exercício 18
+# # algoritmo que receba dois números inteiros de 4 dígitos, representando horas e minutos (por exemplo: 1545, equivalente a 15:45h), e calcular quantas horas estão contidas na soma desses dois valores
+
+# print('Algoritmo para calcular quantas horas estão contidas na soma de dois valores de horas e minutos no formato HHMM')
+# tempo1=int(input('Digite o primeiro valor em H e M no formato HHMM:'))
+# tempo2=int(input('Digite o segundo valor em H e M no formato HHMM:'))
+# minutos1=tempo1//100*60+tempo1%100
+# print(f'Minutos do primeiro valor: {minutos1} minutos!')
+# minutos2=tempo2//100*60+tempo2%100
+# print(f'Minutos do segundo valor: {minutos2} minutos!')
+# somaMinutos=minutos1+minutos2
+# print(f'Soma dos minutos dos dois valores: {somaMinutos} minutos!')
+# horas=somaMinutos//60 # calculo usando o quociente para obter o número de horas contidas na soma dos minutos
+# print(f'Na soma dos dois valores, existem {horas} horas!')
+
+# # exercício 19
+# # algoritmo que leia uma temperatura em graus Celsius e a converta para graus Fahrenheit. A fórmula de conversão é TF = (TC * 1.8) + 32.
+
+# print('Algoritmo para converter uma temperatura de graus Celsius para graus Fahrenheit')
+# tempDigitado=float(input('Digite a temperatura em graus Celsius ou Fahrenheit: '))
+
+# tempFahrenheit=(tempDigitado*1.8)+32
+# tempCelsius=(tempDigitado-32)/1.8
+
+# print(f'A temperatura digitada foi: {tempDigitado:.2f}°C ou {tempDigitado:.2f}°F')
+# print(f'A temperatura convertida é: {tempFahrenheit:.2f}°F ou {tempCelsius:.2f}°C')
+
