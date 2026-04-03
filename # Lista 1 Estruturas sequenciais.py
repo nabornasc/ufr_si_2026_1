@@ -489,7 +489,18 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # area=math.pi*raio**2
 
 # print(f'O perímetro do círculo é: {perimetro:,.2f} unidades de comprimento')
-# print(f'A área do círculo é: {area:,.2f} unidades de área')
+# print(f'A área do círculo é: {area:,.2f} unidades de área') 
+
+# exercício 27
+# algoritmo que, dado a base e a altura de um retângulo, 
+# calcule e imprima o perímetro e a área desse retângulo
+# base=float(input('Digite o valor da base do retângulo para calcular o perímetro e a área: '))
+# altura=float(input('Digite o valor da altura do retângulo para calcular o perímetro e a área: '))
+# perimetro=2*(base+altura)
+# area=base*altura
+# print(f'O perímetro do retângulo é: {perimetro:,.2f} unidades de comprimento')
+# print(f'A área do retângulo é: {area:,.2f} unidades de área')
 
 
-
+# exercício 28
+# 
