@@ -543,4 +543,73 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 
 # print(f'A média ponderada das notas {N1:.2f}, {N2:.2f} e {N3:.2f} com os pesos {P1:.2f}, {P2:.2f} e {P3:.2f} é: {mediaPonderada:.2f}') 
 
+# exercício 31
+# algoritmo que leia um valor a ser dividido entre os três primeiros colocados de um concurso.
+#  O primeiro colocado receberá 50% do valor, o segundo receberá 30%,
+#  e o terceiro, 20%. O programa deve calcular e mostrar quanto cada competidor irá receber.
+
+# valorTotal=float(input('Digite o valor total a ser dividido entre os três primeiros colocados de um concurso: '))
+
+# valorPrimeiro=valorTotal*0.5
+# valorSegundo=valorTotal*0.3
+# valorTerceiro=valorTotal*0.2
+
+# print(f'O valor total a ser dividido é: R${valorTotal:,.2f}')
+# print(f'O primeiro colocado receberá: R${valorPrimeiro:,.2f}')
+# print(f'O segundo colocado receberá: R${valorSegundo:,.2f}')
+# print(f'O terceiro colocado receberá: R${valorTerceiro:,.2f}')
+
+# exercício 32
+# algoritmo que calcule e mostre o valor do salário bruto,
+#  o valor calculado do percentual de desconto e o valor do salário líquido de um professor.
+#  Os dados fornecidos serão o valor da hora/aula, o número de aulas dadas no mês e o percentual
+# de desconto do INSS, que é de 12%.
+
+# print('Algoritmo para calcular o salário bruto, o valor do desconto do INSS e o salário líquido de um professor a partir do valor da hora/aula, número de aulas dadas no mês e percentual de desconto do INSS')
+
+# valorHoraAula=float(input('Digite o valor da hora/aula do professor: '))
+# numeroAulas=int(input('Digite o número de aulas dadas pelo professor no mês: '))
+# percentualDesconto=0.12
+# salarioBruto=valorHoraAula*numeroAulas
+# descontoINSS=salarioBruto*percentualDesconto
+# salarioLiquido=salarioBruto-descontoINSS
+
+# print(f'O salário bruto do professor é: R${salarioBruto:,.2f}')
+# print(f'O valor do desconto do INSS é: R${descontoINSS:,.2f}')
+# print(f'O salário líquido do professor é: R${salarioLiquido:,.2f}')
+
+# exercício 33
+# algoritmo que leia o valor de compra de uma mercadoria e o valor percentual do cálculo do 
+# preço de custo, e em seguida, mostrar o preço de compra, o valor do aumento e o preço de venda.
+
+# print('Algoritmo para calcular o preço de venda de uma mercadoria a partir do valor de compra e do percentual de aumento para calcular o preço de custo')
+
+# valorCompra=float(input('Digite o valor de compra da mercadoria: '))
+# percentualAumento=float(input('Digite o valor percentual do aumento para calcular o preço de venda da mercadoria: '))
+
+# precoCusto=valorCompra
+# valorAumento=precoCusto*percentualAumento/100
+# precoVenda=precoCusto+valorAumento 
+
+# print(f'O preço de compra da mercadoria é: R${precoCusto:,.2f}')
+# print(f'O valor do aumento para calcular o preço de venda é: R${valorAumento:,.2f}')
+# print(f'O preço de venda da mercadoria é: R${precoVenda:,.2f}')
+
+# exercício 34
+# algoritmo que receba o valor inicial e o valor final de um produto e mostre qual foi a 
+# porcentagem de aumento
+
+print('Algoritmo para calcular a porcentagem de aumento entre um valor inicial e um valor final de um produto')
+
+valorInicial=float(input('Digite o valor inicial do produto: '))
+valorFinal=float(input('Digite o valor final do produto: '))
+
+if valorInicial!=0:
+    porcentagemAumento=((valorFinal-valorInicial)/valorInicial)*100
+    print(f'O valor inicial do produto foi: R${valorInicial:,.2f}')
+    print(f'O valor final do produto foi: R${valorFinal:,.2f}')
+    print(f'A porcentagem de aumento entre o valor inicial e o valor final do produto é: {porcentagemAumento:.2f}%')
+else:
+    print('O valor inicial do produto não pode ser zero para calcular a porcentagem de aumento.')
+
 
