@@ -186,41 +186,94 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 
 # Exercício 13
 # algoritmo que leia a idade de uma pessoa em anos e mostre esse valor convertido em dias, horas, minutos e segundos, considerando o tempo decorrido até o momento em que o algoritmo foi executado
+# from datetime import datetime
+
+# print('Algoritmo para converter a idade completa.')
+
+# dataString=input('Digite a data de nascimento da pessoa no formato DDMMAAAA: ')
+# dataNascimento=datetime.strptime(dataString,'%d%m%Y')
+# dataAtual=datetime.now()
+
+# idadeAnos=dataAtual.year-dataNascimento.year 
+# # print(f'Idade em anos: {idadeAnos}')
+# idadeMeses=dataAtual.month-dataNascimento.month 
+# # print(f'Idade em meses: {idadeMeses}')
+# idadeDias=dataAtual.day-dataNascimento.day 
+# # print(f'Idade em dias: {idadeDias}')
+
+
+# if idadeMeses<0 or (idadeMeses==0 and idadeDias<0):
+#     idadeAnos-=1
+#     idadeMeses+=12
+#     idadeDias+=30
+
+# diferencaDias=(dataAtual-dataNascimento).days
+# # print(f'Diferença em dias: {diferencaDias}')
+# idadeHoras=diferencaDias*24
+# # print(f'Idade em horas: {idadeHoras}')
+# idadeMinutos=idadeHoras*60
+# # print(f'Idade em minutos: {idadeMinutos}')
+# idadeSegundos=idadeMinutos*60
+# # print(f'Idade em segundos: {idadeSegundos}')
+
+# def formatar(n):
+#     return f'{n:,}'.replace(',', '.')
+
+# print('\nIdade detalhada:')
+# print(f'Anos: {formatar(idadeAnos)}\nMeses: {formatar(idadeMeses)}\nDias: {formatar(idadeDias)}')
+
+# print(f'Horas: {formatar(idadeHoras)}\nMinutos: {formatar(idadeMinutos)}\nSegundos: {formatar(idadeSegundos)}')
+
+# exercício 14
+# algoritmo que receba a informação de data (dia e mês, no formato DDMM) e calcular e mostrar o total de dias cumpridos no ano
+# v1 - manual 
+# from datetime import datetime
+
+
+# print('Algoritmo para calcular o total de dias cumpridos no ano a partir de uma data no formato DDMM') 
+# dataStr=input('Digite a data no formato DDMM: ')
+# data=datetime.strptime(dataStr,'%d%m')
+
+# dia=data.day
+# mes=data.month
+
+# diasCumpridos=0 
+
+# if mes>1:
+#     diasCumpridos+=31
+# if mes>2:
+#     diasCumpridos+=29
+# if mes>3:
+#     diasCumpridos+=31
+# if mes>4:
+#     diasCumpridos+=30
+# if mes>5:
+#     diasCumpridos+=31
+# if mes>6:
+#     diasCumpridos+=30
+# if mes>7:
+#     diasCumpridos+=31
+# if mes>8:    
+#     diasCumpridos+=31
+# if mes>9:
+#     diasCumpridos+=30
+# if mes>10:
+#     diasCumpridos+=31
+# if mes>11:
+#     diasCumpridos+=30
+
+# diasCumpridos+=dia
+
+# print(f'Total de dias cumpridos no ano até a data {dataStr}: {diasCumpridos}')
+
+# v2 - usando lista
 from datetime import datetime
 
-print('Algoritmo para converter a idade completa.')
-
-dataString=input('Digite a data de nascimento da pessoa no formato DDMMAAAA: ')
-dataNascimento=datetime.strptime(dataString,'%d%m%Y')
-dataAtual=datetime.now()
-
-idadeAnos=dataAtual.year-dataNascimento.year 
-# print(f'Idade em anos: {idadeAnos}')
-idadeMeses=dataAtual.month-dataNascimento.month 
-# print(f'Idade em meses: {idadeMeses}')
-idadeDias=dataAtual.day-dataNascimento.day 
-# print(f'Idade em dias: {idadeDias}')
-
-
-if idadeMeses<0 or (idadeMeses==0 and idadeDias<0):
-    idadeAnos-=1
-    idadeMeses+=12
-    idadeDias+=30
-
-diferencaDias=(dataAtual-dataNascimento).days
-# print(f'Diferença em dias: {diferencaDias}')
-idadeHoras=diferencaDias*24
-# print(f'Idade em horas: {idadeHoras}')
-idadeMinutos=idadeHoras*60
-# print(f'Idade em minutos: {idadeMinutos}')
-idadeSegundos=idadeMinutos*60
-# print(f'Idade em segundos: {idadeSegundos}')
-
-def formatar(n):
-    return f'{n:,}'.replace(',', '.')
-
-print('\nIdade detalhada:')
-print(f'Anos: {formatar(idadeAnos)}\nMeses: {formatar(idadeMeses)}\nDias: {formatar(idadeDias)}')
-
-print(f'Horas: {formatar(idadeHoras)}\nMinutos: {formatar(idadeMinutos)}\nSegundos: {formatar(idadeSegundos)}')
-
+print('Algoritmo para calcular o total de dias cumpridos no ano a partir de uma data no formato DDMM')
+dataStr=input('Digite a data no formato DDMM: ')
+data=datetime.strptime(dataStr, '%d%m')
+dia=data.day
+mes=data.month
+diasPorMes=[31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+diasCumpridos=sum(diasPorMes[:mes-1])+dia
+print(f'Total de dias cumpridos no ano até a data {dataStr}: {diasCumpridos}')
