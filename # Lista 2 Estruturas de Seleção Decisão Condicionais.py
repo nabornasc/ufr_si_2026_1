@@ -154,3 +154,128 @@ Seção de Declarações de variáveis
 # else:
 #     print('O aluno está Aprovado.')
 
+# exercício 7
+# algoritmo que receba o peso de uma pessoa e classifique-a como 
+# "Abaixo do peso" (IMC menor que 18.5), "Peso normal" 
+# (IMC entre 18.5 e 24.9) ou "Acima do peso" (IMC maior que 24.9).
+
+# peso=float(input('Digite o peso da pessoa em kg: '))
+# altura=float(input('Digite a altura da pessoa em cm: '))
+
+# imc=peso/((altura/100)**2)
+
+# if imc < 18.5:
+#     print(f'Seu IMC é {imc:.2f}, classificado como Abaixo do peso.')
+# elif imc >= 18.5 and imc <= 24.9:
+#     print(f'Seu IMC é {imc:.2f}, classificado como Peso normal.')
+# else:
+#     print(f'Seu IMC é {imc:.2f}, classificado como Acima do peso.')
+
+# exercício 8
+# algoritmo que receba o valor de uma compra e aplique um desconto 
+# de acordo com o valor: "Desconto de 5%" (para compras abaixo de 100 
+# reais), "Desconto de 10%" (para compras entre 100 e 500 reais) ou 
+# "Desconto de 15%" (para compras acima de 500 reais).
+
+# valor_compra=float(input('Digite o valor da compra em reais: '))
+
+# if valor_compra < 100:
+#     desconto = valor_compra * 0.05
+#     print(f'Você recebeu um desconto de 5%. O valor da compra com desconto é: R$ {valor_compra-desconto:.2f}')
+# elif valor_compra >= 100 and valor_compra <= 500:
+#     desconto = valor_compra * 0.1
+#     print(f'Você recebeu um desconto de 10%. O valor da compra com desconto é: R$ {valor_compra-desconto:.2f}')
+# else:
+#     desconto = valor_compra * 0.15
+#     print(f'Você recebeu um desconto de 15%. O valor da compra com desconto é: R$ {valor_compra-desconto:.2f}')
+
+# exercício 9
+# Programa para sorteio e verificação de número digitado pelo usuário,
+# mostrar se ganhou ou perdeu. 
+
+# import random
+
+# numeroSorteado = random.randint(1, 6)
+
+# numeroUsuario = int(input('Digite um número entre 1 e 6 para tentar ganhar: '))
+
+# if numeroUsuario == numeroSorteado:
+#     print('Parabéns! Você acertou o número sorteado.')
+# else:
+#     print(f'Que pena! O número sorteado foi {numeroSorteado}.')
+
+# exercício 10
+# algoritmo que gere um número inteiro aleatório entre 1 e 3,
+# onde cada número representa uma previsão do tempo. 
+# O número 1 indica "Ensolarado", o número 2 indica "Nublado" e 
+# o número 3 indica "Chuvoso". Exiba a previsão correspondente.
+
+# import random
+
+# numeroSorteado = random.randint(1, 3)
+
+# if numeroSorteado == 1:
+#     print('A previsão do tempo é: Ensolarado.')
+# elif numeroSorteado == 2:
+#     print('A previsão do tempo é: Nublado.')
+# else:
+#     print('A previsão do tempo é: Chuvoso.')
+
+# exercício 11
+# algoritmo que gere um número inteiro aleatório entre 1 e 100.
+# Verifique se o número está no intervalo de 1 a 33, 34 a 66, ou 67 a 100, 
+# e exiba uma mensagem correspondente: "Você ganhou um prêmio de bronze!", 
+# "Você ganhou um prêmio de prata!" ou "Você ganhou um prêmio de ouro!"
+
+# import random
+
+# numeroSorteado = random.randint(1, 100)
+
+# if numeroSorteado >= 1 and numeroSorteado <= 33:
+#     print(f'Número sorteado: {numeroSorteado}. Você ganhou um prêmio de bronze!')
+# elif numeroSorteado >= 34 and numeroSorteado <= 66:
+#     print(f'Número sorteado: {numeroSorteado}. Você ganhou um prêmio de prata!')
+# else:
+#     print(f'Número sorteado: {numeroSorteado}. Você ganhou um prêmio de ouro!')
+
+# exercício 12
+# algoritmo que gere um número inteiro aleatório entre 1 e 3 
+# para representar a escolha de um caminho em um jogo. O número 1 
+# indica "Caminho da floresta", o número 2 indica "Caminho da montanha" 
+# e o número 3 indica "Caminho do deserto"
+
+# import random
+
+# numeroSorteado = random.randint(1, 3)
+
+# if numeroSorteado == 1:
+#     print(f'{numeroSorteado} - Foi sorteado! O seu Caminho é da floresta.')
+# elif numeroSorteado == 2:
+#     print(f'{numeroSorteado} - Foi sorteado! O seu Caminho é da montanha.')
+# else:
+#     print(f'{numeroSorteado} - Foi sorteado! O seu Caminho é do deserto.')
+
+# exercício 13
+# Algoritmo que receba 2 numero inteiro e ordene-os em ordem crescente.
+
+# num1=int(input('Digite o primeiro número inteiro: '))
+# num2=int(input('Digite o segundo número inteiro: '))
+# if num1 == num2:
+#     print(f'Os números são iguais: {num1}, {num2}')
+# else:
+#     if num1 < num2:
+#         print(f'Os números em ordem crescente são: {num1}, {num2}')
+#     else:
+#         print(f'Os números em ordem crescente são: {num2}, {num1}')
+
+# exercício 14
+# algoritmo em Python para simular a brincadeira de "Par ou Ímpar" 
+# entre o usuário e o computador
+
+import random
+
+opcaoMaquina = random.choice(['P', 'I'])
+print()
+opcaoUsuario = input('Escolha P ou I considerando escolha do adversario: ')
+numeroUsuario = int(input('Digite um número inteiro entre 0 e 10: '))
+
