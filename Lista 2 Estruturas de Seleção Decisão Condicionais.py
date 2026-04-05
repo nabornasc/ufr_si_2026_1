@@ -274,8 +274,16 @@ Seção de Declarações de variáveis
 
 import random
 
-opcaoMaquina = random.choice(['P', 'I'])
-print()
-opcaoUsuario = input('Escolha P ou I considerando escolha do adversario: ')
-numeroUsuario = int(input('Digite um número inteiro entre 0 e 10: '))
+escolhaUsuario = input('Escolha P = Par ou I = Ímpar: ').strip().upper()
+# print(f'Você escolheu {'PAR' if escolhaUsuario == 'p' else 'IMPAR'}')
+
+numeroUsuario = int(input('Digite um número 1 a 10: '))
+# print(numeroUsuario)
+
+escolhaMaquina = 'I' if escolhaUsuario == 'P' else 'P'
+# print(escolhaMaquina)
+print(f'Computador escolheu: {"Par" if escolhaMaquina == "P" else "Ímpar"}')
+
+numeroMaquina = random.randint(1,10)
+print(numeroMaquina)
 

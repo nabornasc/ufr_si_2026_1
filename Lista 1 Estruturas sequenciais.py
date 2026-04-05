@@ -1,4 +1,4 @@
-'''# Lista 1 Estruturas sequenciais
+''' Lista 1 Estruturas sequenciais
 
 # Exercício 1
 varInteiro=int(input("Digite um número inteiro: "))
