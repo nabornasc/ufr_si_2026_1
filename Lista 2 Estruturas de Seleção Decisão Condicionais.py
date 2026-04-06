@@ -272,40 +272,45 @@ Seção de Declarações de variáveis
 # algoritmo em Python para simular a brincadeira de "Par ou Ímpar" 
 # entre o usuário e o computador
 
-import random
+# import random
 
-while True:
-    escolhaUsuario = input('Escolha P = Par ou I = Ímpar: ').strip().upper()
-    if escolhaUsuario in ('P', 'I'):
-        break
-    print('Escolha inválida. Por favor digite P ou I.')
+# while True:
+#     escolhaUsuario = input('Escolha P = Par ou I = Ímpar: ').strip().upper()
+#     if escolhaUsuario in ('P', 'I'):
+#         break
+#     print('Escolha inválida. Por favor digite P ou I.')
 
-print(f'Você escolheu {"PAR" if escolhaUsuario == "P" else "IMPAR"}')
+# print(f'Você escolheu {"PAR" if escolhaUsuario == "P" else "IMPAR"}')
 
-while True:
-    try:
-        numeroUsuario = int(input('Digite um número de 1 a 10: '))
-        if numeroUsuario < 1 or numeroUsuario > 10:
-            print('Número fora do intervalo. Digite um número entre 1 e 10.')
-            continue
-        break
-    except ValueError:
-        print('Digite apenas números inteiros.')
+# while True:
+#     try:
+#         numeroUsuario = int(input('Digite um número de 1 a 10: '))
+#         if numeroUsuario < 1 or numeroUsuario > 10:
+#             print('Número fora do intervalo. Digite um número entre 1 e 10.')
+#             continue
+#         break
+#     except ValueError:
+#         print('Digite apenas números inteiros.')
 
-escolhaMaquina = 'I' if escolhaUsuario == 'P' else 'P'
-# print(escolhaMaquina)
-print(f'\nComputador escolheu: {"Par" if escolhaMaquina == "P" else "Ímpar"}')
+# escolhaMaquina = 'I' if escolhaUsuario == 'P' else 'P'
+# # print(escolhaMaquina)
+# print(f'\nComputador escolheu: {"Par" if escolhaMaquina == "P" else "Ímpar"}')
 
-numeroMaquina = random.randint(1,10)
-# print(numeroMaquina)
-print(f'Computador jogou: {numeroMaquina}')
+# numeroMaquina = random.randint(1,10)
+# # print(numeroMaquina)
+# print(f'Computador jogou: {numeroMaquina}')
 
-soma = numeroMaquina + numeroUsuario
-resultado = 'P' if soma % 2 == 0 else 'I'
+# soma = numeroMaquina + numeroUsuario
+# resultado = 'P' if soma % 2 == 0 else 'I'
 
-print(f'\nSoma: {numeroUsuario} + {numeroMaquina} = {soma} → {"Par" if resultado == "P" else "Ímpar"}')
+# print(f'\nSoma: {numeroUsuario} + {numeroMaquina} = {soma} → {"Par" if resultado == "P" else "Ímpar"}')
 
-if resultado == escolhaUsuario:
-    print('\nVocê ganhou!\n')
-else:
-    print('\nVocê perdeu!\n')
+# if resultado == escolhaUsuario:
+#     print('\nVocê ganhou!\n')
+# else:
+#     print('\nVocê perdeu!\n')
+
+# exercicio 15
+# algoritmo que receba 2 números e verifique se eles são iguais ou diferentes.
+
+
