@@ -314,3 +314,5 @@ Seção de Declarações de variáveis
 # algoritmo que receba 2 números e verifique se eles são iguais ou diferentes.
 
 
+# print('Ola Mundo.')
+
