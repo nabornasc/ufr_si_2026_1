@@ -81,12 +81,12 @@
 
 # =================================
 
-codigoPeca1, numPeca1, valorPeca1 = input().split()
-codigoPeca2, numPeca2, valorPeca2 = input().split()
+# codigoPeca1, numPeca1, valorPeca1 = input().split()
+# codigoPeca2, numPeca2, valorPeca2 = input().split()
 
-fatura = int(numPeca1) * float(valorPeca1) + int(numPeca2) * float(valorPeca2)
+# fatura = int(numPeca1) * float(valorPeca1) + int(numPeca2) * float(valorPeca2)
 
-print(f'VALOR A PAGAR: R$ {fatura:.2f}')
+# print(f'VALOR A PAGAR: R$ {fatura:.2f}')
 
 # codigoPeca1=int(input())
 # numPeca1=int(input())
@@ -99,3 +99,58 @@ print(f'VALOR A PAGAR: R$ {fatura:.2f}')
 # fatura=(numPeca1*valorPeca1)+(numPeca2*valorPeca2)
 
 # print(f'VALOR A PAGAR: R$ {fatura:.2f}')
+
+# =================================
+
+# r=float(input())**3
+
+# pi=3.14159
+
+# volume=(4/3)*pi*r
+
+# print(f'VOLUME = {volume:.3f}')
+
+# =================================
+
+# try:
+#     a, b, c = input().split()
+#     a,b,c = float(a,b,c)
+#     # b = float(b)
+#     # c = float(c)
+# except ValueError as e:
+#     print(f"Erro: Entrada inválida. Esperava 3 números separados por espaço. Detalhes: {e}")
+#     exit()
+
+# pi = 3.14159
+
+# triaguloretangulo = a*c/2
+# areaCirculo = pi*c**2
+# areaTrapezio = (a+b)*c/2
+# areaQuadrado = b**2
+# areaRetangulo = a*b
+
+# print(f'TRIANGULO: {triaguloretangulo:.3F}')
+# print(f'CIRCULO: {areaCirculo:.3F}')
+# print(f'TRAPEZIO: {areaTrapezio:.3F}')
+# print(f'QUADRADO: {areaQuadrado:.3F}')
+# print(f'RETANGULO: {areaRetangulo:.3F}')
+
+# =================================
+
+# a, b, c = input().split()
+# a, b, c = int(a), int(b), int(c)
+
+# maiorAB = (a + b + abs(a - b)) // 2
+
+# if maiorAB < c:
+#     print(f'{c} eh o maior')
+# else:
+#     print(f'{maiorAB} eh o maior')
+    
+x, y = input().split()
+x, y = int(x), float(y)
+
+consumoMedio=x/y
+
+print(f'{consumoMedio:.3f} km/l')
+
