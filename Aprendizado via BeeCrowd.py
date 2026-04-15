@@ -146,11 +146,94 @@
 #     print(f'{c} eh o maior')
 # else:
 #     print(f'{maiorAB} eh o maior')
+
+# =================================
     
-x, y = input().split()
-x, y = int(x), float(y)
+# x, y = input().split()
+# x, y = int(x), float(y)
 
-consumoMedio=x/y
+# consumoMedio=x/y
 
-print(f'{consumoMedio:.3f} km/l')
+# print(f'{consumoMedio:.3f} km/l')
 
+# =================================
+
+# x1,y1=map(float,input().split())
+# x2,y2=map(float,input().split())
+
+# distancia=((x2-x1)**2+(y2-y1)**2)**(1/2)
+
+# print(f'{distancia:.4f}')
+
+# =================================
+
+# tempo=int(input())*2
+
+# print(f'{tempo} minutos')
+
+# =================================
+
+# tempoViagem=int(input())
+# velocidadeMedia=int(input())
+
+# quantLitros=(tempoViagem*velocidadeMedia)/12
+
+# print(f'{quantLitros:.3f}')
+
+# =================================
+
+''' ENCONTRAR ERRO 
+# n=int(input())
+# resto=n
+
+# nota100=(resto//100)
+# resto=resto%100
+
+# nota50=(resto//50)
+# resto=resto%50
+
+# nota20=(resto//20)
+# resto=resto%20
+
+# nota10=(resto//10)
+# resto=resto%10
+
+# nota5=(resto//5)
+# resto=resto%5
+
+# nota2=(resto//2)
+# resto=resto%2
+
+# nota1=(resto//1)
+
+# print(f'{nota100} nota(s) de R$ 100,00')
+# print(f'{nota50} nota(s) de R$ 50,00')
+# print(f'{nota20} nota(s) de R$ 20,00')
+# print(f'{nota10} nota(s) de R$ 10,00')
+# print(f'{nota5} nota(s) de R$ 5,00')
+# print(f'{nota2} nota(s) de R$ 2,00')
+# print(f'{nota1} nota(s) de R$ 1,00')
+'''
+
+# =================================
+
+# n = int(input())
+# cedulas = [100, 50, 20, 10, 5, 2, 1]
+
+# resto = n
+# for cedula in cedulas:
+#     quantidade = resto // cedula
+#     resto = resto % cedula
+#     print(f'{quantidade} nota(s) de R$ {cedula:,.2f}'.replace(',', '.'))
+
+# =================================
+    
+n=int(input())
+resto=n
+
+cedulas = [100,50,20,10,5,2,1]
+
+for cedula in cedulas:
+    quantidadeCedulas=resto//cedula
+    resto=resto%cedula
+    print(f'{quantidadeCedulas} nota(s) de R$ {cedula:.2f}'.replace('.',','))
