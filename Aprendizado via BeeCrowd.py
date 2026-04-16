@@ -228,12 +228,53 @@
 
 # =================================
     
-n=int(input())
-resto=n
+# n=int(input())
+# resto=n
 
-cedulas = [100,50,20,10,5,2,1]
+# cedulas = [100,50,20,10,5,2,1]
 
-for cedula in cedulas:
-    quantidadeCedulas=resto//cedula
-    resto=resto%cedula
-    print(f'{quantidadeCedulas} nota(s) de R$ {cedula:.2f}'.replace('.',','))
+# for cedula in cedulas:
+#     quantidadeCedulas=resto//cedula
+#     resto=resto%cedula
+#     print(f'{quantidadeCedulas} nota(s) de R$ {cedula:.2f}'.replace('.',','))
+
+# tempo=int(input())
+
+# segundos=tempo%60
+# print(segundos)
+# minutos=(tempo//60)%60
+# print(minutos)
+# horas=tempo//3600
+# print(horas)
+
+# print(f'{horas}:{minutos}:{segundos}')
+
+
+# idadeDias=int(input())
+
+# ano=idadeDias//365
+# mes=(idadeDias%365)//30
+# dia=(idadeDias%365)%30
+
+# print(f'{ano} ano(s)')
+# print(f'{mes} mes(es)') 
+# print(f'{dia} dia(s)')
+
+
+valor=float(input())
+centavos=round(valor*100)
+
+notas=[100,50,20,10,5,2]
+moedas=[1,.5,.25,.10,.05,.01]
+
+print('NOTAS:')
+for nota in notas:
+    quantNotas=valor//nota
+    valor=valor%nota
+    print(f'{int(quantNotas)} nota(s) de R$ {nota:.2f}'.replace(',','.'))
+
+print('MOEDAS:')
+for moeda in moedas:
+    quantMoedas=valor//moeda
+    valor=valor%moeda
+    print(f'{int(quantMoedas)} moeda(s) de R$ {moeda:.2f}'.replace(',','.'))
