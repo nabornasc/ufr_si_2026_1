@@ -261,20 +261,71 @@
 # print(f'{dia} dia(s)')
 
 
-valor=float(input())
-centavos=round(valor*100)
+# valor=float(input())
+# centavos=round(valor*100)
 
-notas=[100,50,20,10,5,2]
-moedas=[1,.5,.25,.10,.05,.01]
+# notas=[100,50,20,10,5,2]
+# moedas=[1,.5,.25,.10,.05,.01]
 
-print('NOTAS:')
-for nota in notas:
-    quantNotas=valor//nota
-    valor=valor%nota
-    print(f'{int(quantNotas)} nota(s) de R$ {nota:.2f}'.replace(',','.'))
+# print('NOTAS:')
+# for nota in notas:
+#     quantNotas=valor//nota
+#     valor=valor%nota
+#     print(f'{int(quantNotas)} nota(s) de R$ {nota:.2f}'.replace(',','.'))
 
-print('MOEDAS:')
-for moeda in moedas:
-    quantMoedas=valor//moeda
-    valor=valor%moeda
-    print(f'{int(quantMoedas)} moeda(s) de R$ {moeda:.2f}'.replace(',','.'))
+# print('MOEDAS:')
+# for moeda in moedas:
+#     quantMoedas=valor//moeda
+#     valor=valor%moeda
+#     print(f'{int(quantMoedas)} moeda(s) de R$ {moeda:.2f}'.replace(',','.'))
+
+# a=int(input())
+# b=int(input())
+# c=int(input())
+# d=int(input())
+
+# if b>c:
+#     if d>a:
+#         if c+d:
+#             if a+b:
+#                 if c % 2 == 0 and d % 2 == 0: # Positivos
+#                     if a % 2 == 0: # par
+#                         print('Valores aceitos')
+# else:
+#     print('Valores nao aceitos')
+    
+
+# a, b, c, d = map(int, input().split())
+
+# if b > c and d > a and c + d > a + b and c > 0 and d > 0 and a % 2 == 0:
+#     print("Valores aceitos")
+# else:
+#     print("Valores nao aceitos")
+
+# Leia 3 valores de ponto flutuante e efetue o cálculo das raízes da equação de Bhaskara. Se não for possível calcular as raízes, mostre a mensagem correspondente “Impossivel calcular”, caso haja uma divisão por 0 ou raiz de numero negativo.
+
+# a=float(input())
+# b=float(input())
+# c=float(input())
+
+# delta=(b**2)-4*a*c
+
+# if a==0 or delta<0:
+#     print('Impossivel calcular')
+# else:
+#     r1=(-b+delta**0.5)/(2*a)
+#     r2=(-b-delta**0.5)/(2*a)
+#     print(f'R1 = {r1:.5f}')
+#     print(f'R2 = {r2:.5f}')
+
+a,b,c=map(float,input().split())
+
+delta=(b**2)-4*a*c
+
+if a==0 or delta<0:
+    print('Impossivel calcular')
+else:
+    r1=(-b+delta**(1/2))/(2*a)
+    r2=(-b-delta**(1/2))/(2*a)
+    print(f'R1 = {r1:.5f}')
+    print(f'R2 = {r2:.5f}')
