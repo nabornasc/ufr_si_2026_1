@@ -318,14 +318,115 @@
 #     print(f'R1 = {r1:.5f}')
 #     print(f'R2 = {r2:.5f}')
 
-a,b,c=map(float,input().split())
+# a,b,c=map(float,input().split())
 
-delta=(b**2)-4*a*c
+# delta=(b**2)-4*a*c
 
-if a==0 or delta<0:
-    print('Impossivel calcular')
-else:
-    r1=(-b+delta**(1/2))/(2*a)
-    r2=(-b-delta**(1/2))/(2*a)
-    print(f'R1 = {r1:.5f}')
-    print(f'R2 = {r2:.5f}')
+# if a==0 or delta<0:
+#     print('Impossivel calcular')
+# else:
+#     r1=(-b+delta**(1/2))/(2*a)
+#     r2=(-b-delta**(1/2))/(2*a)
+#     print(f'R1 = {r1:.5f}')
+#     print(f'R2 = {r2:.5f}')
+    
+# valor=float(input())
+
+# if valor<0 or 100<valor:
+#     print('Fora de intervalo')
+# else:
+#     if valor >= 0 and valor <= 25:
+#         print('Intervalo [0,25]')
+#     else:
+#         if valor>25 and valor <= 50:
+#             print('Intervalo (25,50]')
+#         else:
+#             if valor>50 and valor <= 75:
+#                 print('Intervalo [50,75]')
+#             else:
+#                 print('Intervalo (75,100]')
+ 
+# ======================================================
+ 
+# codigoItem,quantItem=map(int,input().split())
+
+# if codigoItem==1:
+#     preco=4
+# elif codigoItem==2:
+#     preco=4.5
+# elif codigoItem==3:
+#     preco=5
+# elif codigoItem==4:
+#     preco=2
+# elif codigoItem==5:
+#     preco=1.5
+    
+# total=preco*quantItem
+
+# print(f'Total: R$ {total:.2f}')
+
+# ======================================================
+
+# codItem,quantItem=map(int,input().split())
+
+# preco={1:4,2:4.5,3:5,4:2,5:1.5}
+
+# total=preco[codItem]*quantItem
+
+# print(f'Total: R$ {total:.2f}')
+
+# ======================================================
+
+# n1,n2,n3,n4=map(float,input().split())
+
+# media=(n1*2+n2*3+n3*4+n4*1)/10
+
+# if media>=7:
+#     print(f'Media: {media:.1f}')
+#     print('Aluno aprovado.')
+# elif media>=5:
+#     n5=float(input())
+#     print(f'Media: {media:.1f}')
+#     print('Aluno em exame.')
+#     print(f'Nota do exame: {n5:.1f}')
+#     novaMedia=(media+n5)/2
+#     if novaMedia >= 5:
+#         print('Aluno aprovado.')
+#         print(f'Media final: {novaMedia:.1f}')
+#     else:
+#         print('Aluno reprovado.')
+#         print(f'Media final: {novaMedia:.1f}')
+# else:
+#     print(f'Media: {media:.1f}')
+#     print('Aluno reprovado.')
+
+# ======================================================
+
+# n1, n2, n3, n4 = map(float, input().split())
+
+# media = (n1*2 + n2*3 + n3*4 + n4) / 10
+
+# print(f"Media: {media:.1f}")
+
+# if media >= 7:
+#     print("Aluno aprovado.")
+
+# elif media < 5:
+#     print("Aluno reprovado.")
+
+# else:
+#     print("Aluno em exame.")
+    
+#     exame = float(input())
+#     print(f"Nota do exame: {exame:.1f}")
+    
+#     media_final = (media + exame) / 2
+    
+#     if media_final >= 5:
+#         print("Aluno aprovado.")
+#     else:
+#         print("Aluno reprovado.")
+    
+#     print(f"Media final: {media_final:.1f}")
+
+
