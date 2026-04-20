@@ -429,4 +429,49 @@
     
 #     print(f"Media final: {media_final:.1f}")
 
+# ======================================================
+
+# x,y=map(float,input().split())
+
+# if x==y==0:
+#     print('Origem')
+# elif x==0 or y==0:
+#     print('Eixo X' if x==0 else 'Eixo Y')
+# else:
+#     if x>0 and y>0:
+#         print('Q1')
+#     elif x<0 and y>0:
+#         print('Q2')
+#     elif x<0 and y<0:
+#         print('Q3')
+#     else:
+#         print('Q4')
+
+# ======================================================
+
+
+a,b,c=map(int,input().split())
+
+if a<b<c:
+    print(f'{a}\n{b}\n{c}\n')
+    print(f'{a}\n{b}\n{c}')
+else:
+    if a<c<b:
+        print(f'{a}\n{c}\n{b}\n')
+        print(f'{a}\n{b}\n{c}')
+    else:
+        if b<a<c:
+            print(f'{b}\n{a}\n{c}\n')
+            print(f'{a}\n{b}\n{c}')
+        else:
+            if b<c<a:
+                print(f'{b}\n{c}\n{a}\n')
+                print(f'{a}\n{b}\n{c}')
+            else:
+                if c<a<b:
+                    print(f'{c}\n{a}\n{b}\n')
+                    print(f'{a}\n{b}\n{c}')
+                else:
+                    print(f'{c}\n{b}\n{a}\n')
+                    print(f'{a}\n{b}\n{c}') 
 
