@@ -161,30 +161,93 @@
 
 # exercicio 8
 
-while True:
-    pesoTerra=float(input('Digite um peso em kg: '))
-    opcaoPlaneta=int(input('Digite 0 para sair,\nDigite 1 para Mercúrio,\nDigite 2 para Vênus,\nDigite 3 para Marte,\nDigite 4 para Jupiter,\nDigite 5 para Saturno,\nDigite 6 para Urano,\nDigite 7 para Netuno,\n\nOpção:  '))
+# while True:
+#     pesoTerra=float(input('Digite um peso em kg: '))
+#     opcaoPlaneta=int(input('Digite 0 para sair,\nDigite 1 para Mercúrio,\nDigite 2 para Vênus,\nDigite 3 para Marte,\nDigite 4 para Jupiter,\nDigite 5 para Saturno,\nDigite 6 para Urano,\nDigite 7 para Netuno,\n\nOpção:  '))
     
-    if opcaoPlaneta>7:
-        print('\nOpção inválida! Tente novamente.')
+#     if opcaoPlaneta>7:
+#         print('\nOpção inválida! Tente novamente.')
     
-    elif opcaoPlaneta!=0:
+#     elif opcaoPlaneta!=0:
         
-        pesoPlaneta =  {
-            (1, 'Mercúrio'): 0.38,
-            (2, 'Vênus'): 0.90,
-            (3, 'Marte'): 0.38,
-            (4, 'Jupiter'): 2.53,
-            (5, 'Saturno'): 1.06,
-            (6, 'Urano'): 0.89,
-            (7, 'Netuno'): 1.14
-        }
+#         pesoPlaneta =  {
+#             (1, 'Mercúrio'): 0.38,
+#             (2, 'Vênus'): 0.90,
+#             (3, 'Marte'): 0.38,
+#             (4, 'Jupiter'): 2.53,
+#             (5, 'Saturno'): 1.06,
+#             (6, 'Urano'): 0.89,
+#             (7, 'Netuno'): 1.14
+#         }
 
-        for chave, valor in pesoPlaneta.items():
-            if chave[0]==opcaoPlaneta:
-                print(f'\nSeu peso em {chave[1]} é {pesoTerra*valor:.2f} kg')
+#         for chave, valor in pesoPlaneta.items():
+#             if chave[0]==opcaoPlaneta:
+#                 print(f'\nSeu peso em {chave[1]} é {pesoTerra*valor:.2f} kg')
 
-    else:
-        break
+#     else:
+#         break
+
+# ================================================================
+
+# exercicio 9 
+
+# valorReal = float(input("Digite o valor de valor real: "))
+
+# if valorReal <= 1:
+#     resultado = 1
+# elif valorReal <= 2:
+#     resultado = 2
+# elif valorReal <= 3:
+#     resultado = valorReal ** 2
+# else:
+#     resultado = valorReal ** 3
+
+# print(f"f({valorReal}) = {resultado}")
+
+# ================================================================
+
+# exercicio 10
+
+# while True:
+#     profissao=input('\n[M] Médico\n[E] Engenheiro\n[P] Professor\n[O] Outros\nDigite a sua Profissão: ').lower()
+    
+#     if profissao in ('exit', 'sair', 'fim', 'quit'):
+#         break
+
+#     salario=float(input('Digite o salario: $ '))
+
+#     if profissao=='m':
+#         print((f'\nSeu salario com 20% de aumento fica: $ {salario+(salario*.2):,.2f}'))
+#     elif profissao=='e':
+#         print((f'\nSeu salario com 15% de aumento fica: $ {salario+(salario*.15):,.2f}'))
+#     elif profissao=='p':
+#         print((f'\nSeu salario com 10% de aumento fica: $ {salario+(salario*.10):,.2f}'))
+#     elif profissao=='o':
+#         print((f'\nSeu salario com 5% de aumento fica: $ {salario+(salario*.05):,.2f}'))
+#     else:
+#         print('\nOpção inválida! Tente novamente.')
+
+# ===============================================================
+
+# while True:
+#     profissao = input('Digite a profissão ([M] Médico, [E] Engenheiro, [P] Professor, [O] Outro): ')
+#     salario = float(input('Digite o salario: R$ '))
+
+#     profissoes = {
+#         'm':('Médico', salario * 0.25),
+#         'e':('Engenheiro', salario * 0.15),
+#         'p':('Professor', salario * 0.10),
+#         'o':('Outro', salario * 0.05)
+#     }
+
+#     if profissao in profissoes:
+#         print(f'\n{profissoes[profissao][0]} ganha R$ {salario+profissoes[profissao][1]:,.2f}')
+#         break
+
+#     else:
+#         print('\nOpção inválida! Tente novamente.')
+
+# =================================================================
+
 
 
