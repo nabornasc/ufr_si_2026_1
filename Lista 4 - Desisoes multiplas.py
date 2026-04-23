@@ -250,25 +250,43 @@
 # =================================================================
 # exercicio 11
 
-valorMerc=float(input('Digite o valor da mercadoria: R$ '))
-condPgto=input('Digite a condição de pagamento \n[V] A Vista, \n[C] Cheque, \n[CC] Cartão de Crédito, \n[CC2] Crédito em 2x, \n[CC3] Crédito em 3x: ').lower()
+# valorMerc=float(input('Digite o valor da mercadoria: R$ '))
+# condPgto=input('Digite a condição de pagamento \n[V] A Vista, \n[C] Cheque, \n[CC] Cartão de Crédito, \n[CC2] Crédito em 2x, \n[CC3] Crédito em 3x: ').lower()
 
-listPgto={
-    'v':('A Vista', 0.15),
-    'c':('Cheque', 0.15),
-    'cc':('Cartão de Crédito', 0.10),
-    'cc2':('Crédito em 2x', 0),
-    'cc3':('Crédito em 3x', 0.10)
-}
+# listPgto={
+#     'v':('A Vista', 0.15),
+#     'c':('Cheque', 0.15),
+#     'cc':('Cartão de Crédito', 0.10),
+#     'cc2':('Crédito em 2x', 0),
+#     'cc3':('Crédito em 3x', 0.10)
+# }
 
-if condPgto == 'cc3':
-    print(f'\n{listPgto[condPgto][0]} valor final R$ {valorMerc+(valorMerc*listPgto[condPgto][1]):,.2f}')    
-elif condPgto in listPgto:
-    print(f'\n{listPgto[condPgto][0]} valor final R$ {valorMerc-(valorMerc*listPgto[condPgto][1]):,.2f}')
-else:
-    print('\nOpção inválida! Tente novamente.')
+# if condPgto == 'cc3':
+#     print(f'\n{listPgto[condPgto][0]} valor final R$ {valorMerc+(valorMerc*listPgto[condPgto][1]):,.2f}')    
+# elif condPgto in listPgto:
+#     print(f'\n{listPgto[condPgto][0]} valor final R$ {valorMerc-(valorMerc*listPgto[condPgto][1]):,.2f}')
+# else:
+#     print('\nOpção inválida! Tente novamente.')
+
+# # ================================================================
+
+# # exercicio 12
+
+# A = float(input('Digite o valor de A: '))
+# B = float(input('Digite o valor de B: '))
+# C = float(input('Digite o valor de C: '))
+# D = float(input('Digite o valor de D: '))
+
+# maior = max(A, B, C, D)
+# menor = min(A, B, C, D)
+
+# print(f'\nO maior valor é {maior} e o menor valor é {menor}.')
 
 # ================================================================
 
-# exercicio 12
+a,b,c,d = map(float,input('Digite 4 valores para A, B, C e D: ').split())
 
+maior = max(a, b, c, d)
+menor = min(a, b, c, d)
+
+print(f'\nO maior valor é {maior} e o menor valor é {menor}.')
