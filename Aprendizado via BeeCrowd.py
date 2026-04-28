@@ -283,5 +283,7 @@
 
 a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
 
-if (a+b>c) or (a+c>b) or (b+c>a):
-    print(f'Area = {(a+b)*c/2:.1f}') 
+if (a+b>c) and (a+c>b) and (b+c>a):
+    print(f'Perimetro = {a+b+c:.1f}') 
+else:
+    print(f'Area = {((a+b)/2)*c:.1f}')

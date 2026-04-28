@@ -284,9 +284,46 @@
 
 # ================================================================
 
-a,b,c,d = map(float,input('Digite 4 valores para A, B, C e D: ').split())
+# a,b,c,d = map(float,input('Digite 4 valores para A, B, C e D: ').split())
 
-maior = max(a, b, c, d)
-menor = min(a, b, c, d)
+# maior = max(a, b, c, d)
+# menor = min(a, b, c, d)
 
-print(f'\nO maior valor é {maior} e o menor valor é {menor}.')
+# print(f'\nO maior valor é {maior} e o menor valor é {menor}.')
+
+# ================================================================
+
+# import math
+
+# # Solicita ao usuário que digite os coeficientes a, b e c
+# a = float(input("Digite o coeficiente a (diferente de zero): "))
+# b = float(input("Digite o coeficiente b: "))
+# c = float(input("Digite o coeficiente c: "))
+
+# # Calcula o valor de delta
+# delta = b**2 - 4 * a * c
+
+# # Verifica se delta é negativo
+# if (delta < 0):
+#     print("Não existem raízes reais.")
+
+# # Verifica se delta não é negativo
+# if (delta != 0):
+#     x1 = (-b + math.sqrt(delta)) / (2 * a)
+#     x2 = (-b - math.sqrt(delta)) / (2 * a)
+#     print("As raízes reais da equação são:")
+#     print("x1 =", x1)
+#     print("x2 =", x2)
+
+# ================================================================
+
+# Solicita ao usuário que digite a idade
+idade = int(input("Digite a idade: "))
+
+if (idade < 16):
+    print("Não eleitor.")
+else:
+    if ((idade >= 18) or (idade < 65)):
+        print("Eleitor obrigatório.")
+    else:
+        print("Eleitor facultativo.")

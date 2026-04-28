@@ -453,16 +453,16 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # print(f'A velocidade convertida para nós por segundo é: {velocidadeNS:,.2f} n/s')
 
 # # exercício 24
-# # algoritmo que calcule o valor de delta para uma equação de segundo grau,
-# # utilizando a fórmula delta = b² - 4ac.
+# algoritmo que calcule o valor de delta para uma equação de segundo grau,
+# utilizando a fórmula delta = b² - 4ac.
 
-# valorA=float(input('Digite o valor de a para calcular o delta de uma equação de segundo grau: '))
-# valorB=float(input('Digite o valor de b para calcular o delta de uma equação de segundo grau: '))
-# valorC=float(input('Digite o valor de c para calcular o delta de uma equação de segundo grau: '))
+valorA=float(input('Digite o valor de a para calcular o delta de uma equação de segundo grau: '))
+valorB=float(input('Digite o valor de b para calcular o delta de uma equação de segundo grau: '))
+valorC=float(input('Digite o valor de c para calcular o delta de uma equação de segundo grau: '))
 
-# delta=valorB**2-4*valorA*valorC
+delta=valorB**2-4*valorA*valorC
 
-# print(f'O valor de delta para a equação de segundo grau é: {delta:,.2f}')
+print(f'O valor de delta para a equação de segundo grau é: {delta:,.2f}')
 
 
 # exercício 25
@@ -599,17 +599,17 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # algoritmo que receba o valor inicial e o valor final de um produto e mostre qual foi a 
 # porcentagem de aumento
 
-print('Algoritmo para calcular a porcentagem de aumento entre um valor inicial e um valor final de um produto')
+# print('Algoritmo para calcular a porcentagem de aumento entre um valor inicial e um valor final de um produto')
 
-valorInicial=float(input('Digite o valor inicial do produto: '))
-valorFinal=float(input('Digite o valor final do produto: '))
+# valorInicial=float(input('Digite o valor inicial do produto: '))
+# valorFinal=float(input('Digite o valor final do produto: '))
 
-if valorInicial!=0:
-    porcentagemAumento=((valorFinal-valorInicial)/valorInicial)*100
-    print(f'O valor inicial do produto foi: R${valorInicial:,.2f}')
-    print(f'O valor final do produto foi: R${valorFinal:,.2f}')
-    print(f'A porcentagem de aumento entre o valor inicial e o valor final do produto é: {porcentagemAumento:.2f}%')
-else:
-    print('O valor inicial do produto não pode ser zero para calcular a porcentagem de aumento.')
+# if valorInicial!=0:
+#     porcentagemAumento=((valorFinal-valorInicial)/valorInicial)*100
+#     print(f'O valor inicial do produto foi: R${valorInicial:,.2f}')
+#     print(f'O valor final do produto foi: R${valorFinal:,.2f}')
+#     print(f'A porcentagem de aumento entre o valor inicial e o valor final do produto é: {porcentagemAumento:.2f}%')
+# else:
+#     print('O valor inicial do produto não pode ser zero para calcular a porcentagem de aumento.')
 
 
