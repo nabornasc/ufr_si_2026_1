@@ -279,3 +279,9 @@
 #     valor=valor%moeda
 #     print(f'{int(quantMoedas)} moeda(s) de R$ {moeda:.2f}'.replace(',','.'))
 
+# =============================================================
+
+a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
+
+if (a+b>c) or (a+c>b) or (b+c>a):
+    print(f'Area = {(a+b)*c/2:.1f}') 
