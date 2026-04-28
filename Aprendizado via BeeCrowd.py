@@ -281,9 +281,32 @@
 
 # =============================================================
 
-a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
+# a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
+#
+# if (a+b>c) and (a+c>b) and (b+c>a):
+#     print(f'Perimetro = {a+b+c:.1f}')
+# else:
+#     print(f'Area = {((a+b)/2)*c:.1f}')
 
-if (a+b>c) and (a+c>b) and (b+c>a):
-    print(f'Perimetro = {a+b+c:.1f}') 
-else:
-    print(f'Area = {((a+b)/2)*c:.1f}')
+# ====================================================
+
+# lados = list(map(float, input().split()))
+# lados.sort(reverse=True)
+# a, b, c = lados
+#
+# if a >= b + c:
+#     print("NAO FORMA TRIANGULO")
+# else:
+#     if a ** 2 == b ** 2 + c ** 2:
+#         print("TRIANGULO RETANGULO")
+#     elif a ** 2 > b ** 2 + c ** 2:
+#         print("TRIANGULO OBTUSANGULO")
+#     else:
+#         print("TRIANGULO ACUTANGULO")
+#
+#     if a == b == c:
+#         print("TRIANGULO EQUILATERO")
+#     elif a == b or b == c or a == c:
+#         print("TRIANGULO ISOSCELES")
+
+# ============================================
