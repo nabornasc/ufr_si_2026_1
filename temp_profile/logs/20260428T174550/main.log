@@ -1,0 +1,8 @@
+2026-04-28 17:45:50.688 [info] CrossAppIPCService: connecting to peer
+2026-04-28 17:45:50.742 [info] CrossAppIPCService: disconnected (instance-already-active)
+2026-04-28 17:45:50.749 [error] Error: Error mutex already exists
+    at Is.installMutex (file:///C:/Users/nabor/AppData/Local/Programs/Microsoft%20VS%20Code/10c8e557c8/resources/app/out/main.js:516:26126)
+2026-04-28 17:45:50.774 [info] update#setState idle
+2026-04-28 17:46:20.805 [info] update#setState checking for updates
+2026-04-28 17:46:21.005 [info] update#setState idle
+2026-04-28 17:50:17.700 [info] Extension host with pid 1002192 exited with code: 0, signal: unknown.

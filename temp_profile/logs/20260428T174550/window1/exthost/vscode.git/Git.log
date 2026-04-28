@@ -1,0 +1,7 @@
+2026-04-28 17:45:53.348 [info] [main] Log level: Info
+2026-04-28 17:45:53.348 [info] [main] Validating found git in: "C:\Program Files\Git\cmd\git.exe"
+2026-04-28 17:45:53.348 [info] [askpassManager] Creating content-addressed askpass scripts at c:\Users\nabor\Documents\¹Nabor\UFR-SI\ufr_si_2026_1\temp_profile\User\globalStorage\vscode.git\askpass\493597c785d4c5cb
+2026-04-28 17:45:53.348 [info] [askpassManager] Successfully created content-addressed askpass scripts
+2026-04-28 17:45:53.348 [info] [main] Using git "2.54.0.windows.1" from "C:\Program Files\Git\cmd\git.exe"
+2026-04-28 17:45:53.348 [info] [Model][doInitialScan] Initial repository scan started
+2026-04-28 17:45:53.348 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
