@@ -310,3 +310,111 @@
 #         print("TRIANGULO ISOSCELES")
 
 # ============================================
+
+# a,b=map(int,input().split())
+#
+# hora=24
+#
+# if a>b:
+#     test1=(hora-a)+b
+#     print(f'O JOGO DUROU {test1} HORA(S)')
+# elif a<b:
+#     test2=b-a
+#     print(f'O JOGO DUROU {test2} HORA(S)')
+# else:
+#     print(f'O JOGO DUROU {hora} HORA(S)')
+
+# ==============================================
+
+# hrInc,minInc,hrFim,minFim = map(int,input().split())
+#
+# hora=24
+# minutos=60
+#
+# if hrInc<hrFim:
+#     tempoHr=(hrFim-hrInc)
+#     tempoMin=(minFim-minInc)
+#     if minInc>minFim:
+#         print(f'O JOGO DUROU {tempoHr-1} HORA(S) E {tempoMin+60} MINUTO(S)')
+#     else:
+#         print(f'O JOGO DUROU {tempoHr} HORA(S) E {tempoMin} MINUTO(S)')
+# else:
+#     print(f'O JOGO DUROU {hora} HORA(S) E {minutos-60} MINUTO(S)')
+
+# ===========================================================
+
+# hrInc, minInc, hrFim, minFim = map(int, input().split())
+#
+# inicio = hrInc * 60 + minInc
+# fim    = hrFim * 60 + minFim
+#
+# if fim <= inicio:          # virada de meia-noite
+#     fim += 24 * 60
+#
+# duracao = fim - inicio
+# horas   = duracao // 60
+# minutos = duracao % 60
+#
+# print(f'O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)')
+
+# ============================================================
+
+# salario: float=float(input())
+#
+# if salario>2000:
+#     reajuste=salario*.04
+#     novoSal = salario + reajuste
+#     emPorc=int(.04*100)
+#     print(f'Novo salario: {novoSal:.2f}')
+#     print(f'Reajuste ganho: {reajuste:.2f}')
+#     print(f'Em percentual: {emPorc} %')
+# elif salario>1200:
+#     reajuste = salario * .07
+#     novoSal = salario + reajuste
+#     emPorc = int(.07 * 100)
+#     print(f'Novo salario: {novoSal:.2f}')
+#     print(f'Reajuste ganho: {reajuste:.2f}')
+#     print(f'Em percentual: {emPorc} %')
+# elif salario > 800:
+#     reajuste = salario * .1
+#     novoSal = salario + reajuste
+#     emPorc = int(.1 * 100)
+#     print(f'Novo salario: {novoSal:.2f}')
+#     print(f'Reajuste ganho: {reajuste:.2f}')
+#     print(f'Em percentual: {emPorc} %')
+# elif salario > 400:
+#     reajuste = salario * .12
+#     novoSal = salario + reajuste
+#     emPorc = int(.12 * 100)
+#     print(f'Novo salario: {novoSal:.2f}')
+#     print(f'Reajuste ganho: {reajuste:.2f}')
+#     print(f'Em percentual: {emPorc} %')
+# else:
+#     reajuste = salario * .15
+#     novoSal = salario + reajuste
+#     emPorc = int(.15 * 100)
+#     print(f'Novo salario: {novoSal:.2f}')
+#     print(f'Reajuste ganho: {reajuste:.2f}')
+#     print(f'Em percentual: {emPorc} %')
+#
+# # ========================================================
+#
+# salario = float(input())
+#
+# if salario > 2000:
+#     perc = 0.04
+# elif salario > 1200:
+#     perc = 0.07
+# elif salario > 800:
+#     perc = 0.10
+# elif salario > 400:
+#     perc = 0.12
+# else:
+#     perc = 0.15
+#
+# reajuste = salario * perc
+# novoSal  = salario + reajuste
+#
+# print(f'Novo salario: {novoSal:.2f}')
+# print(f'Reajuste ganho: {reajuste:.2f}')
+# print(f'Em percentual: {int(perc * 100)} %')
