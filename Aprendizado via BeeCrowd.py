@@ -281,9 +281,35 @@
 
 # =============================================================
 
-a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
+# a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
 
-if (a+b>c) and (a+c>b) and (b+c>a):
-    print(f'Perimetro = {a+b+c:.1f}') 
+# if (a+b>c) and (a+c>b) and (b+c>a):
+#     print(f'Perimetro = {a+b+c:.1f}') 
+# else:
+#     print(f'Area = {((a+b)/2)*c:.1f}')
+
+# =============================================================
+
+salario = float(input())
+
+if salario <= 2000.00:
+    print("Isento")
 else:
-    print(f'Area = {((a+b)/2)*c:.1f}')
+    imposto = 0.0
+    
+    # Faixa 1: de R$ 2000.01 até R$ 3000.00 (8%)
+    if salario > 2000.00:
+        faixa1 = min(salario, 3000.00) - 2000.00
+        imposto += faixa1 * 0.08
+    
+    # Faixa 2: de R$ 3000.01 até R$ 4500.00 (18%)
+    if salario > 3000.00:
+        faixa2 = min(salario, 4500.00) - 3000.00
+        imposto += faixa2 * 0.18
+    
+    # Faixa 3: acima de R$ 4500.00 (28%)
+    if salario > 4500.00:
+        faixa3 = salario - 4500.00
+        imposto += faixa3 * 0.28
+    
+    print(f"R$ {imposto:.2f}")
