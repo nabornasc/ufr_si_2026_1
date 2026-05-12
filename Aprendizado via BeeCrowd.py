@@ -290,26 +290,32 @@
 
 # =============================================================
 
-salario = float(input())
+# salario = float(input())
 
-if salario <= 2000.00:
-    print("Isento")
-else:
-    imposto = 0.0
+# if salario <= 2000.00:
+#     print("Isento")
+# else:
+#     imposto = 0.0
     
-    # Faixa 1: de R$ 2000.01 até R$ 3000.00 (8%)
-    if salario > 2000.00:
-        faixa1 = min(salario, 3000.00) - 2000.00
-        imposto += faixa1 * 0.08
+#     # Faixa 1: de R$ 2000.01 até R$ 3000.00 (8%)
+#     if salario > 2000.00:
+#         faixa1 = min(salario, 3000.00) - 2000.00
+#         imposto += faixa1 * 0.08
     
-    # Faixa 2: de R$ 3000.01 até R$ 4500.00 (18%)
-    if salario > 3000.00:
-        faixa2 = min(salario, 4500.00) - 3000.00
-        imposto += faixa2 * 0.18
+#     # Faixa 2: de R$ 3000.01 até R$ 4500.00 (18%)
+#     if salario > 3000.00:
+#         faixa2 = min(salario, 4500.00) - 3000.00
+#         imposto += faixa2 * 0.18
     
-    # Faixa 3: acima de R$ 4500.00 (28%)
-    if salario > 4500.00:
-        faixa3 = salario - 4500.00
-        imposto += faixa3 * 0.28
+#     # Faixa 3: acima de R$ 4500.00 (28%)
+#     if salario > 4500.00:
+#         faixa3 = salario - 4500.00
+#         imposto += faixa3 * 0.28
     
-    print(f"R$ {imposto:.2f}")
+#     print(f"R$ {imposto:.2f}")
+
+# =============================================================
+
+print('Ola, Mundo!')
+print("2.0")
+
