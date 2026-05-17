@@ -282,177 +282,40 @@
 # =============================================================
 
 # a,b,c=map(float,input('Digite 3 valores Reais A, B e C: ').split())
-#
+
 # if (a+b>c) and (a+c>b) and (b+c>a):
-#     print(f'Perimetro = {a+b+c:.1f}')
+#     print(f'Perimetro = {a+b+c:.1f}') 
 # else:
 #     print(f'Area = {((a+b)/2)*c:.1f}')
 
-# ====================================================
+# =============================================================
 
-# lados = list(map(float, input().split()))
-# lados.sort(reverse=True)
-# a, b, c = lados
-#
-# if a >= b + c:
-#     print("NAO FORMA TRIANGULO")
-# else:
-#     if a ** 2 == b ** 2 + c ** 2:
-#         print("TRIANGULO RETANGULO")
-#     elif a ** 2 > b ** 2 + c ** 2:
-#         print("TRIANGULO OBTUSANGULO")
-#     else:
-#         print("TRIANGULO ACUTANGULO")
-#
-#     if a == b == c:
-#         print("TRIANGULO EQUILATERO")
-#     elif a == b or b == c or a == c:
-#         print("TRIANGULO ISOSCELES")
-
-# ============================================
-
-# a,b=map(int,input().split())
-#
-# hora=24
-#
-# if a>b:
-#     test1=(hora-a)+b
-#     print(f'O JOGO DUROU {test1} HORA(S)')
-# elif a<b:
-#     test2=b-a
-#     print(f'O JOGO DUROU {test2} HORA(S)')
-# else:
-#     print(f'O JOGO DUROU {hora} HORA(S)')
-
-# ==============================================
-
-# hrInc,minInc,hrFim,minFim = map(int,input().split())
-#
-# hora=24
-# minutos=60
-#
-# if hrInc<hrFim:
-#     tempoHr=(hrFim-hrInc)
-#     tempoMin=(minFim-minInc)
-#     if minInc>minFim:
-#         print(f'O JOGO DUROU {tempoHr-1} HORA(S) E {tempoMin+60} MINUTO(S)')
-#     else:
-#         print(f'O JOGO DUROU {tempoHr} HORA(S) E {tempoMin} MINUTO(S)')
-# else:
-#     print(f'O JOGO DUROU {hora} HORA(S) E {minutos-60} MINUTO(S)')
-
-# ===========================================================
-
-# hrInc, minInc, hrFim, minFim = map(int, input().split())
-#
-# inicio = hrInc * 60 + minInc
-# fim    = hrFim * 60 + minFim
-#
-# if fim <= inicio:          # virada de meia-noite
-#     fim += 24 * 60
-#
-# duracao = fim - inicio
-# horas   = duracao // 60
-# minutos = duracao % 60
-#
-# print(f'O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)')
-
-# ============================================================
-
-# salario: float=float(input())
-#
-# if salario>2000:
-#     reajuste=salario*.04
-#     novoSal = salario + reajuste
-#     emPorc=int(.04*100)
-#     print(f'Novo salario: {novoSal:.2f}')
-#     print(f'Reajuste ganho: {reajuste:.2f}')
-#     print(f'Em percentual: {emPorc} %')
-# elif salario>1200:
-#     reajuste = salario * .07
-#     novoSal = salario + reajuste
-#     emPorc = int(.07 * 100)
-#     print(f'Novo salario: {novoSal:.2f}')
-#     print(f'Reajuste ganho: {reajuste:.2f}')
-#     print(f'Em percentual: {emPorc} %')
-# elif salario > 800:
-#     reajuste = salario * .1
-#     novoSal = salario + reajuste
-#     emPorc = int(.1 * 100)
-#     print(f'Novo salario: {novoSal:.2f}')
-#     print(f'Reajuste ganho: {reajuste:.2f}')
-#     print(f'Em percentual: {emPorc} %')
-# elif salario > 400:
-#     reajuste = salario * .12
-#     novoSal = salario + reajuste
-#     emPorc = int(.12 * 100)
-#     print(f'Novo salario: {novoSal:.2f}')
-#     print(f'Reajuste ganho: {reajuste:.2f}')
-#     print(f'Em percentual: {emPorc} %')
-# else:
-#     reajuste = salario * .15
-#     novoSal = salario + reajuste
-#     emPorc = int(.15 * 100)
-#     print(f'Novo salario: {novoSal:.2f}')
-#     print(f'Reajuste ganho: {reajuste:.2f}')
-#     print(f'Em percentual: {emPorc} %')
-#
-# # ========================================================
-#
 # salario = float(input())
-#
-# if salario > 2000:
-#     perc = 0.04
-# elif salario > 1200:
-#     perc = 0.07
-# elif salario > 800:
-#     perc = 0.10
-# elif salario > 400:
-#     perc = 0.12
-# else:
-#     perc = 0.15
-#
-# reajuste = salario * perc
-# novoSal  = salario + reajuste
-#
-# print(f'Novo salario: {novoSal:.2f}')
-# print(f'Reajuste ganho: {reajuste:.2f}')
-# print(f'Em percentual: {int(perc * 100)} %')
 
-# ================================================================
-
-# opc1=input()
-# opc2=input()
-# opc3=input()
-#
-# list1=['vertebrado','invertebrado']
-# list2=['ave','mamifero','inseto','anelideo']
-# list3=['carnivoro','onivoro','herbivoro','hematofago']
-# list4=['aguia','pomba','homem','vaca','pulga','lagarta','sanguessuga','minhoca']
-#
-# if opc1 == list1[0]:
-#     if opc2 == list2[0]:
-#         if opc3 == list3[0]:
-#             print(list4[0])
-#         else:
-#             print(list4[1])
-#
-#     elif opc2 == list2[1]:
-#         if opc3 == list3[1]:
-#             print(list4[2])
-#         else:
-#             print(list4[3])
-#
+# if salario <= 2000.00:
+#     print("Isento")
 # else:
-#     if opc2 == list2[2]:
-#         if opc3 == list3[3]:
-#             print(list4[4])
-#         else:
-#             print(list4[5])
-#
-#     elif opc2 == list2[3]:
-#         if opc3 == list3[3]:
-#             print(list4[6])
-#         else:
-#             print(list4[7])
+#     imposto = 0.0
+    
+#     # Faixa 1: de R$ 2000.01 até R$ 3000.00 (8%)
+#     if salario > 2000.00:
+#         faixa1 = min(salario, 3000.00) - 2000.00
+#         imposto += faixa1 * 0.08
+    
+#     # Faixa 2: de R$ 3000.01 até R$ 4500.00 (18%)
+#     if salario > 3000.00:
+#         faixa2 = min(salario, 4500.00) - 3000.00
+#         imposto += faixa2 * 0.18
+    
+#     # Faixa 3: acima de R$ 4500.00 (28%)
+#     if salario > 4500.00:
+#         faixa3 = salario - 4500.00
+#         imposto += faixa3 * 0.28
+    
+#     print(f"R$ {imposto:.2f}")
+
+# =============================================================
+
+print('Ola, Mundo!')
+print("2.0")
 
