@@ -74,9 +74,19 @@ def fatorial(n):
             print(f'= {mult:,}')
     return mult
 
+def somNum():
+    num=int(input('Calculo de somatórios: '))
+    calc=0
+    for cont in range(1,num+1,1):
+        calc=calc+1/(2*cont)
+        cont+=cont
+    return print(f'O somatório de 0 a {num} fazendo 1/(2*n) = {calc}')
+
 print('Escolha a Função!')
 print('[1] PA "Progressão Aritimetica"')
 print('[2] Fatorial')
+print('[3] Somatório Matemático')
+
 opc=int(input())
 limpar()
 
@@ -86,3 +96,6 @@ if opc == 1:
 elif opc == 2:
     limpar()
     fatorial(int(input('Digite n!: ')))
+elif opc == 3:
+    limpar()
+    somNum()
