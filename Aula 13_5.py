@@ -19,23 +19,23 @@
 #
 # for cont in range(rep):
 #     num = float(input('Digite um numero para SOMA: '))
-#     resul+=num
+#     result+=num
 #     cont+=1
-# print(resul)
+# print(result)
 
 # ============================================================
 #
 # print('Programa para somar "P.As"')
-# pa=int(input('Deseja uma PA "Progressão Aritmética de quantos números: '))
-# rz=int(input('Qual a razão dessa PA "1/1; 2/2; 3/3.. : '))
+# pa=int(input('Deseja uma PA "Progressão Aritmética" de quantos números: '))
+# rz=int(input('Qual a razão dessa PA "1/1; 2/2; 3/3…" : '))
 # soma=0
 # print('Passo a passo |   |   |')
 # for cont in range(1,pa+1):
 #     if rz==1:
-#         print('Passo a passo ',soma,'+',cont)
+#         print('Passo a passo ',soma,'+', cont)
 #         soma+=cont
 #     else:
-#         print('Passo a passo ',soma,'+',cont*rz)
+#         print('Passo a passo ',soma,'+', cont*rz)
 #         soma+=cont*rz
 # print(soma)
 
@@ -80,7 +80,8 @@ def somNum():
     for cont in range(1,num+1,1):
         calc=calc+1/(2*cont)
         cont+=cont
-    return print(f'O somatório de 0 a {num} fazendo 1/(2*n) = {calc}')
+
+    print(f'O somatório de 0 a {num} fazendo 1/(2*n) = {calc}')
 
 def somDiv():
     rep=int(input('Deseja repetir quantas X: '))
@@ -103,7 +104,7 @@ def somDiv():
 
         if cont_PI == 's':
             print(f'A quantidade de pares do numero {valor} é = {numPar}.')
-            print(f'A quantidade de impares do numero {valor} é = {numImpar}.')
+            print(f'A quantidade de ímpares do numero {valor} é = {numImpar}.')
 
 
 print('Escolha a Função!')
