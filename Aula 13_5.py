@@ -82,10 +82,36 @@ def somNum():
         cont+=cont
     return print(f'O somatório de 0 a {num} fazendo 1/(2*n) = {calc}')
 
+def somDiv():
+    rep=int(input('Deseja repetir quantas X: '))
+    limpar()
+    cont_PI=str(input('Deseja contar os Pares/Impares [S/N]: ')).lower()
+    limpar()
+    for cont in range(1,rep+1,1):
+        calc=0
+        numPar=0
+        numImpar=0
+        valor=int(input('Digite um valor INT > 0: '))
+        for cont1 in range(1,valor+1,1):
+            if valor % cont1 == 0:
+                calc=calc+1
+                print(f'{valor} / {cont1} = {valor/cont1}')
+                numPar=numPar+1
+            elif valor % cont1 != 0:
+                numImpar=numImpar+1
+        print(f'{valor} tem um total de {calc} de divisores.',end='\n\n')
+
+        if cont_PI == 's':
+            print(f'A quantidade de pares do numero {valor} é = {numPar}.')
+            print(f'A quantidade de impares do numero {valor} é = {numImpar}.')
+
+
 print('Escolha a Função!')
 print('[1] PA "Progressão Aritimetica"')
 print('[2] Fatorial')
 print('[3] Somatório Matemático')
+print('[4] Somatório Divisores')
+
 
 opc=int(input())
 limpar()
@@ -99,3 +125,6 @@ elif opc == 2:
 elif opc == 3:
     limpar()
     somNum()
+elif opc == 4:
+    limpar()
+    somDiv()
