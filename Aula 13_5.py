@@ -88,10 +88,14 @@ def somDiv():
     limpar()
     cont_PI=str(input('Deseja contar os Pares/Impares [S/N]: ')).lower()
     limpar()
+    cont_Pri=str(input('Deseja verificar se é Primo [S/N]: ')).lower()
+    limpar()
+
     for cont in range(1,rep+1,1):
         calc=0
         numPar=0
         numImpar=0
+
         valor=int(input('Digite um valor INT > 0: '))
         for cont1 in range(1,valor+1,1):
             if valor % cont1 == 0:
@@ -100,7 +104,13 @@ def somDiv():
                 numPar=numPar+1
             elif valor % cont1 != 0:
                 numImpar=numImpar+1
+
         print(f'{valor} tem um total de {calc} de divisores.',end='\n\n')
+
+        if cont_Pri == 's' and calc == 2:
+            print(f'{valor} é um numero Primo!\n')
+        else:
+            print(f'{valor} não é um numero Primo!\n')
 
         if cont_PI == 's':
             print(f'A quantidade de pares do numero {valor} é = {numPar}.')
