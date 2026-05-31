@@ -1,6 +1,6 @@
 # a = int(input('Quer iniciar em [-1/0/1]: '))
-# b = int(input('Quer ir até [10,100,..: '))
-# c = int(input('Quer contar de quanto em quanto [1,2,..]: '))
+# b = int(input('Quer ir até [10,100,…: '))
+# c = int(input('Quer contar de quanto em quanto [1,2,…]: '))
 # d = str(input('Crescente ou decrescente [C/D]: ').lower())
 #
 # for i in range(a, b + 1, c):
@@ -22,6 +22,7 @@
 #     mat.append(linha)
 # print(mat)
 # from random import randint
+# from sys import flags
 
 # =====================================================================
 # aprendendo a criar e manipular matrizes
@@ -116,3 +117,99 @@
 #             print(matA[l][c])
 # print(f'\n O total da soma é {soma}, divido pela quantidade {qtd} vai dar a media {soma/qtd}')
 
+#
+# qtd=0
+# for cont in range(4):
+#     num=int(input('Digite um numero: '))
+#     if num==0:
+#         qtd+=1
+# print(f'\n Quantidade de numero NULOS é: {qtd}, que da {qtd*100/4}% dos digitados.')
+#
+# fat=1
+# for cont in range(1,4):
+#     fat*=cont
+# print(f'O fatorial de {cont} é: {fat:,.2f}')
+
+
+# qtd=0
+# for cont in range(5):
+#     num=int(input('Digite um Numero: '))
+#     if num<5:
+#         qtd+=1
+# if qtd>0:
+#     print(f'Tivemos um total de {qtd} numero Menor que 5.')
+
+# ic=int(input('Inicia em [0/1]: '))
+# fm=int(input('Termina em [10/100]: '))
+# ps=int(input('Passos [1/1;2/2]: '))
+# qd=str(input('Cacular Quadrado [S/N]: ')).lower()
+# el=str(input('Cacular Potencia [S/N]: ')).lower()
+# pt=int(input('Potencia de [2;3]: '))
+#
+#
+# for termo in range(ic,fm+1,ps):
+#     if qd=='s':
+#         quad=termo**2
+#         print(f'O Quadrado de {termo} é {quad}')
+#     elif el=='s':
+#         pot=pt**termo
+#         print(f'O numero {termo} na Potencia {pt} é {pot}')
+#     else:
+#         print(termo)
+#
+
+# fórmula PA = a1 + i * r, sendo a1 e r informados pelo usuário
+#
+# a1=int(input('Digite o 1º termo da PA: '))
+# rz=int(input('Digite a razão da PA: '))
+#
+# for cont in range(a1,10,rz):
+#     pa=a1+cont*rz
+# print(pa)
+
+# cont=1
+# soma=0
+# while(cont<101):
+#     soma+=2
+#     cont+=1
+# print(soma)
+#
+# num=1
+# while(num!=0):
+#     num=int(input('Digite um numero qualquer, ou ZERO [0] para sair: '))
+#     if num!=0:
+#         print(f'O numero digitado foi {num}')
+
+# flag=''
+# while flag.lower() != 's':
+#     num=int(input('Digite um numero: '))
+#     quad=num**2
+#     print(f'O numero {num} é {quad} ao quadrado.')
+#     flag=str(input('Deseja Sair [S/N]: ')).lower()
+
+
+# cont=0
+# while cont<=100:
+#     print(cont)
+#     cont+=1
+
+op=''
+while op != 's':
+    num=int(input('Digite um numero: '))
+
+    if num<2:
+        print(f'O numero {num}, não é Primo!')
+    else:
+        div=2
+        pri=True
+
+        while div*div<=num:
+            if num % div == 0:
+                pri=False
+                break
+            div+=1
+        if pri:
+            print(f'O numero {num}, é Primo!')
+        else:
+            print(f'O numero {num}, Não é Primo pois tem +{div} divisores.')
+    op=str(input('Deseja [S]air:')).lower()
