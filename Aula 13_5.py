@@ -208,8 +208,10 @@ while op != 's':
                 pri=False
                 break
             div+=1
+
         if pri:
             print(f'O numero {num}, é Primo!')
         else:
             print(f'O numero {num}, Não é Primo pois tem +{div} divisores.')
+
     op=str(input('Deseja [S]air:')).lower()
