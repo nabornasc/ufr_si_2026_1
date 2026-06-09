@@ -1,329 +1,333 @@
-# Lista 4 - Desisoes multiplas
+"""
+LISTA 4 - DECISÕES MÚLTIPLAS
+Exercícios com múltiplas condições e estruturas complexas.
 
-# from posixpath import sep
+Autor: Nabor N. Silva (revisado)
+Versão: 2.0
+"""
 
-
-# ladA, ladB, ladC = map(int,(input('Digite as medidas dos lados do triangulo A, B, C: ') for _ in range(3)))
-
-# if ladA+ladB>ladC and ladA+ladC>ladB and ladB+ladC>ladA:
-#     if ladA==ladB==ladC:
-#         print('Triangulo Equilatero')
-
-#     elif ladA==ladB or ladA==ladC or ladB==ladC:
-#         print('Triangulo Isosceles')
-
-#     else:
-#         print('Triangulo Escaleno')
-# else:
-#     print('Triangulo Invalido')
+import random
+import math
 
 
-# exercício 2
-
-# idAluno=input('Digite aqui codigo ID do aluno: ')
-# nota1,nota2,nota3=[float(input(f'Digite aqui a nota P{n+1} do aluno: ')) for n in range(3)]
-# mediaEx=float(input('Digite aqui a media dos exercicios: '))
-
-# mediaFinal=(nota1+nota2*2+nota3*3+mediaEx)/7
-
-# print(f'\nAluno ID: {idAluno} com notas P1= {nota1}, P2= {nota2}, e P3= {nota3}')
-# print(f'\nCom media exercicios {mediaEx}')
-# print(f'\nTeve media aproveitamento {mediaFinal:.2f}', "Aluno Aprovado" if mediaFinal>=6 else 'Aluno Reprovado')
-
-# exercício 3
-
-# peso=float(input('Digite o seu peso em Kg: '))
-# altura=float(input('Digite sua altura em metros ex: 1.70: '))
-
-# imc=peso/(altura**2)
-
-# if imc>30:
-#     print(f'\nSeu IMC é {imc:.2f}, classificado como Obesidade Morbida')
-# elif imc>=25:
-#     print(f'\nSeus IMC é {imc:.2f}, classificado como Obesidade')
-# elif imc>=18.5:
-#     print(f'\nSeus IMC é {imc:.2f}, classificado como Peso Normal')
-# else:
-#     print(f'\nSeus IMC é {imc:.2f}, classificado como Abaixo do peso')
-
-# exercício 4
-# import random
-# print('Bem vindo ao Magic 8-Ball ')
-
-# while True:
-#     pergunta=input('Digite sua pergunta ou "sair": ')
-#     if pergunta=='sair':
-#         break
-#     else:
-#         resposta=random.randint(1,8)
-#         if resposta==1:
-#             print('Sim')
-#         elif resposta==2:
-#             print('Nao')
-#         elif resposta==3:
-#             print('Provavelmente sim')
-#         elif resposta==4:
-#             print('Provavelmente não')
-#         elif resposta==5:
-#             print('Não posso prever agora.')
-#         elif resposta==6:
-#             print('Concentre-se e pergunte novamente.')
-#         elif resposta==7:
-#             print('Melhor não te dizer agora.')
-#         elif resposta==8:
-#             print('Pergunte novamente mais tarde.')
-
-# exercício 5
-# import random
-
-# print('Bem vindo a Horgwarts!\n Sente-se em breve sera chamado. =}')
-# nome=input('\nOlá jovem aluno, qual seu nome? ') 
-
-# print(f'\n{nome} seja bem-vindo ao castelo de Hogwarts, onde o mago e o feiticeiro se reúnem para ensinar os jovens magos a magia da escola!')
-# desejo=input(f'\n{nome} escolha uma das opções abaixo: \n1 - Entra na CASA GRIFINÓRIA \n2 - Entra na CASA SONSERINA \n3 - Entra na CASA CORVINAL \n4 - Entra na CASA LUFA-LUFA \nQual é seu Desejo? ')
-# escolha=random.randint(1,4)
-
-# if escolha==1:
-#     print(nome,'Seja bem-vindo a CASA GRIFINÓRIA!','\nÉ bom que sua bravura, coragem, ousadia e cavalheirismo se alinham com sua ALMA!' if desejo=='1' else '\nAcredito que seu caminho aqui seja o correto!')
-
-# elif escolha==2:
-#     print(nome,'Seja bem-vindo a CASA SONSERINA!','\nÉ bom que sua ambição, astúcia, engenhosidade e autopreservação se alinham com sua ALMA!' if desejo=='2' else '\nAcredito que seu caminho aqui seja o correto!')
-
-# elif escolha==3:
-#     print(nome,'Seja bem-vindo a CASA CORVINAL!','\nÉ bom que sua inteligência, sabedoria, criatividade e aprendizado se alinham com sua ALMA!' if desejo=='3' else '\nAcredito que seu caminho aqui seja o correto!')
-
-# elif escolha==4:
-#     print(nome,'Seja bem-vindo a CASA LUFA-LUFA!','\nÉ bom que sua lealdade, paciência, trabalho duro e honestidade se alinham com sua ALMA!' if desejo=='4' else '\nAcredito que seu caminho aqui seja o correto!')
-
-# exercicio 6
-
-# diaSemana=input('Digite um dia da semana "1 a 7": ')
-
-# if diaSemana=='1':
-#     print('\nEm Portugues é Domingo; \nEm Ingles é  Sunday; \nEm Espanhol é Domingo.')
-# elif diaSemana=='2':
-#     print('\nEm Portugues é Segunda-feira; \nEm Ingles é Monday; \nEm Espanhol é Lunes.')
-# elif diaSemana=='3':
-#     print('\nEm Portugues é Terca-feira; \nEm Ingles é Tuesday; \nEm Espanhol é Martes.')
-# elif diaSemana=='4':
-#     print('\nEm Portugues é Quarta-feira; \nEm Ingles é Wednesday; \nEm Espanhol é Miércoles.')
-# elif diaSemana=='5':
-#     print('\nEm Portugues é Quinta-feira; \nEm Ingles é Thursday; \nEm Espanhol é Jueves.')
-# elif diaSemana=='6':
-#     print('\nEm Portugues é Sexta-feira; \nEm Ingles é Friday; \nEm Espanhol é Viernes.')
-# elif diaSemana=='7':
-#     print('\nEm Portugues é Sabado; \nEm Ingles é Saturday; \nEm Espanhol é Sabado.')
-
-# =================================================================
-
-# dias = [
-#     ('Domingo', 'Sunday', 'Domingo'),
-#     ('Segunda-feira', 'Monday', 'Lunes'),
-#     ('Terça-feira', 'Tuesday', 'Martes'),
-#     ('Quarta-feira', 'Wednesday', 'Miércoles'),
-#     ('Quinta-feira', 'Thursday', 'Jueves'),
-#     ('Sexta-feira', 'Friday', 'Viernes'),
-#     ('Sábado', 'Saturday', 'Sábado')
-# ]
-# while True:
-#     try:
-#         dia = int(input('Digite um dia da semana (1 a 7): '))
-#         pt, en, es = dias[dia-1]
-#         print(f'\nEm Português é {pt};\nEm Inglês é {en};\nEm Espanhol é {es}.')
-#         break
-#     except (ValueError, IndexError):
-#         print('Valor inválido! Digite um número inteiro de 1 a 7.')
-
-# =================================================================
-
-# exercicio 7
-
-# while True:
-#     idadeCompetidor=int(input('Digite a idade do competidor (ou 99 para encerrar): '))
-
-#     if idadeCompetidor<5:
-#         print('Não qualificado para competição.')
-#     elif idadeCompetidor==99:
-#         break
-#     else:
-#         if idadeCompetidor>=18:
-#             print('Sua categoria é Sênior.')
-#         elif idadeCompetidor>=14:
-#             print('Sua categoria é Juvenil: B')
-#         elif idadeCompetidor>=11:
-#             print('Sua categoria é Juvenil: A')
-#         elif idadeCompetidor>=8:
-#             print('Sua categoria é Infantil: B')
-#         else:
-#             print('Sua categoria é Infantil: A')
-
-# ================================================================
-
-# exercicio 8
-
-# while True:
-#     pesoTerra=float(input('Digite um peso em kg: '))
-#     opcaoPlaneta=int(input('Digite 0 para sair,\nDigite 1 para Mercúrio,\nDigite 2 para Vênus,\nDigite 3 para Marte,\nDigite 4 para Jupiter,\nDigite 5 para Saturno,\nDigite 6 para Urano,\nDigite 7 para Netuno,\n\nOpção:  '))
-    
-#     if opcaoPlaneta>7:
-#         print('\nOpção inválida! Tente novamente.')
-    
-#     elif opcaoPlaneta!=0:
+def exercicio_1() -> None:
+    """Classifica triângulo por seus lados."""
+    print("\n=== EXERCÍCIO 1: Classificacao de Triângulo ===")
+    try:
+        lado_a: float = float(input("Digite o lado A: "))
+        lado_b: float = float(input("Digite o lado B: "))
+        lado_c: float = float(input("Digite o lado C: "))
         
-#         pesoPlaneta =  {
-#             (1, 'Mercúrio'): 0.38,
-#             (2, 'Vênus'): 0.90,
-#             (3, 'Marte'): 0.38,
-#             (4, 'Jupiter'): 2.53,
-#             (5, 'Saturno'): 1.06,
-#             (6, 'Urano'): 0.89,
-#             (7, 'Netuno'): 1.14
-#         }
+        if (lado_a + lado_b > lado_c and 
+            lado_a + lado_c > lado_b and 
+            lado_b + lado_c > lado_a):
+            
+            if lado_a == lado_b == lado_c:
+                print("Triângulo Equilátero")
+            elif lado_a == lado_b or lado_a == lado_c or lado_b == lado_c:
+                print("Triângulo Isósceles")
+            else:
+                print("Triângulo Escaleno")
+        else:
+            print("Triângulo Inválido")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
 
-#         for chave, valor in pesoPlaneta.items():
-#             if chave[0]==opcaoPlaneta:
-#                 print(f'\nSeu peso em {chave[1]} é {pesoTerra*valor:.2f} kg')
 
-#     else:
-#         break
+def exercicio_2() -> None:
+    """Calcula media de aluno com pesos."""
+    print("\n=== EXERCÍCIO 2: Media Ponderada de Aluno ===")
+    try:
+        id_aluno: str = input("Digite o ID do aluno: ")
+        nota1: float = float(input("Digite a nota P1: "))
+        nota2: float = float(input("Digite a nota P2: "))
+        nota3: float = float(input("Digite a nota P3: "))
+        media_exercicios: float = float(input("Digite a media de exercícios: "))
+        
+        media_final: float = (nota1 + nota2*2 + nota3*3 + media_exercicios) / 7
+        
+        status: str = "Aprovado" if media_final >= 6 else "Reprovado"
+        print(f"\nAluno {id_aluno}: Média = {media_final:.2f} - {status}")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
 
-# ================================================================
 
-# exercicio 9 
+def exercicio_3() -> None:
+    """Classifica IMC com categorias."""
+    print("\n=== EXERCÍCIO 3: Classificacao de IMC ===")
+    try:
+        peso: float = float(input("Digite o peso (kg): "))
+        altura: float = float(input("Digite a altura (m): "))
+        
+        imc: float = peso / (altura ** 2)
+        
+        if imc > 30:
+            categoria = "Obesidade Mórbida"
+        elif imc >= 25:
+            categoria = "Obesidade"
+        elif imc >= 18.5:
+            categoria = "Peso Normal"
+        else:
+            categoria = "Abaixo do peso"
+        
+        print(f"IMC: {imc:.2f} - {categoria}")
+    except (ValueError, ZeroDivisionError):
+        print("Erro: Digite valores válidos!")
 
-# valorReal = float(input("Digite o valor de valor real: "))
 
-# if valorReal <= 1:
-#     resultado = 1
-# elif valorReal <= 2:
-#     resultado = 2
-# elif valorReal <= 3:
-#     resultado = valorReal ** 2
-# else:
-#     resultado = valorReal ** 3
-
-# print(f"f({valorReal}) = {resultado}")
-
-# ================================================================
-
-# exercicio 10
-
-# while True:
-#     profissao=input('\n[M] Médico\n[E] Engenheiro\n[P] Professor\n[O] Outros\nDigite a sua Profissão: ').lower()
+def exercicio_4() -> None:
+    """Magic 8-Ball."""
+    print("\n=== EXERCÍCIO 4: Magic 8-Ball ===")
+    respostas = {
+        1: "Sim",
+        2: "Não",
+        3: "Provavelmente sim",
+        4: "Provavelmente não",
+        5: "Não posso prever agora",
+        6: "Concentre-se e pergunte novamente",
+        7: "Melhor não te dizer agora",
+        8: "Pergunte novamente mais tarde"
+    }
     
-#     if profissao in ('exit', 'sair', 'fim', 'quit'):
-#         break
+    while True:
+        pergunta: str = input("\nDigite sua pergunta (ou 'sair'): ").strip()
+        if pergunta.lower() in ['sair', 'exit', 'fim']:
+            break
+        
+        resposta: int = random.randint(1, 8)
+        print(f"Resposta: {respostas[resposta]}")
 
-#     salario=float(input('Digite o salario: $ '))
 
-#     if profissao=='m':
-#         print((f'\nSeu salario com 20% de aumento fica: $ {salario+(salario*.2):,.2f}'))
-#     elif profissao=='e':
-#         print((f'\nSeu salario com 15% de aumento fica: $ {salario+(salario*.15):,.2f}'))
-#     elif profissao=='p':
-#         print((f'\nSeu salario com 10% de aumento fica: $ {salario+(salario*.10):,.2f}'))
-#     elif profissao=='o':
-#         print((f'\nSeu salario com 5% de aumento fica: $ {salario+(salario*.05):,.2f}'))
-#     else:
-#         print('\nOpção inválida! Tente novamente.')
+def exercicio_5() -> None:
+    """Sistema de casas Hogwarts."""
+    print("\n=== EXERCÍCIO 5: Distribuicao de Casas Hogwarts ===")
+    nome: str = input("Qual seu nome? ").strip()
+    print(f"\n{nome}, bem-vindo ao castelo de Hogwarts!")
+    
+    escolha: int = random.randint(1, 4)
+    casas = {
+        1: "GRIFINÓRIA",
+        2: "SONSERINA",
+        3: "CORVINAL",
+        4: "LUFA-LUFA"
+    }
+    
+    print(f"{nome} foi distribuído para a casa {casas[escolha]}!")
 
-# ===============================================================
 
-# while True:
-#     profissao = input('Digite a profissão ([M] Médico, [E] Engenheiro, [P] Professor, [O] Outro): ')
-#     salario = float(input('Digite o salario: R$ '))
+def exercicio_6() -> None:
+    """Traduz dia da semana."""
+    print("\n=== EXERCÍCIO 6: Traducao de Dias ===")
+    dias = [
+        ("Domingo", "Sunday", "Domingo"),
+        ("Segunda-feira", "Monday", "Lunes"),
+        ("Terca-feira", "Tuesday", "Martes"),
+        ("Quarta-feira", "Wednesday", "Miercoles"),
+        ("Quinta-feira", "Thursday", "Jueves"),
+        ("Sexta-feira", "Friday", "Viernes"),
+        ("Sábado", "Saturday", "Sabado")
+    ]
+    
+    try:
+        dia: int = int(input("Digite um dia (1-7): "))
+        if 1 <= dia <= 7:
+            pt, en, es = dias[dia-1]
+            print(f"Português: {pt}\nInglês: {en}\nEspanhol: {es}")
+        else:
+            print("Erro: Digite um número de 1 a 7!")
+    except ValueError:
+        print("Erro: Digite um número válido!")
 
-#     profissoes = {
-#         'm':('Médico', salario * 0.25),
-#         'e':('Engenheiro', salario * 0.15),
-#         'p':('Professor', salario * 0.10),
-#         'o':('Outro', salario * 0.05)
-#     }
 
-#     if profissao in profissoes:
-#         print(f'\n{profissoes[profissao][0]} ganha R$ {salario+profissoes[profissao][1]:,.2f}')
-#         break
+def exercicio_7() -> None:
+    """Categorias de competidores."""
+    print("\n=== EXERCÍCIO 7: Categorias de Competicao ===")
+    categorias = {
+        (0, 4): "Não qualificado",
+        (5, 7): "Infantil A",
+        (8, 10): "Infantil B",
+        (11, 13): "Juvenil A",
+        (14, 17): "Juvenil B",
+        (18, 999): "Sênior"
+    }
+    
+    while True:
+        try:
+            idade: int = int(input("Digite a idade (99 para sair): "))
+            if idade == 99:
+                break
+            
+            categoria: str = ""
+            for (min_idade, max_idade), cat in categorias.items():
+                if min_idade <= idade <= max_idade:
+                    categoria = cat
+                    break
+            
+            print(f"Categoria: {categoria}")
+        except ValueError:
+            print("Erro: Digite um número válido!")
 
-#     else:
-#         print('\nOpção inválida! Tente novamente.')
 
-# =================================================================
-# exercicio 11
+def exercicio_8() -> None:
+    """Peso em outros planetas."""
+    print("\n=== EXERCÍCIO 8: Peso em Outros Planetas ===")
+    planetas = {
+        1: ("Mercúrio", 0.38),
+        2: ("Vênus", 0.90),
+        3: ("Marte", 0.38),
+        4: ("Júpiter", 2.53),
+        5: ("Saturno", 1.06),
+        6: ("Urano", 0.89),
+        7: ("Netuno", 1.14)
+    }
+    
+    while True:
+        try:
+            print("\n[1] Mercúrio [2] Vênus [3] Marte [4] Júpiter")
+            print("[5] Saturno [6] Urano [7] Netuno [0] Sair")
+            opcao: int = int(input("Escolha um planeta: "))
+            
+            if opcao == 0:
+                break
+            elif opcao in planetas:
+                peso_terra: float = float(input("Digite seu peso (kg): "))
+                nome_planeta, gravidade = planetas[opcao]
+                peso_planeta: float = peso_terra * gravidade
+                print(f"Seu peso em {nome_planeta}: {peso_planeta:.2f} kg")
+            else:
+                print("Opção inválida!")
+        except ValueError:
+            print("Erro: Digite valores válidos!")
 
-# valorMerc=float(input('Digite o valor da mercadoria: R$ '))
-# condPgto=input('Digite a condição de pagamento \n[V] A Vista, \n[C] Cheque, \n[CC] Cartão de Crédito, \n[CC2] Crédito em 2x, \n[CC3] Crédito em 3x: ').lower()
 
-# listPgto={
-#     'v':('A Vista', 0.15),
-#     'c':('Cheque', 0.15),
-#     'cc':('Cartão de Crédito', 0.10),
-#     'cc2':('Crédito em 2x', 0),
-#     'cc3':('Crédito em 3x', 0.10)
-# }
+def exercicio_9() -> None:
+    """Funcao especial."""
+    print("\n=== EXERCÍCIO 9: Funcao Especial ===")
+    try:
+        valor_real: float = float(input("Digite um valor real: "))
+        
+        if valor_real <= 1:
+            resultado: float = 1
+        elif valor_real <= 2:
+            resultado = 2
+        elif valor_real <= 3:
+            resultado = valor_real ** 2
+        else:
+            resultado = valor_real ** 3
+        
+        print(f"f({valor_real}) = {resultado}")
+    except ValueError:
+        print("Erro: Digite um valor válido!")
 
-# if condPgto == 'cc3':
-#     print(f'\n{listPgto[condPgto][0]} valor final R$ {valorMerc+(valorMerc*listPgto[condPgto][1]):,.2f}')    
-# elif condPgto in listPgto:
-#     print(f'\n{listPgto[condPgto][0]} valor final R$ {valorMerc-(valorMerc*listPgto[condPgto][1]):,.2f}')
-# else:
-#     print('\nOpção inválida! Tente novamente.')
 
-# # ================================================================
+def exercicio_10() -> None:
+    """Calculo de aumento por profissao."""
+    print("\n=== EXERCÍCIO 10: Aumento Salarial por Profissao ===")
+    profissoes = {
+        'm': ('Médico', 0.20),
+        'e': ('Engenheiro', 0.15),
+        'p': ('Professor', 0.10),
+        'o': ('Outro', 0.05)
+    }
+    
+    while True:
+        try:
+            profissao: str = input("Digite profissão [M/E/P/O] (ou sair): ").lower()
+            
+            if profissao in ['sair', 'exit', 'fim']:
+                break
+            elif profissao in profissoes:
+                salario: float = float(input("Digite o salário: R$ "))
+                nome, percentual = profissoes[profissao]
+                novo_salario: float = salario * (1 + percentual)
+                print(f"{nome}: R$ {novo_salario:,.2f}")
+            else:
+                print("Opção inválida!")
+        except ValueError:
+            print("Erro: Digite valores válidos!")
 
-# # exercicio 12
 
-# A = float(input('Digite o valor de A: '))
-# B = float(input('Digite o valor de B: '))
-# C = float(input('Digite o valor de C: '))
-# D = float(input('Digite o valor de D: '))
+def exercicio_11() -> None:
+    """Desconto por condicao de pagamento."""
+    print("\n=== EXERCÍCIO 11: Desconto por Forma de Pagamento ===")
+    condicoes = {
+        'v': ('À Vista', 0.15, True),
+        'c': ('Cheque', 0.15, True),
+        'cc': ('Cartão de Crédito', 0.10, True),
+        'cc2': ('Crédito em 2x', 0, False),
+        'cc3': ('Crédito em 3x', 0.10, False)
+    }
+    
+    try:
+        valor: float = float(input("Digite o valor da mercadoria: R$ "))
+        print("\n[V] À Vista [C] Cheque [CC] Cartão Crédito [CC2] 2x [CC3] 3x")
+        condicao: str = input("Digite a condicao: ").lower()
+        
+        if condicao in condicoes:
+            nome, taxa, eh_desconto = condicoes[condicao]
+            if eh_desconto:
+                valor_final: float = valor - (valor * taxa)
+            else:
+                valor_final = valor + (valor * taxa)
+            
+            print(f"{nome}: R$ {valor_final:,.2f}")
+        else:
+            print("Opção inválida!")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
 
-# maior = max(A, B, C, D)
-# menor = min(A, B, C, D)
 
-# print(f'\nO maior valor é {maior} e o menor valor é {menor}.')
+def exercicio_12() -> None:
+    """Maior e menor entre 4 valores."""
+    print("\n=== EXERCÍCIO 12: Maior e Menor Entre 4 Valores ===")
+    try:
+        valores: list = [float(x) for x in input("Digite 4 valores (separados por espaço): ").split()]
+        
+        if len(valores) == 4:
+            print(f"Maior: {max(valores)}")
+            print(f"Menor: {min(valores)}")
+        else:
+            print("Erro: Digite exatamente 4 valores!")
+    except ValueError:
+        print("Erro: Digite valores numéricos válidos!")
 
-# ================================================================
 
-# a,b,c,d = map(float,input('Digite 4 valores para A, B, C e D: ').split())
+def menu_principal() -> None:
+    """Menu principal para selecao de exercicios."""
+    opcoes = {
+        '1': ('Classificacao de Triângulo', exercicio_1),
+        '2': ('Media Ponderada', exercicio_2),
+        '3': ('Classificacao de IMC', exercicio_3),
+        '4': ('Magic 8-Ball', exercicio_4),
+        '5': ('Casas Hogwarts', exercicio_5),
+        '6': ('Traducao de Dias', exercicio_6),
+        '7': ('Categorias de Competicao', exercicio_7),
+        '8': ('Peso em Planetas', exercicio_8),
+        '9': ('Funcao Especial', exercicio_9),
+        '10': ('Aumento Salarial', exercicio_10),
+        '11': ('Desconto Pagamento', exercicio_11),
+        '12': ('Maior e Menor', exercicio_12),
+    }
+    
+    while True:
+        print("\n" + "="*60)
+        print("LISTA 4 - DECISÕES MÚLTIPLAS")
+        print("="*60)
+        for key, (desc, _) in opcoes.items():
+            print(f"[{key:2}] {desc}")
+        print("[0] Sair")
+        print("="*60)
+        
+        escolha = input("Escolha uma opcao: ").strip()
+        
+        if escolha == '0':
+            print("Até logo!")
+            break
+        elif escolha in opcoes:
+            opcoes[escolha][1]()
+        else:
+            print("Opcao inválida! Tente novamente.")
 
-# maior = max(a, b, c, d)
-# menor = min(a, b, c, d)
 
-# print(f'\nO maior valor é {maior} e o menor valor é {menor}.')
-
-# ================================================================
-
-# import math
-
-# # Solicita ao usuário que digite os coeficientes a, b e c
-# a = float(input("Digite o coeficiente a (diferente de zero): "))
-# b = float(input("Digite o coeficiente b: "))
-# c = float(input("Digite o coeficiente c: "))
-
-# # Calcula o valor de delta
-# delta = b**2 - 4 * a * c
-
-# # Verifica se delta é negativo
-# if (delta < 0):
-#     print("Não existem raízes reais.")
-
-# # Verifica se delta não é negativo
-# if (delta != 0):
-#     x1 = (-b + math.sqrt(delta)) / (2 * a)
-#     x2 = (-b - math.sqrt(delta)) / (2 * a)
-#     print("As raízes reais da equação são:")
-#     print("x1 =", x1)
-#     print("x2 =", x2)
-
-# ================================================================
-
-# Solicita ao usuário que digite a idade
-# idade = int(input("Digite a idade: "))
-
-# if (idade < 16):
-#     print("Não eleitor.")
-# else:
-#     if ((idade >= 18) or (idade < 65)):
-#         print("Eleitor obrigatório.")
-#     else:
-#         print("Eleitor facultativo.")
+if __name__ == "__main__":
+    menu_principal()
