@@ -11,6 +11,7 @@
 Este repositório contém todos os exercícios, listas e estudos de programação Python desenvolvidos durante o **primeiro semestre de 2026** no curso de **Sistemas de Informação da UFR**.
 
 Inclui:
+
 - ✅ **3 Listas de Exercícios** com ~50+ exercícios resolvidos
 - ✅ **26 Programas de Estudo Temático** (Fibonacci, números perfeitos, etc.)
 - ✅ **Exemplos Práticos** de estruturas sequenciais, condicionais e loops
@@ -48,10 +49,12 @@ ufr_si_2026_1/
 ## 🚀 Como Usar
 
 ### **Requisitos**
+
 - Python 3.8+
 - Sem dependências externas (usa apenas bibliotecas padrão)
 
 ### **Executar um Exercício**
+
 ```bash
 # Lista 1 - Estruturas Sequenciais
 python "Lista 1 Estruturas sequenciais.py"
@@ -67,6 +70,7 @@ python "Estudos Codigos PY/sequencia_fibonacci.py"
 ```
 
 ### **Executar Testes**
+
 ```bash
 python tests.py
 ```
@@ -76,7 +80,9 @@ python tests.py
 ## 📖 Conteúdo das Listas
 
 ### **Lista 1: Estruturas Sequenciais**
+
 Exercícios sobre operações aritméticas, variáveis e tipos de dados:
+
 - Leitura de tipos inteiro, real e texto
 - Troca de variáveis
 - Cálculo de antecessor e sucessor
@@ -84,7 +90,9 @@ Exercícios sobre operações aritméticas, variáveis e tipos de dados:
 - Progressões aritméticas
 
 ### **Lista 2: Estruturas de Decisão/Condicionais**
+
 Exercícios com operadores lógicos e estruturas if/elif/else:
+
 - Comparações numéricas
 - Menu de operações matemáticas
 - Classificação por faixa de valores (idade, temperatura, IMC)
@@ -92,7 +100,9 @@ Exercícios com operadores lógicos e estruturas if/elif/else:
 - Simulações (sorteio, par/ímpar)
 
 ### **Lista 4: Decisões Múltiplas**
+
 Exercícios com múltiplas condições e loops:
+
 - Classificação de triângulos
 - Cálculo de IMC com categorias
 - Magic 8-Ball (simulação aleatória)
@@ -106,6 +116,7 @@ Exercícios com múltiplas condições e loops:
 ## 🧪 Exemplos de Uso
 
 ### **Exemplo 1: Estrutura Sequencial**
+
 ```python
 # Lista 1, Exercício 1
 # Entrada: número inteiro e real
@@ -117,6 +128,7 @@ print(f"Resultado: {resultado}")
 ```
 
 ### **Exemplo 2: Estrutura Condicional**
+
 ```python
 # Lista 2, Exercício 3
 # Classificar pessoa por faixa etária
@@ -130,6 +142,7 @@ else:
 ```
 
 ### **Exemplo 3: Loop com Iteração**
+
 ```python
 # Estudos: somatorio_1_n.py
 # Somatório de 1/1 + 1/2 + 1/3 + ... + 1/50
@@ -143,16 +156,16 @@ for cont in range(1, 51):
 
 ## 📚 Estudos Temáticos (Pasta: `Estudos Codigos PY/`)
 
-| Arquivo | Descrição |
-|---------|-----------|
-| `sequencia_fibonacci.py` | Série de Fibonacci |
-| `numero_perfeito.py` | Identificação de números perfeitos |
-| `somatorio_1_n.py` | Somatório harmônico |
-| `fatorial_7.py` | Cálculo de fatorial |
+| Arquivo                  | Descrição                           |
+| ------------------------ | ----------------------------------- |
+| `sequencia_fibonacci.py` | Série de Fibonacci                  |
+| `numero_perfeito.py`     | Identificação de números perfeitos  |
+| `somatorio_1_n.py`       | Somatório harmônico                 |
+| `fatorial_7.py`          | Cálculo de fatorial                 |
 | `progressao_numerica.py` | Progressões (aritmética/geométrica) |
-| `flag_primo.py` | Identificação de números primos |
-| `soma_multiplos_5.py` | Soma de múltiplos de 5 |
-| ... | (19+ mais programas) |
+| `flag_primo.py`          | Identificação de números primos     |
+| `soma_multiplos_5.py`    | Soma de múltiplos de 5              |
+| ...                      | (19+ mais programas)                |
 
 ---
 
@@ -163,7 +176,7 @@ for cont in range(1, 51):
 ✅ **Validação** - Entrada de dados validada onde necessário  
 ✅ **Tratamento de Erros** - Try/except em operações críticas  
 ✅ **Comentários** - Código bem comentado e legível  
-✅ **Testes** - Testes unitários disponíveis  
+✅ **Testes** - Testes unitários disponíveis
 
 ---
 
@@ -188,7 +201,7 @@ for cont in range(1, 51):
 
 **Nabor N. Silva**  
 Estudante de Sistemas de Informação - UFR  
-Email: nabor.silva@ufr.edu.br
+Email: nabor.n@aluno.ufr.edu.br
 
 ---
 
