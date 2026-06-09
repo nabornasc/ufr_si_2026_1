@@ -456,13 +456,13 @@ print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
 # algoritmo que calcule o valor de delta para uma equação de segundo grau,
 # utilizando a fórmula delta = b² - 4ac.
 
-valorA=float(input('Digite o valor de a para calcular o delta de uma equação de segundo grau: '))
-valorB=float(input('Digite o valor de b para calcular o delta de uma equação de segundo grau: '))
-valorC=float(input('Digite o valor de c para calcular o delta de uma equação de segundo grau: '))
+# valorA=float(input('Digite o valor de a para calcular o delta de uma equação de segundo grau: '))
+# valorB=float(input('Digite o valor de b para calcular o delta de uma equação de segundo grau: '))
+# valorC=float(input('Digite o valor de c para calcular o delta de uma equação de segundo grau: '))
 
-delta=valorB**2-4*valorA*valorC
+# delta=valorB**2-4*valorA*valorC
 
-print(f'O valor de delta para a equação de segundo grau é: {delta:,.2f}')
+# print(f'O valor de delta para a equação de segundo grau é: {delta:,.2f}')
 
 
 # exercício 25
