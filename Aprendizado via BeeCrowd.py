@@ -148,7 +148,7 @@
 #     print(f'{maiorAB} eh o maior')
 
 # =================================
-    
+
 # x, y = input().split()
 # x, y = int(x), float(y)
 
@@ -227,7 +227,7 @@
 #     print(f'{quantidade} nota(s) de R$ {cedula:,.2f}'.replace(',', '.'))
 
 # =================================
-    
+
 # n=int(input())
 # resto=n
 
