@@ -1,165 +1,208 @@
-'''Programa: CalculoDobro
-Descrição: Este programa solicita um valor ao usuário e calcula o dobro desse valor.
-Autor: NaborNSilva
-Data de Criação: 29-03-26
-Versão: 1.0
-Bibliotecas Utilizadas: Nenhuma
-Este programa foi desenvolvido como exemplo de implementação em Python.
-O objetivo é demonstrar o uso de entrada e saída de dados, além de operações aritméticas básicas.
-'''
+"""
+ARQUIVO DE MODELO E TESTES
+Exemplos de referência para práticas de programação Python.
 
-'''Declaração de variáveis
-numero    # variável que armazenará o valor informado pelo usuário
-            do tipo decimal (ponto flutuante)
-quadrado    # variável que armazenará o resultado do dobro
-'''
-'''
-numero = 0
-quadrado = 0
-FATOR = 3
+Autor: Nabor N. Silva
+Versão: 2.0
+"""
 
-# entrada de dados
 
-numero = float(input('Digite aqui um numero: '))
+def calculo_dobro(numero: float) -> float:
+    """
+    Calcula o dobro de um número.
+    
+    Args:
+        numero (float): O número a ser dobrado
+        
+    Returns:
+        float: O dobro do número
+    """
+    return numero * 2
 
-# processo de calculo
 
-quadrado = numero**FATOR
+def calculo_quadrado(numero: float) -> float:
+    """
+    Calcula o quadrado de um número.
+    
+    Args:
+        numero (float): O número a ser elevado ao quadrado
+        
+    Returns:
+        float: O quadrado do número
+    """
+    return numero ** 2
 
-# saida
 
-print(f'O quadrado de {numero} é {quadrado:.3f}.')
-'''
+def calculo_cubo(numero: float) -> float:
+    """
+    Calcula o cubo de um número.
+    
+    Args:
+        numero (float): O número a ser elevado ao cubo
+        
+    Returns:
+        float: O cubo do número
+    """
+    return numero ** 3
 
-'''tipos de variaveis
-inteiro: int
-decimal: float
-texto: str
-booleano: bool
-'''
-'''
-numero=int(input('Digite um numero inteiro: '))
-numero=numero+1
-print(f'Numero da variavel é {numero}')
-'''
-'''
-a=10
-a=a+1
-print(f'O valor da variavel é {a}')
-'''
-'''
-a=int(input('Digite um numero inteiro: '))
-b=int(input('Digite outro numero inteiro: '))
 
-soma=a+b
-subtracao=a-b
-multiplicacao=a*b
-divisao=a/b
+def operacoes_aritmeticas(a: float, b: float) -> dict:
+    """
+    Realiza operações aritméticas básicas.
+    
+    Args:
+        a (float): Primeiro número
+        b (float): Segundo número
+        
+    Returns:
+        dict: Dicionário com resultados de soma, subtração, multiplicação e divisão
+    """
+    return {
+        'soma': a + b,
+        'subtracao': a - b,
+        'multiplicacao': a * b,
+        'divisao': a / b if b != 0 else None,
+        'modulo': a % b if b != 0 else None
+    }
 
-print(f'A soma de {a} e {b} é {soma}.') 
-print(f'A subtracao de {a} e {b} é {subtracao}.') 
-print(f'A multiplicacao de {a} e {b} é {multiplicacao}.') 
-print(f'A divisao de {a} e {b} é {divisao}.') 
-'''
-'''
-potencia=2
-x=float(input('Digite um numero decimal: '))
-result=x**potencia
-print(f'O numero {x} elevado a potencia {potencia} é {result:.2f}.')
-'''
-'''
-tipoDeRaiz=int(input('Digite 2 para raiz quadrada ou 3 para raiz cubica ou etc: '))
 
-numero=float(input('Digite um numero decimal: '))
-calculo=numero**(1/tipoDeRaiz)
-print(f'A raiz {tipoDeRaiz} de {numero} é {calculo:.2f}.')
-'''
+def raiz(numero: float, indice: int = 2) -> float:
+    """
+    Calcula a raiz de um número.
+    
+    Args:
+        numero (float): O número
+        indice (int): Índice da raiz (2 para quadrada, 3 para cúbica, etc)
+        
+    Returns:
+        float: A raiz do número
+    """
+    if numero < 0 and indice % 2 == 0:
+        return None
+    return numero ** (1 / indice)
 
-# a=float(input('Digite um numero decimal: '))
-# b=float(input('Digite outro numero decimal: '))
 
-# divisao=a/b
-# quociente=a//b
-# resto=a%b
+def inverso_numero(numero: int) -> int:
+    """
+    Inverte os dígitos de um número.
+    
+    Args:
+        numero (int): O número a ser invertido
+        
+    Returns:
+        int: O número invertido
+    """
+    return int(str(numero)[::-1])
 
-# print(f'A divisao de {a} por {b} é {divisao:.2f}.')
-# print(f'O quociente da divisao de {a} por {b} é {quociente:.2f}.')
-# print(f'O resto da divisao de {a} por {b} é {resto:.2f}.')
 
-# numero=int(input('Digite um numero inteiro: '))
-# dezena=numero//10
-# unidade=numero%10
-# # print(f'O inverso de {numero} é {unidade}{dezena}.') # para numeros de 2 digitos
-# def inverso(numero): # para numeros de 2 ou mais digitos, usando string
-#     return str(numero)[::-1]
-# print(f'O inverso de {numero} é {inverso(numero)}.') # para numeros de 2 ou mais digitos, usando fatiamento de string
+def decomposicao_tempo(minutos_totais: int) -> dict:
+    """
+    Decomposição de minutos em horas e minutos.
+    
+    Args:
+        minutos_totais (int): Total de minutos
+        
+    Returns:
+        dict: Dicionário com horas e minutos
+    """
+    horas: int = minutos_totais // 60
+    minutos: int = minutos_totais % 60
+    return {'horas': horas, 'minutos': minutos}
 
-# horas_4dig=int(input('Digite um numero inteiro de 4 digitos representando horas: '))
-# horas=horas_4dig//100
-# # print(horas)
-# minutos=horas_4dig%100
-# # print(minutos)
-# convertidoSegundos=horas*3600+minutos*60
-# convertidoMinutos=convertidoSegundos/60
-# print(f'{horas} horas e {minutos} minutos representam {convertidoMinutos} minutos.')
-# print(f'{convertidoMinutos} minutos representam {convertidoSegundos} segundos.')
 
-# valorInical=float(input('Digite um valor inicial: '))
-# taxa=float(input('Digite a taxa de crescimento (em porcentagem): '))
-# valorFinalComAcrescimo=valorInical*(1+taxa/100)
-# valorFinalComDesconto=valorInical*(1-taxa/100)
-# print(f'O valor final após o crescimento de {taxa}% é {valorFinalComAcrescimo:.2f}.')
-# print(f'O valor final após o desconto de {taxa}% é {valorFinalComDesconto:.2f}.')
+def percentual(parte: float, total: float) -> float:
+    """
+    Calcula percentual de uma parte em relação ao total.
+    
+    Args:
+        parte (float): A parte
+        total (float): O total
+        
+    Returns:
+        float: O percentual
+    """
+    if total == 0:
+        return 0
+    return (parte / total) * 100
 
-# print('Este programa calcula a expressão\n y = (a^potencia1 / b^potencia2 + c)^(1/raiz).')
-# a=float(input('Digite um numero decimal para A: '))
-# b=float(input('Digite outro numero decimal para B: '))
-# potencia1=int(input('Digite a potencia para o numero a: '))
-# potencia2=int(input('Digite a potencia para o numero b: '))
-# c=float(input('Digite um numero decimal C para ser somado: '))
-# raiz=int(input('Digite a raiz para o resultado final: '))
-# y=((a**potencia1)/(b**potencia2+c))**1/raiz
-# print(f'O resultado da expressão é {y:.2f}.')
 
-# a=int(input('Digite 1º numero inteiro: '))
-# b=int(input('Digite 2º numero inteiro: '))
-# c=a 
-# d=b
-# print(f'Antes da troca: a={a}, b={b}')
-# print(f'Depois da troca: a={d}, b={c}')
+def exemplo_interativo() -> None:
+    """Exemplo de programa interativo com menu."""
+    print("\n" + "="*50)
+    print("EXEMPLOS DE REFERÊNCIA")
+    print("="*50)
+    
+    while True:
+        print("\n[1] Dobro de um número")
+        print("[2] Quadrado de um número")
+        print("[3] Cubo de um número")
+        print("[4] Operações aritméticas")
+        print("[5] Raiz de um número")
+        print("[6] Inverso de um número")
+        print("[7] Decomposição de tempo")
+        print("[8] Cálculo de percentual")
+        print("[0] Sair")
+        
+        opcao: str = input("\nEscolha uma opção: ").strip()
+        
+        if opcao == '0':
+            print("Até logo!")
+            break
+        
+        try:
+            if opcao == '1':
+                num: float = float(input("Digite um número: "))
+                resultado: float = calculo_dobro(num)
+                print(f"O dobro de {num} é {resultado}")
+            
+            elif opcao == '2':
+                num: float = float(input("Digite um número: "))
+                resultado: float = calculo_quadrado(num)
+                print(f"O quadrado de {num} é {resultado:.2f}")
+            
+            elif opcao == '3':
+                num: float = float(input("Digite um número: "))
+                resultado: float = calculo_cubo(num)
+                print(f"O cubo de {num} é {resultado:.2f}")
+            
+            elif opcao == '4':
+                a: float = float(input("Digite o primeiro número: "))
+                b: float = float(input("Digite o segundo número: "))
+                resultados: dict = operacoes_aritmeticas(a, b)
+                print(f"\nResultados:")
+                for op, valor in resultados.items():
+                    print(f"  {op}: {valor}")
+            
+            elif opcao == '5':
+                num: float = float(input("Digite um número: "))
+                indice: int = int(input("Digite o índice da raiz (padrão 2): ") or "2")
+                resultado: float = raiz(num, indice)
+                print(f"A raiz {indice} de {num} é {resultado:.4f}")
+            
+            elif opcao == '6':
+                num: int = int(input("Digite um número: "))
+                resultado: int = inverso_numero(num)
+                print(f"O inverso de {num} é {resultado}")
+            
+            elif opcao == '7':
+                minutos: int = int(input("Digite o total de minutos: "))
+                resultado: dict = decomposicao_tempo(minutos)
+                print(f"{minutos} minutos = {resultado['horas']}h {resultado['minutos']}min")
+            
+            elif opcao == '8':
+                parte: float = float(input("Digite a parte: "))
+                total: float = float(input("Digite o total: "))
+                resultado: float = percentual(parte, total)
+                print(f"{parte} é {resultado:.2f}% de {total}")
+            
+            else:
+                print("Opção inválida!")
+        
+        except ValueError:
+            print("Erro: Digite valores válidos!")
+        except Exception as e:
+            print(f"Erro: {e}")
 
-# a=int(input('Numero a ser previsto, antecessor e sucessor: '))
-# antecessor=a-1
-# sucessor=a+1
-# print(f'O numero {a} tem como antecessor {antecessor} e sucessor {sucessor}.')
 
-# numReal=float(input('Digite um numero real, que vamos separar o inteiro; do fracionado; e o arredondado: '))
-# parteInteira=int(numReal)
-# parteFracionada=numReal-parteInteira
-# parteArredondada=round(numReal)
-# print(f'O numero real digitado é {numReal}.')
-# print(f'A parte inteira do numero é {parteInteira}.')
-# print(f'A parte fracionada do numero é {parteFracionada:.2f}.')
-# print(f'O numero arredondado é {parteArredondada}.')
-
-# # O programa deve receber a razão da PA e a posição do termo desejado como entrada. Ambos os valores devem ser números reais.
-# print('Formular geral da PA: a(n) = a(1) + (n - 1) * r,\nonde a(n) é o termo na posição n,\na(1) é o primeiro termo da PA,\nr é a razão da PA e n é a posição do termo desejado.')
-# razao=float(input('Digite a razão da PA: '))
-# posicao=int(input('Digite a posição do termo desejado: '))
-# # O programa deve calcular o termo da PA usando a fórmula: termo = primeiro_termo + (posição - 1) * razão. O primeiro termo da PA é considerado como 0.
-# primeiro_termo=int(input('Digite o primeiro termo da PA: '))
-# termo=primeiro_termo+(posicao-1)*razao
-# # O programa deve exibir o termo da PA correspondente à posição desejada.
-# print(f'O termo da PA na posição {posicao} é {termo:.2f}.')
-
-# #algoritmo que efetue o cálculo da quantidade de litros de combustível gastos em uma viagem
-# distancia=float(input('Digite a distancia da viagem em km: '))
-# consumo=float(input('Digite o consumo do veículo em km/l: '))
-# litros_gastos=distancia/consumo
-# print(f'Para percorrer {distancia} km, o veículo gastará {litros_gastos:.2f} litros de combustível.')
-# #apresentar os valores da velocidade média, tempo gasto na viagem, distância percorrida e a quantidade de litros utilizados na viagem
-# velocidade_media=float(input('Digite a velocidade média da viagem em km/h: '))
-# tempo_gasto=distancia/velocidade_media
-# horas=int(tempo_gasto)
-# minutos=int((tempo_gasto-horas)*60)
-# print(f'Para percorrer {distancia} km a uma velocidade média de {velocidade_media} km/h,\no tempo gasto na viagem será de {horas} horas e {minutos} minutos.')
+if __name__ == "__main__":
+    exemplo_interativo()
