@@ -1,102 +1,240 @@
-''' Lista 1 Estruturas sequenciais
+"""
+LISTA 1 - ESTRUTURAS SEQUENCIAIS
+Exercícios sobre operações aritméticas, variáveis e tipos de dados.
 
-# Exercício 1
-varInteiro=int(input("Digite um número inteiro: "))
-varReal=float(input("Digite um número real: "))
-varTexto=str(input("Digite um texto: "))
+Autor: Nabor N. Silva
+Data: 29/03/2026
+Versão: 2.0
+"""
 
-resultado=varInteiro+varReal
-print("O resultado da soma do número inteiro e do número real é: ", resultado)
-print("O texto digitado foi: ", varTexto)  
-'''
-'''
-# Exercício 2
-# algoritmo que leia dois números inteiros do teclado, um de cada vez, e realizar a troca dos valores dessas variáveis sem que os valores sejam perdidos durante a troca
-var1=int(input("Digite o primeiro número inteiro: "))
-var2=int(input("Digite o segundo número inteiro: "))
-print("Valores antes da troca:")
-print("Variável 1:", var1)
-print("Variável 2:", var2)
-# Realizando a troca dos valores
-var1, var2 = var2, var1
-# 2 opção:
-var3, var4 = var2, var1
-print("Valores depois da troca:")
-print("Variável 1:", var1)
-print("Variável 2:", var2)
-# print("Variável 1:", var4)
-# print("Variável 2:", var3)
-'''
-'''
-# Exercício 3
-# algoritmo que leia um número inteiro do teclado e calcule o antecessor e o sucessor desse número
-var=int(input("Digite um número inteiro: "))
-antecessor=var-1
-sucessor=var+1
-print(f"O antecessor do número é: {antecessor}", f'e o sucessor do número é: {sucessor}')
-'''
-'''
-# Exercício 4
-# algoritmo que receba um número real, calcule e imprima a parte inteira do número, a parte fracionária do número e o número arredondado
-var=float(input('Digite um número real para segmentar a parte inteira, a parte fracionária e o número arredondado: '))
-parteInteira=int(var)
-parteFracionaria=var-parteInteira
-numeroArredondado=round(var)
-print(f"A parte inteira do número é: {parteInteira}")
-print(f"A parte fracionária do número é: {parteFracionaria:.2f}")
-print(f"O número arredondado é: {numeroArredondado}")
-'''
-'''
-# Exercício 5
-# algoritmo que solicite a razão de uma Progressão Aritmética (PA) e a posição do termo a ser calculado,valorTermo = 1 + (posicao_termo - 1) * razao
-print('valorTermo = 1 + (posicao_termo - 1) * razao')
-razao=float(input("Digite a razão da Progressão Aritmética (PA): "))
-posicaoTermo=int(input("Digite a posição do termo a ser calculado: ")) 
-valorTermo = 1 + (posicaoTermo - 1) * razao
-print(f"O valor do termo na posição {posicaoTermo} é: {valorTermo}")
-'''
+def exercicio_1() -> None:
+    """
+    Exercício 1: Leitura de tipos de dados
+    Lê um número inteiro, um real e um texto, mostrando a soma dos números.
+    """
+    print("\n=== EXERCÍCIO 1: Leitura de Tipos de Dados ===")
+    try:
+        var_inteiro: int = int(input("Digite um número inteiro: "))
+        var_real: float = float(input("Digite um número real: "))
+        var_texto: str = input("Digite um texto: ")
+        
+        resultado: float = var_inteiro + var_real
+        print(f"O resultado da soma do número inteiro e do número real é: {resultado}")
+        print(f"O texto digitado foi: {var_texto}")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
 
-# # Exercício 6
-# # algoritmo que efetue o cálculo da quantidade de litros de combustível gastos em uma viagem, considerando que o carro faz 12 km com um litro. Deverão ser fornecidos o tempo gasto na viagem e a velocidade média
-# print('Calculo de distância percorrida e litros gastos em uma viagem')
-# tempoGasto=float(input('Digite o tempo gasto na viagem (em horas): '))
-# velocidadeMedia=float(input('Digite a velocidade média durante a viagem (em km/h):'))
-# eficiencia=float(input('Digite a eficiência do carro (km por litro): '))
-# distPerc=tempoGasto*velocidadeMedia
-# litrosGastos=distPerc/eficiencia
-# print(f'A quantidade de litros de combustível gastos na viagem de {distPerc:.2f} km, foi de: {litrosGastos:.2f} litros')
 
-# # Exercício 7
-# # programa que, dados dois números inteiros como entrada, realiza a operação de divisão e exibe o dividendo, divisor, quociente e resto
-# print('Programa para realizar a operação de divisão entre dois números inteiros e exibir o dividendo, divisor, quociente e resto')
-# dividendo=int(input('Digite o dividendo (número inteiro): '))
-# divisor=int(input('Digite o divisor (número inteiro): '))
-# quociente=dividendo//divisor
-# resto=dividendo%divisor
-# print(f'Dividendo: {dividendo}')
-# print(f'Divisor: {divisor}')
-# print(f'Quociente: {quociente}')
-# print(f'Resto: {resto}')
+def exercicio_2() -> None:
+    """
+    Exercício 2: Troca de variáveis
+    Lê dois números inteiros e realiza a troca de seus valores.
+    """
+    print("\n=== EXERCÍCIO 2: Troca de Variáveis ===")
+    try:
+        var1: int = int(input("Digite o primeiro número inteiro: "))
+        var2: int = int(input("Digite o segundo número inteiro: "))
+        
+        print(f"Valores antes da troca: var1={var1}, var2={var2}")
+        
+        var1, var2 = var2, var1
+        
+        print(f"Valores depois da troca: var1={var1}, var2={var2}")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
 
-# # Exercício 8
-# # algoritmo que receba um número de quatro dígitos e mostre as unidades, dezenas, centenas e milhares que compõem esse número.
-# print('Algoritmo para decompor um número de quatro dígitos em unidades, dezenas, centenas e milhares')
-# numero=int(input('Digite um número de quatro dígitos: '))
-# unidades=numero%10
-# dezenas=(numero//10)%10
-# centenas=(numero//100)%10
-# milhares=numero//1000
-# print(f'Número: {numero}')
-# print(f'Milhares: {milhares}')
-# print(f'Centenas: {centenas}')
-# print(f'Dezenas: {dezenas}')
-# print(f'Unidades: {unidades}')
 
-# # Exercício 9
-# # algoritmo que leia uma informação de latitude no formato GGMMSS (Graus, Minutos e Segundos) e decomponha esta informação em graus, minutos e segundos
-# print('Algoritmo para decompor uma informação de latitude no formato GGMMSS em graus, minutos e segundos')
-# latitude=int(input('Digite a latitude no formato GGMMSS: '))
-# if 0<=latitude<=999999:
+def exercicio_3() -> None:
+    """
+    Exercício 3: Antecessor e sucessor
+    Lê um número inteiro e calcula seu antecessor e sucessor.
+    """
+    print("\n=== EXERCÍCIO 3: Antecessor e Sucessor ===")
+    try:
+        numero: int = int(input("Digite um número inteiro: "))
+        antecessor: int = numero - 1
+        sucessor: int = numero + 1
+        print(f"Antecessor: {antecessor} | Número: {numero} | Sucessor: {sucessor}")
+    except ValueError:
+        print("Erro: Digite um valor inteiro válido!")
+
+
+def exercicio_4() -> None:
+    """
+    Exercício 4: Decomposição de número real
+    Lê um número real e exibe parte inteira, fracionária e arredondada.
+    """
+    print("\n=== EXERCÍCIO 4: Decomposição de Número Real ===")
+    try:
+        numero: float = float(input("Digite um número real: "))
+        parte_inteira: int = int(numero)
+        parte_fracionaria: float = numero - parte_inteira
+        numero_arredondado: int = round(numero)
+        
+        print(f"Parte inteira: {parte_inteira}")
+        print(f"Parte fracionária: {parte_fracionaria:.2f}")
+        print(f"Número arredondado: {numero_arredondado}")
+    except ValueError:
+        print("Erro: Digite um valor real válido!")
+
+
+def exercicio_5() -> None:
+    """
+    Exercício 5: Progressão Aritmética (PA)
+    Calcula um termo específico de uma PA usando a fórmula: a(n) = a1 + (n-1) * r
+    """
+    print("\n=== EXERCÍCIO 5: Progressão Aritmética ===")
+    print("Fórmula: a(n) = a1 + (n-1) * r")
+    try:
+        primeiro_termo: float = float(input("Digite o primeiro termo da PA: "))
+        razao: float = float(input("Digite a razão da PA: "))
+        posicao: int = int(input("Digite a posição do termo desejado: "))
+        
+        valor_termo: float = primeiro_termo + (posicao - 1) * razao
+        print(f"O termo da PA na posição {posicao} é: {valor_termo:.2f}")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
+
+
+def exercicio_6() -> None:
+    """
+    Exercício 6: Cálculo de combustível em viagem
+    Calcula litros gastos, tempo de viagem e velocidade média.
+    """
+    print("\n=== EXERCÍCIO 6: Combustível em Viagem ===")
+    try:
+        tempo_gasto: float = float(input("Digite o tempo gasto na viagem (em horas): "))
+        velocidade_media: float = float(input("Digite a velocidade média (em km/h): "))
+        eficiencia: float = float(input("Digite a eficiência do carro (km/l): "))
+        
+        distancia_percorrida: float = tempo_gasto * velocidade_media
+        litros_gastos: float = distancia_percorrida / eficiencia
+        
+        print(f"\n--- Resultados ---")
+        print(f"Distância percorrida: {distancia_percorrida:.2f} km")
+        print(f"Litros de combustível gastos: {litros_gastos:.2f} l")
+    except (ValueError, ZeroDivisionError):
+        print("Erro: Digite valores válidos! Eficiência não pode ser zero.")
+
+
+def exercicio_7() -> None:
+    """
+    Exercício 7: Divisão com detalhes
+    Realiza divisão entre dois inteiros e exibe dividendo, divisor, quociente e resto.
+    """
+    print("\n=== EXERCÍCIO 7: Divisão com Detalhes ===")
+    try:
+        dividendo: int = int(input("Digite o dividendo (número inteiro): "))
+        divisor: int = int(input("Digite o divisor (número inteiro): "))
+        
+        if divisor == 0:
+            print("Erro: Divisor não pode ser zero!")
+            return
+        
+        quociente: int = dividendo // divisor
+        resto: int = dividendo % divisor
+        divisao_decimal: float = dividendo / divisor
+        
+        print(f"\n--- Resultados ---")
+        print(f"Dividendo: {dividendo}")
+        print(f"Divisor: {divisor}")
+        print(f"Quociente: {quociente}")
+        print(f"Resto: {resto}")
+        print(f"Divisão (decimal): {divisao_decimal:.4f}")
+    except ValueError:
+        print("Erro: Digite valores inteiros válidos!")
+
+
+def exercicio_8() -> None:
+    """
+    Exercício 8: Decomposição de número de 4 dígitos
+    Extrai unidades, dezenas, centenas e milhares.
+    """
+    print("\n=== EXERCÍCIO 8: Decomposição de Número de 4 Dígitos ===")
+    try:
+        numero: int = int(input("Digite um número de 4 dígitos: "))
+        
+        if numero < 1000 or numero > 9999:
+            print("Erro: Digite um número entre 1000 e 9999!")
+            return
+        
+        milhares: int = numero // 1000
+        centenas: int = (numero // 100) % 10
+        dezenas: int = (numero // 10) % 10
+        unidades: int = numero % 10
+        
+        print(f"\nNúmero: {numero}")
+        print(f"Milhares: {milhares}")
+        print(f"Centenas: {centenas}")
+        print(f"Dezenas: {dezenas}")
+        print(f"Unidades: {unidades}")
+    except ValueError:
+        print("Erro: Digite um número inteiro válido!")
+
+
+def exercicio_9() -> None:
+    """
+    Exercício 9: Latitude em formato GGMMSS
+    Decompõe uma coordenada em graus, minutos e segundos.
+    """
+    print("\n=== EXERCÍCIO 9: Latitude em Formato GGMMSS ===")
+    try:
+        latitude: int = int(input("Digite a latitude no formato GGMMSS (ex: 234517): "))
+        
+        if 0 <= latitude <= 999999:
+            graus: int = latitude // 10000
+            minutos: int = (latitude // 100) % 100
+            segundos: int = latitude % 100
+            
+            print(f"\n--- Resultado ---")
+            print(f"Graus: {graus}°")
+            print(f"Minutos: {minutos}'")
+            print(f"Segundos: {segundos}\"")
+        else:
+            print("Erro: Digite um valor entre 0 e 999999!")
+    except ValueError:
+        print("Erro: Digite um número inteiro válido!")
+
+
+def menu_principal() -> None:
+    """
+    Menu principal para seleção de exercícios.
+    """
+    opcoes = {
+        '1': ('Exercício 1: Leitura de Tipos de Dados', exercicio_1),
+        '2': ('Exercício 2: Troca de Variáveis', exercicio_2),
+        '3': ('Exercício 3: Antecessor e Sucessor', exercicio_3),
+        '4': ('Exercício 4: Decomposição de Número Real', exercicio_4),
+        '5': ('Exercício 5: Progressão Aritmética', exercicio_5),
+        '6': ('Exercício 6: Combustível em Viagem', exercicio_6),
+        '7': ('Exercício 7: Divisão com Detalhes', exercicio_7),
+        '8': ('Exercício 8: Decomposição de 4 Dígitos', exercicio_8),
+        '9': ('Exercício 9: Latitude em GGMMSS', exercicio_9),
+    }
+    
+    while True:
+        print("\n" + "="*50)
+        print("LISTA 1 - ESTRUTURAS SEQUENCIAIS")
+        print("="*50)
+        for key, (desc, _) in opcoes.items():
+            print(f"[{key}] {desc}")
+        print("[0] Sair")
+        print("="*50)
+        
+        escolha = input("Escolha uma opção: ").strip()
+        
+        if escolha == '0':
+            print("Até logo!")
+            break
+        elif escolha in opcoes:
+            opcoes[escolha][1]()
+        else:
+            print("Opção inválida! Tente novamente.")
+
+
+if __name__ == "__main__":
+    menu_principal()
+
 
 #     graus=latitude//10000
 #     minutos=(latitude//100)%100

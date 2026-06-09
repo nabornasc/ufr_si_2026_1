@@ -1,318 +1,344 @@
-# Lista 2 Estruturas de Seleção/Decisão/Condicionais 
+"""
+LISTA 2 - ESTRUTURAS DE DECISÃO/CONDICIONAIS
+Exercícios com operadores lógicos e estruturas if/elif/else.
 
-# =========================================
-'''
-Seção de cabeçalho
-Nome do algoritmo/programa: Lista estruturas de decisão -
-Ex. 01
-Função/Descrição: 1.    Escreva
-um algoritmo que leia dois números inteiros.
-Mostre na tela e diga se eles são iguais ou diferentes.
-Autor: Waine Teixeira Júnior
-Data: 31/05/2019
-Número de controle de versão: 1.0
-'''
-# =========================================
-'''
-Seção de Declarações de variáveis
- 
-'''
-# =========================================
-# inicio do algoritmo/programa
- 
-#entrada de dados
-# print ('Digite o primeiro número')
-# n1 = int (input())
-# print ('Digite o segundo número')
-# n2 = int (input())
- 
-#processamento e saida
- 
-# if (n1 == n2):
-#     print (n1, ' e ',n2,' são iguais')
-# else:
-#     print (n1, ' e ',n2,' são diferentes')
- 
-# =========================================
-# fim do algoritmo/programa
+Autor: Nabor N. Silva (revisado)
+Versão: 2.0
+"""
+
+import random
 
 
-# exercício 1
-# algorimto que leia A e B, que serão valores inteiros digitados pelo teclado.
-# Determine e mostre somente se A é maior que B. Nesse caso mostrar a mensagem:
-# A é maior que B
+def exercicio_1() -> None:
+    """Compara dois números e verifica se são iguais ou diferentes."""
+    print("\n=== EXERCÍCIO 1: Comparação de Números ===")
+    try:
+        a: int = int(input("Digite o valor de A: "))
+        b: int = int(input("Digite o valor de B: "))
+        
+        if a > b:
+            print(f"{a} é maior que {b}")
+        elif a == b:
+            print(f"{a} é igual a {b}")
+        else:
+            print(f"{a} é menor que {b}")
+    except ValueError:
+        print("Erro: Digite números inteiros válidos!")
 
-# A = int(input("Digite o valor de A: "))
-# B = int(input("Digite o valor de B: "))
 
-# if A > B:
-#     print("A é maior que B")
-# elif A == B:
-#     print("A é igual a B")
-# else:
-#     print("A não é maior que B")
+def exercicio_2() -> None:
+    """Menu de operações matemáticas."""
+    print("\n=== EXERCÍCIO 2: Menu de Operações ===")
+    print("\n[1] Adição")
+    print("[2] Subtração")
+    print("[3] Multiplicação")
+    print("[4] Divisão")
     
-# exercício 2
-# algoritmo um menu de opções de operações matemáticas
+    try:
+        opcao: int = int(input("\nDigite a opção desejada: "))
+        
+        if opcao not in [1, 2, 3, 4]:
+            print("Opção inválida!")
+            return
+        
+        valor1: float = float(input("Digite o primeiro número: "))
+        valor2: float = float(input("Digite o segundo número: "))
+        
+        operacoes = {
+            1: ("Adição", valor1 + valor2),
+            2: ("Subtração", valor1 - valor2),
+            3: ("Multiplicação", valor1 * valor2),
+            4: ("Divisão", valor1 / valor2 if valor2 != 0 else None)
+        }
+        
+        nome_op, resultado = operacoes[opcao]
+        
+        if resultado is None:
+            print("Erro: Divisão por zero!")
+        else:
+            print(f"O resultado da {nome_op} é: {resultado:,.2f}")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
 
-# print("Menu de opções para calcular:")
-# print("1. Adição")
-# print("2. Subtração")
-# print("3. Multiplicação")
-# print("4. Divisão")
 
-# opcao=int(input("Digite a opção desejada: "))
+def exercicio_3() -> None:
+    """Classifica pessoa por idade."""
+    print("\n=== EXERCÍCIO 3: Classificação por Idade ===")
+    try:
+        idade: int = int(input("Digite a idade: "))
+        
+        if idade < 12:
+            print("A pessoa é uma criança.")
+        elif idade <= 18:
+            print("A pessoa é um adolescente.")
+        else:
+            print("A pessoa é um adulto.")
+    except ValueError:
+        print("Erro: Digite uma idade válida!")
 
-# if opcao == 1:
-#     print("Você escolheu Adição")
-#     valor1 = float(input("Digite o primeiro número: "))
-#     valor2 = float(input("Digite o segundo número: "))
-#     resultado = valor1 + valor2
-#     print(f'O resultado da adição é: {resultado:,.2f}')
 
-# elif opcao == 2:
-#     print("Você escolheu Subtração")
-#     valor1 = float(input("Digite o primeiro número: "))
-#     valor2 = float(input("Digite o segundo número: "))
-#     resultado = valor1 - valor2
-#     print(f'O resultado da subtração é: {resultado:,.2f}')
+def exercicio_4() -> None:
+    """Classifica eleitor por idade."""
+    print("\n=== EXERCÍCIO 4: Classificação Eleitoral ===")
+    try:
+        idade: int = int(input("Digite a idade: "))
+        
+        if idade < 16:
+            print("A pessoa é não-eleitor.")
+        elif idade < 18 or idade >= 65:
+            print("A pessoa é eleitor facultativo.")
+        else:
+            print("A pessoa é eleitor obrigatório.")
+    except ValueError:
+        print("Erro: Digite uma idade válida!")
 
-# elif opcao == 3:
-#     print("Você escolheu Multiplicação")
-#     valor1 = float(input("Digite o primeiro número: "))
-#     valor2 = float(input("Digite o segundo número: "))
-#     resultado = valor1 * valor2
-#     print(f'O resultado da multiplicação é: {resultado:,.2f}')
+
+def exercicio_5() -> None:
+    """Classifica temperatura."""
+    print("\n=== EXERCÍCIO 5: Classificação de Temperatura ===")
+    try:
+        temperatura: float = float(input("Digite a temperatura em graus C: "))
+        
+        if temperatura < 15:
+            classificacao = "Frio"
+        elif temperatura <= 30:
+            classificacao = "Moderado"
+        else:
+            classificacao = "Quente"
+        
+        print(f"A temperatura é classificada como {classificacao}.")
+    except ValueError:
+        print("Erro: Digite uma temperatura válida!")
+
+
+def exercicio_6() -> None:
+    """Classifica desempenho de aluno."""
+    print("\n=== EXERCÍCIO 6: Classificação de Aluno ===")
+    try:
+        nota1: float = float(input("Digite a primeira nota: "))
+        nota2: float = float(input("Digite a segunda nota: "))
+        nota3: float = float(input("Digite a terceira nota: "))
+        
+        media: float = (nota1 + nota2 + nota3) / 3
+        
+        if media < 5:
+            status = "Reprovado"
+        elif media <= 7:
+            status = "Recuperacao"
+        else:
+            status = "Aprovado"
+        
+        print(f"Media: {media:.2f} - Aluno {status}")
+    except ValueError:
+        print("Erro: Digite notas válidas!")
+
+
+def exercicio_7() -> None:
+    """Classifica IMC."""
+    print("\n=== EXERCÍCIO 7: Calculo de IMC ===")
+    try:
+        peso: float = float(input("Digite o peso (kg): "))
+        altura: float = float(input("Digite a altura (m): "))
+        
+        imc: float = peso / (altura ** 2)
+        
+        if imc < 18.5:
+            categoria = "Abaixo do peso"
+        elif imc <= 24.9:
+            categoria = "Peso normal"
+        else:
+            categoria = "Acima do peso"
+        
+        print(f"IMC: {imc:.2f} - {categoria}")
+    except (ValueError, ZeroDivisionError):
+        print("Erro: Digite valores válidos!")
+
+
+def exercicio_8() -> None:
+    """Aplica desconto por valor."""
+    print("\n=== EXERCÍCIO 8: Calculo de Desconto ===")
+    try:
+        valor_compra: float = float(input("Digite o valor da compra (R$): "))
+        
+        if valor_compra < 100:
+            desconto = valor_compra * 0.05
+            percentual = 5
+        elif valor_compra <= 500:
+            desconto = valor_compra * 0.10
+            percentual = 10
+        else:
+            desconto = valor_compra * 0.15
+            percentual = 15
+        
+        valor_final: float = valor_compra - desconto
+        print(f"Desconto de {percentual}%: R$ {desconto:.2f}")
+        print(f"Valor final: R$ {valor_final:.2f}")
+    except ValueError:
+        print("Erro: Digite um valor válido!")
+
+
+def exercicio_9() -> None:
+    """Sorteio de número."""
+    print("\n=== EXERCÍCIO 9: Sorteio de Número ===")
+    numero_sorteado: int = random.randint(1, 6)
     
-# elif opcao == 4:
-#     print("Você escolheu Divisão")
-#     valor1 = float(input("Digite o primeiro número: "))
-#     valor2 = float(input("Digite o segundo número: "))
-#     if valor2 != 0:
-#         resultado = valor1 / valor2
-#         print(f'O resultado da divisão é: {resultado:,.2f}')
-#     else:
-#         print("Erro: Divisão por zero não é permitida.")
-# else:
-#     print("Opção inválida. Por favor, escolha uma opção entre 1 e 4.")
+    try:
+        numero_usuario: int = int(input("Digite um número de 1 a 6: "))
+        
+        if numero_usuario == numero_sorteado:
+            print("Parabéns! Você acertou!")
+        else:
+            print(f"Que pena! O número sorteado foi {numero_sorteado}.")
+    except ValueError:
+        print("Erro: Digite um número válido!")
+
+
+def exercicio_10() -> None:
+    """Previsao de tempo aleatória."""
+    print("\n=== EXERCÍCIO 10: Previsao do Tempo ===")
+    numero_sorteado: int = random.randint(1, 3)
     
-# exercício 3
-# algoritmo que receba a idade de uma pessoa.
-# Suponha a entrada de um valor válido.
-# Verifique se ela é uma criança (menor de 12 anos),
-# um adolescente (entre 12 e 18 anos) ou um adulto (maior de 18 anos).
-
-# idade=int(input('Digite a idade para verificar se é criança, adolescente ou adulto: '))
-# if idade < 12:
-#     print('A pessoa é uma criança.')
-# else:
-#     if idade >= 12 and idade <= 18:
-#         print('A pessoa é um adolescente.')
-#     else:
-#         print('A pessoa é um adulto.')
-
-# exercício 4
-# algoritmo em que leia a idade de uma pessoa e informe a sua classe eleitoral
-# idade=int(input('Digite a idade para verificar a classe eleitoral: '))
-# if idade < 16:
-#     print('A pessoa é não-eleitor.')
-# else:
-#     if idade >= 16 and idade < 18 or idade >= 65:
-#         print('A pessoa é eleitor facultativo.')
-#     else:
-#         print('A pessoa é eleitor obrigatório.')
-
-# exercício 5
-# algoritmo que receba a temperatura em graus Celsius e classifique-a 
-# como "Frio" (abaixo de 15°C), "Moderado" (entre 15°C e 30°C) 
-# ou "Quente" (acima de 30°C).
-
-# temperatura=float(input('Digite a temperatura em graus Celsius para classificar: '))
-# if temperatura < 15:
-#     print('A temperatura é classificada como Frio.')
-# else:
-#     if temperatura >= 15 and temperatura <= 30:
-#         print('A temperatura é classificada como Moderado.')
-#     else:
-#         print('A temperatura é classificada como Quente.')
-
-# exercício 6
-# algoritmo que receba três notas de um aluno e determine se ele está 
-# "Reprovado" (média abaixo de 5), em "Recuperação" 
-# (média entre 5 e 7) ou "Aprovado" (média acima de 7).
-
-# nota1=float(input('Digite a primeira nota: '))
-# nota2=float(input('Digite a segunda nota: '))
-# nota3=float(input('Digite a terceira nota: '))
-
-# media = (nota1 + nota2 + nota3) / 3
-
-# if media < 5:
-#     print('O aluno está Reprovado.')
-# elif media >= 5 and media <= 7:
-#     print('O aluno está em Recuperação.')
-# else:
-#     print('O aluno está Aprovado.')
-
-# exercício 7
-# algoritmo que receba o peso de uma pessoa e classifique-a como 
-# "Abaixo do peso" (IMC menor que 18.5), "Peso normal" 
-# (IMC entre 18.5 e 24.9) ou "Acima do peso" (IMC maior que 24.9).
-
-# peso=float(input('Digite o peso da pessoa em kg: '))
-# altura=float(input('Digite a altura da pessoa em cm: '))
-
-# imc=peso/((altura/100)**2)
-
-# if imc < 18.5:
-#     print(f'Seu IMC é {imc:.2f}, classificado como Abaixo do peso.')
-# elif imc >= 18.5 and imc <= 24.9:
-#     print(f'Seu IMC é {imc:.2f}, classificado como Peso normal.')
-# else:
-#     print(f'Seu IMC é {imc:.2f}, classificado como Acima do peso.')
-
-# exercício 8
-# algoritmo que receba o valor de uma compra e aplique um desconto 
-# de acordo com o valor: "Desconto de 5%" (para compras abaixo de 100 
-# reais), "Desconto de 10%" (para compras entre 100 e 500 reais) ou 
-# "Desconto de 15%" (para compras acima de 500 reais).
-
-# valor_compra=float(input('Digite o valor da compra em reais: '))
-
-# if valor_compra < 100:
-#     desconto = valor_compra * 0.05
-#     print(f'Você recebeu um desconto de 5%. O valor da compra com desconto é: R$ {valor_compra-desconto:.2f}')
-# elif valor_compra >= 100 and valor_compra <= 500:
-#     desconto = valor_compra * 0.1
-#     print(f'Você recebeu um desconto de 10%. O valor da compra com desconto é: R$ {valor_compra-desconto:.2f}')
-# else:
-#     desconto = valor_compra * 0.15
-#     print(f'Você recebeu um desconto de 15%. O valor da compra com desconto é: R$ {valor_compra-desconto:.2f}')
-
-# exercício 9
-# Programa para sorteio e verificação de número digitado pelo usuário,
-# mostrar se ganhou ou perdeu. 
-
-# import random
-
-# numeroSorteado = random.randint(1, 6)
-
-# numeroUsuario = int(input('Digite um número entre 1 e 6 para tentar ganhar: '))
-
-# if numeroUsuario == numeroSorteado:
-#     print('Parabéns! Você acertou o número sorteado.')
-# else:
-#     print(f'Que pena! O número sorteado foi {numeroSorteado}.')
-
-# exercício 10
-# algoritmo que gere um número inteiro aleatório entre 1 e 3,
-# onde cada número representa uma previsão do tempo. 
-# O número 1 indica "Ensolarado", o número 2 indica "Nublado" e 
-# o número 3 indica "Chuvoso". Exiba a previsão correspondente.
-
-# import random
-
-# numeroSorteado = random.randint(1, 3)
-
-# if numeroSorteado == 1:
-#     print('A previsão do tempo é: Ensolarado.')
-# elif numeroSorteado == 2:
-#     print('A previsão do tempo é: Nublado.')
-# else:
-#     print('A previsão do tempo é: Chuvoso.')
-
-# exercício 11
-# algoritmo que gere um número inteiro aleatório entre 1 e 100.
-# Verifique se o número está no intervalo de 1 a 33, 34 a 66, ou 67 a 100, 
-# e exiba uma mensagem correspondente: "Você ganhou um prêmio de bronze!", 
-# "Você ganhou um prêmio de prata!" ou "Você ganhou um prêmio de ouro!"
-
-# import random
-
-# numeroSorteado = random.randint(1, 100)
-
-# if numeroSorteado >= 1 and numeroSorteado <= 33:
-#     print(f'Número sorteado: {numeroSorteado}. Você ganhou um prêmio de bronze!')
-# elif numeroSorteado >= 34 and numeroSorteado <= 66:
-#     print(f'Número sorteado: {numeroSorteado}. Você ganhou um prêmio de prata!')
-# else:
-#     print(f'Número sorteado: {numeroSorteado}. Você ganhou um prêmio de ouro!')
-
-# exercício 12
-# algoritmo que gere um número inteiro aleatório entre 1 e 3 
-# para representar a escolha de um caminho em um jogo. O número 1 
-# indica "Caminho da floresta", o número 2 indica "Caminho da montanha" 
-# e o número 3 indica "Caminho do deserto"
-
-# import random
-
-# numeroSorteado = random.randint(1, 3)
-
-# if numeroSorteado == 1:
-#     print(f'{numeroSorteado} - Foi sorteado! O seu Caminho é da floresta.')
-# elif numeroSorteado == 2:
-#     print(f'{numeroSorteado} - Foi sorteado! O seu Caminho é da montanha.')
-# else:
-#     print(f'{numeroSorteado} - Foi sorteado! O seu Caminho é do deserto.')
-
-# exercício 13
-# Algoritmo que receba 2 numero inteiro e ordene-os em ordem crescente.
-
-# num1=int(input('Digite o primeiro número inteiro: '))
-# num2=int(input('Digite o segundo número inteiro: '))
-# if num1 == num2:
-#     print(f'Os números são iguais: {num1}, {num2}')
-# else:
-#     if num1 < num2:
-#         print(f'Os números em ordem crescente são: {num1}, {num2}')
-#     else:
-#         print(f'Os números em ordem crescente são: {num2}, {num1}')
-
-# exercício 14
-# algoritmo em Python para simular a brincadeira de "Par ou Ímpar" 
-# entre o usuário e o computador
-
-# import random
-
-# while True:
-#     escolhaUsuario = input('Escolha P = Par ou I = Ímpar: ').strip().upper()
-#     if escolhaUsuario in ('P', 'I'):
-#         break
-#     print('Escolha inválida. Por favor digite P ou I.')
-
-# print(f'Você escolheu {"PAR" if escolhaUsuario == "P" else "IMPAR"}')
-
-# while True:
-#     try:
-#         numeroUsuario = int(input('Digite um número de 1 a 10: '))
-#         if numeroUsuario < 1 or numeroUsuario > 10:
-#             print('Número fora do intervalo. Digite um número entre 1 e 10.')
-#             continue
-#         break
-#     except ValueError:
-#         print('Digite apenas números inteiros.')
-
-# escolhaMaquina = 'I' if escolhaUsuario == 'P' else 'P'
-# # print(escolhaMaquina)
-# print(f'\nComputador escolheu: {"Par" if escolhaMaquina == "P" else "Ímpar"}')
-
-# numeroMaquina = random.randint(1,10)
-# # print(numeroMaquina)
-# print(f'Computador jogou: {numeroMaquina}')
-
-# soma = numeroMaquina + numeroUsuario
-# resultado = 'P' if soma % 2 == 0 else 'I'
-
-# print(f'\nSoma: {numeroUsuario} + {numeroMaquina} = {soma} → {"Par" if resultado == "P" else "Ímpar"}')
-
-# if resultado == escolhaUsuario:
-#     print('\nVocê ganhou!\n')
-# else:
-#     print('\nVocê perdeu!\n')
-
-# exercicio 15
-# algoritmo que receba 2 números e verifique se eles são iguais ou diferentes.
+    previsoes = {
+        1: "Ensolarado",
+        2: "Nublado",
+        3: "Chuvoso"
+    }
+    
+    print(f"Previsao: {previsoes[numero_sorteado]}")
 
 
-# print('Ola Mundo.')
+def exercicio_11() -> None:
+    """Sorteio de prêmio."""
+    print("\n=== EXERCÍCIO 11: Sorteio de Prêmio ===")
+    numero_sorteado: int = random.randint(1, 100)
+    
+    if 1 <= numero_sorteado <= 33:
+        premio = "Bronze"
+    elif 34 <= numero_sorteado <= 66:
+        premio = "Prata"
+    else:
+        premio = "Ouro"
+    
+    print(f"Número sorteado: {numero_sorteado}")
+    print(f"Você ganhou um prêmio de {premio}!")
 
+
+def exercicio_12() -> None:
+    """Sorteio de caminho."""
+    print("\n=== EXERCÍCIO 12: Escolha de Caminho ===")
+    numero_sorteado: int = random.randint(1, 3)
+    
+    caminhos = {
+        1: "Floresta",
+        2: "Montanha",
+        3: "Deserto"
+    }
+    
+    print(f"Seu caminho é o da {caminhos[numero_sorteado]}!")
+
+
+def exercicio_13() -> None:
+    """Ordena dois números."""
+    print("\n=== EXERCÍCIO 13: Ordenacao de Números ===")
+    try:
+        num1: int = int(input("Digite o primeiro número: "))
+        num2: int = int(input("Digite o segundo número: "))
+        
+        if num1 == num2:
+            print(f"Os números são iguais: {num1}")
+        elif num1 < num2:
+            print(f"Ordem crescente: {num1}, {num2}")
+        else:
+            print(f"Ordem crescente: {num2}, {num1}")
+    except ValueError:
+        print("Erro: Digite números inteiros válidos!")
+
+
+def exercicio_14() -> None:
+    """Par ou Impar contra computador."""
+    print("\n=== EXERCÍCIO 14: Par ou Impar ===")
+    
+    try:
+        escolha_usuario = input("Escolha P (Par) ou I (Impar): ").strip().upper()
+        if escolha_usuario not in ['P', 'I']:
+            print("Escolha inválida!")
+            return
+        
+        numero_usuario: int = int(input("Digite um número de 1 a 10: "))
+        if not 1 <= numero_usuario <= 10:
+            print("Número fora do intervalo!")
+            return
+        
+        numero_maquina: int = random.randint(1, 10)
+        soma: int = numero_usuario + numero_maquina
+        resultado = 'P' if soma % 2 == 0 else 'I'
+        
+        print(f"\nVocê escolheu: {'Par' if escolha_usuario == 'P' else 'Impar'}")
+        print(f"Computador escolheu: {'Par' if resultado == 'P' else 'Impar'}")
+        print(f"Soma: {numero_usuario} + {numero_maquina} = {soma}")
+        
+        if resultado == escolha_usuario:
+            print("Você ganhou!")
+        else:
+            print("Você perdeu!")
+    except ValueError:
+        print("Erro: Digite valores válidos!")
+
+
+def exercicio_15() -> None:
+    """Verifica se números são iguais."""
+    print("\n=== EXERCÍCIO 15: Comparacao Simples ===")
+    try:
+        num1: int = int(input("Digite o primeiro número: "))
+        num2: int = int(input("Digite o segundo número: "))
+        
+        if num1 == num2:
+            print(f"Os números {num1} e {num2} são iguais!")
+        else:
+            print(f"Os números {num1} e {num2} são diferentes!")
+    except ValueError:
+        print("Erro: Digite números inteiros válidos!")
+
+
+def menu_principal() -> None:
+    """Menu principal para selecao de exercicios."""
+    opcoes = {
+        '1': ('Comparacao de Números', exercicio_1),
+        '2': ('Menu de Operacoes', exercicio_2),
+        '3': ('Classificacao por Idade', exercicio_3),
+        '4': ('Classificacao Eleitoral', exercicio_4),
+        '5': ('Classificacao de Temperatura', exercicio_5),
+        '6': ('Classificacao de Aluno', exercicio_6),
+        '7': ('Calculo de IMC', exercicio_7),
+        '8': ('Calculo de Desconto', exercicio_8),
+        '9': ('Sorteio de Número', exercicio_9),
+        '10': ('Previsao do Tempo', exercicio_10),
+        '11': ('Sorteio de Prêmio', exercicio_11),
+        '12': ('Escolha de Caminho', exercicio_12),
+        '13': ('Ordenacao de Números', exercicio_13),
+        '14': ('Par ou Impar', exercicio_14),
+        '15': ('Comparacao Simples', exercicio_15),
+    }
+    
+    while True:
+        print("\n" + "="*60)
+        print("LISTA 2 - ESTRUTURAS DE DECISAO/CONDICIONAIS")
+        print("="*60)
+        for key, (desc, _) in opcoes.items():
+            print(f"[{key:2}] {desc}")
+        print("[0] Sair")
+        print("="*60)
+        
+        escolha = input("Escolha uma opcao: ").strip()
+        
+        if escolha == '0':
+            print("Até logo!")
+            break
+        elif escolha in opcoes:
+            opcoes[escolha][1]()
+        else:
+            print("Opcao inválida! Tente novamente.")
+
+
+if __name__ == "__main__":
+    menu_principal()
