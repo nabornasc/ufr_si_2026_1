@@ -63,18 +63,54 @@ else:
     else:
         print("O segundo numero é ímpar.")
 '''
-import os 
+"""import os 
 
 cls = lambda: os.system('cls' if os.name=='nt' else 'clear')
 cls()
 
-list = (
-    [1,2,3],
-    [4,5,6],
-    [7,8,9], 
+matA = (
+    (1,2,3),
+    (4,5,6),
+    (7,8,9), 
 )
 
-for l in range(len(list)):
-    for c in range(len(list[l])):
-        print(list[l][c], end=" ")
+for l in range(len(matA)):
+    for c in range(len(matA[l])):
+        print(matA[l][c], end=" ")
     print()
+"""
+"""
+valor = int(input())
+meses =  {
+    "January": 1,
+    "February": 2,
+    "March": 3,
+    "April": 4,
+    "May": 5,
+    "June": 6,
+    "July": 7,
+    "August": 8,
+    "September": 9,
+    "October": 10,
+    "November": 11,
+    "December": 12,
+}
+
+for m, n in meses.items():
+    if n == valor:
+        print(m)
+"""
+
+"""
+qtdP=0
+for cont in range(6):
+    num=float(input())
+    if num>0:
+        qtdP+=1
+print(f'{qtdP} valores positivos')
+"""
+
+
+
+
+

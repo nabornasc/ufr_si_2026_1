@@ -316,4 +316,26 @@
 
 # =============================================================
 
-print('Ola, Mundo!')
+
+inc  = int(input().split()[1])
+incH = input()
+fim  = int(input().split()[1])
+fimH = input()
+
+def paraSeg(tempo):
+    h, m, s = tempo.split(':')
+    return int(h) * 3600 + int(m) * 60 + int(s)
+
+total = (fim - inc) * 86400 + paraSeg(fimH) - paraSeg(incH)
+
+dias     = total // 86400;  total %= 86400
+horas    = total // 3600;   total %= 3600
+minutos  = total // 60
+segundos = total % 60
+
+print(f'{dias} dia(s)')
+print(f'{horas} hora(s)')
+print(f'{minutos} minuto(s)')
+print(f'{segundos} segundo(s)')
+
+
