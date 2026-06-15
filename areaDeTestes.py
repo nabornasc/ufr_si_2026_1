@@ -23,7 +23,8 @@ idade_meses = mes_atual - mes_nascimento
 idade_dias = dia_atual - dia_nascimento
 print("Você tem " + str(idade_anos) + " anos, " + str(idade_meses) + " meses e " + str(idade_dias) + " dias.")
 """
-'''
+
+"""
 # codigo de verificação de condição positivo, negativo ou igual
 # compare se é impar ou par
 
@@ -40,8 +41,8 @@ elif numero < 0:
         print("O numero é negativo e ímpar.")
 else:
     print("O numero é igual a zero.")
-'''
-'''
+"""
+"""
 # codigo que recebe 2 numero inteiros e compara se são iguais ou diferentes, e se são pares ou ímpares
 numero1=int(input("Digite o primeiro numero inteiro: "))
 numero2=int(input("Digite o segundo numero inteiro: "))
@@ -62,7 +63,7 @@ else:
         print("O segundo numero é par.")
     else:
         print("O segundo numero é ímpar.")
-'''
+"""
 """import os 
 
 cls = lambda: os.system('cls' if os.name=='nt' else 'clear')
@@ -109,8 +110,3 @@ for cont in range(6):
         qtdP+=1
 print(f'{qtdP} valores positivos')
 """
-
-
-
-
-
