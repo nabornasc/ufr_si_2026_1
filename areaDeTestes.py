@@ -110,3 +110,43 @@ for cont in range(6):
         qtdP+=1
 print(f'{qtdP} valores positivos')
 """
+
+"""
+a = 90
+b = 200
+qa = 0
+while a <= b:
+    a = a + a * 0.03
+    b = b + b * 0.015
+    qa += 1
+    print(f"{qa:3} anos: Cidades - A={a:.2f}mi || B={b:.2f}mi")
+"""
+"""
+soma = 0
+cont = 1
+while cont <= 100:
+    soma = soma + cont
+    cont = cont + 1
+print(f"A soma dos 100 primeiros numeros é: {soma}")
+"""
+"""
+massa = int(input("digite a massa inicial em gramas: "))
+t = 50
+
+while not (massa < 0.5):
+    massa = massa - massa / 2
+    t = t + 1
+
+print("tempo de perda foi ", t)
+"""
+
+import os
+
+cls = lambda: os.system("cls" if os.name == "nt" else "clear")
+cls()
+
+abc = range(97, 123)
+
+for l in abc:
+
+    print(chr(l), end=" ")
