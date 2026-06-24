@@ -140,7 +140,7 @@ while not (massa < 0.5):
 print("tempo de perda foi ", t)
 """
 
-import os
+"""import os
 
 cls = lambda: os.system("cls" if os.name == "nt" else "clear")
 cls()
@@ -150,3 +150,43 @@ abc = range(97, 123)
 for l in abc:
 
     print(chr(l), end=" ")
+"""
+
+import os
+from unittest.util import strclass
+
+cls = lambda: os.system("cls" if os.name == "nt" else "clear")
+cls()
+
+vetNomes = ["Pedro", "Paulo", "Mario", "Andréia", "Julia", "Domingos", "Nabor"]
+vetNumeros = [0, 11, 2, 5, 3, 6, 8, 4, 9, 7]
+
+# print(vetNomes[4])
+# print(vetNomes)
+# print(vetNumeros[2:5])
+
+# cont = len(vetNomes)
+
+# for cont in range(0, cont):
+#     print(f"Na posição {cont} tem {vetNomes[cont]}")
+#     # if cont == len(vetNomes) - 1:
+#     #     break
+
+nomes = []
+idades = []
+cont = 0
+flag = True
+
+while flag:
+    print(f"Digite os dados para posição {cont}")
+    nomes.insert(cont, input(f"Digite o nome: "))
+    idades.insert(cont, input(f"Digite a idade: "))
+    cont += 1
+    if cont > 2:
+        flag = False
+
+pesq = input(str("Digite um nome para pesquisar: "))
+
+for cont in range(len(nomes)):
+    if pesq == nomes[cont]:
+        print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
