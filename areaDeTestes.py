@@ -64,21 +64,33 @@ else:
     else:
         print("O segundo numero é ímpar.")
 """
-"""import os 
+import os
 
-cls = lambda: os.system('cls' if os.name=='nt' else 'clear')
+cls = lambda: os.system("cls" if os.name == "nt" else "clear")
 cls()
 
 matA = (
-    (1,2,3),
-    (4,5,6),
-    (7,8,9), 
+    (1, 2, 3),
+    (4, 5, 6),
+    (7, 8, 9),
 )
 
 for l in range(len(matA)):
     for c in range(len(matA[l])):
         print(matA[l][c], end=" ")
     print()
+
+# Alternativa com lista
+# list = (
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9],
+# )
+#
+# for l in range(len(list)):
+#     for c in range(len(list[l])):
+#         print(list[l][c], end=" ")
+#     print()
 """
 """
 valor = int(input())
@@ -190,3 +202,16 @@ pesq = input(str("Digite um nome para pesquisar: "))
 for cont in range(len(nomes)):
     if pesq == nomes[cont]:
         print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
+=======
+# list = (
+#     [1,2,3],
+#     [4,5,6],
+#     [7,8,9], 
+# )
+
+# for l in range(len(list)):
+#     for c in range(len(list[l])):
+#         print(list[l][c], end=" ")
+#     print()
+
+>>>>>>> a602fb8 (28-6 v0.1)
