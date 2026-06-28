@@ -64,6 +64,7 @@ else:
     else:
         print("O segundo numero é ímpar.")
 """
+"""
 import os
 
 cls = lambda: os.system("cls" if os.name == "nt" else "clear")
@@ -79,6 +80,7 @@ for l in range(len(matA)):
     for c in range(len(matA[l])):
         print(matA[l][c], end=" ")
     print()
+
 
 # Alternativa com lista
 # list = (
@@ -152,20 +154,20 @@ while not (massa < 0.5):
 print("tempo de perda foi ", t)
 """
 
-"""import os
 
-cls = lambda: os.system("cls" if os.name == "nt" else "clear")
-cls()
+# import os
 
-abc = range(97, 123)
+# cls = lambda: os.system("cls" if os.name == "nt" else "clear")
+# cls()
 
-for l in abc:
+# abc = range(97, 123)
 
-    print(chr(l), end=" ")
-"""
+# for l in abc:
+
+#     print(chr(l), end=" ")
+
 
 import os
-from unittest.util import strclass
 
 cls = lambda: os.system("cls" if os.name == "nt" else "clear")
 cls()
@@ -184,25 +186,27 @@ vetNumeros = [0, 11, 2, 5, 3, 6, 8, 4, 9, 7]
 #     # if cont == len(vetNomes) - 1:
 #     #     break
 
-nomes = []
-idades = []
-cont = 0
-flag = True
+# nomes = []
+# idades = []
+# cont = 0
+# flag = True
 
-while flag:
-    print(f"Digite os dados para posição {cont}")
-    nomes.insert(cont, input(f"Digite o nome: "))
-    idades.insert(cont, input(f"Digite a idade: "))
-    cont += 1
-    if cont > 2:
-        flag = False
+# while flag:
+#     print(f"Digite os dados para posição {cont}")
+#     nomes.insert(cont, input(f"Digite o nome: "))
+#     idades.insert(cont, input(f"Digite a idade: "))
+#     cont += 1
+#     if cont > 2:
+#         flag = False
 
-pesq = input(str("Digite um nome para pesquisar: "))
+# pesq = input(str("Digite um nome para pesquisar: "))
 
-for cont in range(len(nomes)):
-    if pesq == nomes[cont]:
-        print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
-=======
+# for cont in range(len(nomes)):
+#     if pesq == nomes[cont]:
+#         print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
+        
+# =======================================================
+
 # list = (
 #     [1,2,3],
 #     [4,5,6],
@@ -214,4 +218,4 @@ for cont in range(len(nomes)):
 #         print(list[l][c], end=" ")
 #     print()
 
->>>>>>> a602fb8 (28-6 v0.1)
+
