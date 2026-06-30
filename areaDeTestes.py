@@ -64,21 +64,35 @@ else:
     else:
         print("O segundo numero é ímpar.")
 """
-"""import os 
+"""
+import os
 
-cls = lambda: os.system('cls' if os.name=='nt' else 'clear')
+cls = lambda: os.system("cls" if os.name == "nt" else "clear")
 cls()
 
 matA = (
-    (1,2,3),
-    (4,5,6),
-    (7,8,9), 
+    (1, 2, 3),
+    (4, 5, 6),
+    (7, 8, 9),
 )
 
 for l in range(len(matA)):
     for c in range(len(matA[l])):
         print(matA[l][c], end=" ")
     print()
+
+
+# Alternativa com lista
+# list = (
+#     [1, 2, 3],
+#     [4, 5, 6],
+#     [7, 8, 9],
+# )
+#
+# for l in range(len(list)):
+#     for c in range(len(list[l])):
+#         print(list[l][c], end=" ")
+#     print()
 """
 """
 valor = int(input())
@@ -140,20 +154,20 @@ while not (massa < 0.5):
 print("tempo de perda foi ", t)
 """
 
-"""import os
 
-cls = lambda: os.system("cls" if os.name == "nt" else "clear")
-cls()
+# import os
 
-abc = range(97, 123)
+# cls = lambda: os.system("cls" if os.name == "nt" else "clear")
+# cls()
 
-for l in abc:
+# abc = range(97, 123)
 
-    print(chr(l), end=" ")
-"""
+# for l in abc:
+
+#     print(chr(l), end=" ")
+
 
 import os
-from unittest.util import strclass
 
 cls = lambda: os.system("cls" if os.name == "nt" else "clear")
 cls()
@@ -172,6 +186,7 @@ vetNumeros = [0, 11, 2, 5, 3, 6, 8, 4, 9, 7]
 #     # if cont == len(vetNomes) - 1:
 #     #     break
 
+<<<<<<< HEAD
 nomes = []
 idades = []
 cont = 0
@@ -184,9 +199,24 @@ while flag:
     cont += 1
     if cont > 2:
         flag = False
+=======
+# nomes = []
+# idades = []
+# cont = 0
+# flag = True
 
-pesq = input(str("Digite um nome para pesquisar: "))
+# while flag:
+#     print(f"Digite os dados para posição {cont}")
+#     nomes.insert(cont, input(f"Digite o nome: "))
+#     idades.insert(cont, input(f"Digite a idade: "))
+#     cont += 1
+#     if cont > 2:
+#         flag = False
+>>>>>>> 2efc6d6c44c5c67f3dc55b7599d44b2931e823d3
 
+# pesq = input(str("Digite um nome para pesquisar: "))
+
+<<<<<<< HEAD
 for cont in range(len(nomes)):
     if pesq == nomes[cont]:
         print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
@@ -243,3 +273,34 @@ if sinal == 0:
     print("valor não localizado")
 
 """
+=======
+# for cont in range(len(nomes)):
+#     if pesq == nomes[cont]:
+#         print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
+        
+# =======================================================
+
+# list = (
+#     [1,2,3],
+#     [4,5,6],
+#     [7,8,9], 
+# )
+
+# for l in range(len(list)):
+#     for c in range(len(list[l])):
+#         print(list[l][c], end=" ")
+#     print()
+
+# =====================================================================
+soma = 0
+qtdP = 0
+
+for cont in range(len(vetNomes)):
+    print(f"\nNa posição {cont} do vetor, tem {vetNomes[cont]}")
+    soma+=vetNumeros[cont]
+    if vetNumeros[cont]%2==0:
+        qtdP+=1
+        print(f"\nO numero {vetNumeros[cont]} do vetor é par")
+print('\nA soma dos numeros do vetor é: ', soma)
+print('A quantidade de numeros pares do vetor é: ', qtdP)
+>>>>>>> 2efc6d6c44c5c67f3dc55b7599d44b2931e823d3
