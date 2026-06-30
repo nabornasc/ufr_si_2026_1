@@ -218,4 +218,15 @@ vetNumeros = [0, 11, 2, 5, 3, 6, 8, 4, 9, 7]
 #         print(list[l][c], end=" ")
 #     print()
 
+# =====================================================================
+soma = 0
+qtdP = 0
 
+for cont in range(len(vetNomes)):
+    print(f"\nNa posição {cont} do vetor, tem {vetNomes[cont]}")
+    soma+=vetNumeros[cont]
+    if vetNumeros[cont]%2==0:
+        qtdP+=1
+        print(f"\nO numero {vetNumeros[cont]} do vetor é par")
+print('\nA soma dos numeros do vetor é: ', soma)
+print('A quantidade de numeros pares do vetor é: ', qtdP)
