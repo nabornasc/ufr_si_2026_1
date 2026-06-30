@@ -176,7 +176,7 @@ nomes = []
 idades = []
 cont = 0
 flag = True
-
+"""
 while flag:
     print(f"Digite os dados para posição {cont}")
     nomes.insert(cont, input(f"Digite o nome: "))
@@ -190,3 +190,56 @@ pesq = input(str("Digite um nome para pesquisar: "))
 for cont in range(len(nomes)):
     if pesq == nomes[cont]:
         print(f"O nome {pesq} esta na posição {cont} do vetor\n{nomes}")
+"""
+"""
+matA = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+soma = 0
+for linha in range(0, 3, 1):
+    for coluna in range(0, 3, 1):
+        if linha == coluna:
+            soma = soma + matA[linha][coluna]
+
+print("soma = ", soma)
+"""
+"""
+matA = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# buscar valor e informar posição
+n = int(input("digite o valor a ser pesquisado"))
+
+for linha in range(0, 3, 1):
+    for coluna in range(0, 3, 1):
+        if matA[linha][coluna] == n:
+            print(n, " localizado na posição ", linha, ", ", coluna)
+"""
+"""
+matA = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# qtd dos impares
+qtd = 0
+for linha in range(0, 3, 1):
+    for coluna in range(0, 3, 1):
+        if matA[linha][coluna] % 2 != 0:
+            qtd = qtd + 1
+
+print("qtd = ", qtd)
+"""
+
+"""
+matA = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# verificar se valor está contido
+n = int(input("digite o valor a ser pesquisado"))
+
+sinal = 0
+for linha in range(0, 3, 1):
+    for coluna in range(0, 3, 1):
+        if matA[linha][coluna] == n:
+            print(n, " localizado na posição ", linha, coluna)
+            sinal = 1
+
+if sinal == 0:
+    print("valor não localizado")
+
+"""
