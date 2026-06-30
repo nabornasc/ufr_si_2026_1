@@ -304,3 +304,6 @@ for cont in range(len(vetNomes)):
 print('\nA soma dos numeros do vetor é: ', soma)
 print('A quantidade de numeros pares do vetor é: ', qtdP)
 >>>>>>> 2efc6d6c44c5c67f3dc55b7599d44b2931e823d3
+
+
+
