@@ -1,0 +1,53 @@
+{
+  "python-envs.defaultEnvManager": "ms-python.python:system",
+
+  "python.analysis": {
+    "completeFunctionParens": true,
+    "autoImportCompletions": true,
+    "autoFormatStrings": true,
+    "extraCommitChars": true,
+    "typeCheckingMode": "basic",
+    "inlayHints": {
+      "variableTypes": false,
+      "functionReturnTypes": false,
+      "callArgumentNames": "false",
+      "pytestParameters": false
+    },
+    "indexing": true,
+    "enableParallelIndexing": true,
+    "diagnosticMode": "workspace",
+    "autoSearchPaths": true,
+    "typeEvaluation": {
+      "analyzeUnannotatedFunctions": true,
+      "strictParameterNoneValue": true
+    },
+    "aiHoverSummaries": true,
+    "gotoDefinitionInStringLiteral": true,
+    "aiCodeActions": {
+      "implementAbstractClasses": true,
+      "generateSymbol": true,
+      "convertFormatString": true
+    },
+    "enablePytestSupport": true
+  },
+
+  "editor.inlayHints.enabled": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.suggest.filterGraceful": true,
+  "editor.suggest.showClasses": false,
+  "editor.parameterHints.enabled": true,
+  "python.linting.enabled": true,
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "*test.py"],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true
+}
