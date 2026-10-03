@@ -231,4 +231,17 @@ print("tempo de perda foi ", t)
 # print('\nA soma dos numeros do vetor é: ', soma)
 # print('A quantidade de numeros pares do vetor é: ', qtdP)
 
+produtos_supermercado = ["Arroz", "Feijão", "Macarrão", "Leite", "Carne",
+                          "Detergente", "Sabonete", "Pão", "Açúcar", "Óleo"]
+quantidade_estoque = [100, 250, 0, 300, 150, 200, 50, 180, 120, 350]
 
+menor = quantidade_estoque[0]
+pos = 0
+
+for cont in range(1, 10, 1):
+    if quantidade_estoque[cont] < menor:
+        menor = quantidade_estoque[cont]
+        pos = cont
+
+print("menor quantidade = ", menor)
+print("produto = ", produtos_supermercado[pos])
